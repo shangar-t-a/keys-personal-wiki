@@ -5,7 +5,7 @@
 - [POETRY](#poetry)
   - [pipx setup for CLI management](#pipx-setup-for-cli-management)
   - [Poetry Setup](#poetry-setup)
-  - [POETRY Management](#poetry-management)
+  - [Poetry Management](#poetry-management)
     - [Setup Poetry project](#setup-poetry-project)
     - [Create or Activate virtual environment](#create-or-activate-virtual-environment)
     - [Install dependencies](#install-dependencies)
@@ -38,7 +38,7 @@
 2. Make poetry to create virtualenv inside project
    > poetry config virtualenvs.in-project true
 
-## POETRY Management
+## Poetry Management
 
 ### Setup Poetry project
 
