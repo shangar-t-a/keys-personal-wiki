@@ -15,6 +15,9 @@
     - [List dependencies](#list-dependencies)
     - [Build Project](#build-project)
     - [Publish Project](#publish-project)
+  - [Internal PyPI](#internal-pypi)
+    - [Setup Internal Server (Server Side)](#setup-internal-server-server-side)
+    - [Publish to internal server via poetry (Client Side)](#publish-to-internal-server-via-poetry-client-side)
 
 ## pipx setup for CLI management
 
@@ -108,3 +111,29 @@ Virtual environment will also get activated by default while running other comma
 ### Publish Project
 
 > poetry publish
+
+## Internal PyPI
+
+Internal pypi server can be hosted in pc via `pypiserver` package
+
+### Setup Internal Server (Server Side)
+
+1. Install `pypiserver` in pipx
+   > pipx install pypiserver
+2. Setup a folder to act as pypi server<br>
+   _Recommendation_: Create a sub directory `packages`
+3. Run the server.
+
+   > pypi-server run -p 8080 -P . -a . --hash-algo=sha256 packages
+
+   -p 8080: Port to be used to serve<br>
+   -P . -a .: No password file and no authentication<br>
+   --hash-algo=sha256: hash algo to generate links<br>
+   packages: path to publish packages<br>
+
+### Publish to internal server via poetry (Client Side)
+
+1. Configure the internal PyPI URL in poetry
+   > poetry config repositories.internal_pypi http:/localhost:8080
+2. Publish to internal PyPI
+   > poetry publish -r internal_pypi
