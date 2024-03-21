@@ -2,9 +2,5 @@
 
 Personal Technical Wiki
 
-- [keys-personal-wiki](#keys-personal-wiki)
-  - [Python](#python)
-
-## Python
-
-1. [Poetry](python/poetry.md)
+- [Python](python/)
+  - [Poetry](python/poetry.md)

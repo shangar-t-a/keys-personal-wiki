@@ -101,7 +101,9 @@ Virtual environment will also get activated by default while running other comma
 
 1. List all dependencies
    > poetry show
-2. List specific dependency
+2. List all dependencies with branching
+   > poetry show --tree
+3. List specific dependency
    > poetry show pendulum
 
 ### Build Project
