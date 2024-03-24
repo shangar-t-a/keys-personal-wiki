@@ -84,7 +84,7 @@ Virtual environment will also get activated by default while running other comma
 5. Install only specified version (Allow only 2.0.5 version)
    > poetry add pendulum==2.0.5
 6. Add git dependency
-   > poetry add git+https://github.com/sdispater/pendulum.git
+   > poetry add git+<https://github.com/sdispater/pendulum.git>
 7. Add local dependency
    > poetry add ../my-package/dist/my_package-0.1.0.whl
 8. Add dependency to a group. The below command will add pytest to dev dependencies
@@ -122,16 +122,16 @@ Internal pypi server can be hosted in pc via `pypiserver` package
 
 1. Install `pypiserver` in pipx
    > pipx install pypiserver
-2. Setup a folder to act as pypi server<br>
+2. Setup a folder to act as pypi server  
    _Recommendation_: Create a sub directory `packages`
 3. Run the server.
 
    > pypi-server run -p 8080 -P . -a . --hash-algo=sha256 packages
 
-   -p 8080: Port to be used to serve<br>
-   -P . -a .: No password file and no authentication<br>
-   --hash-algo=sha256: hash algo to generate links<br>
-   packages: path to publish packages<br>
+   -p 8080: Port to be used to serve  
+   -P . -a .: No password file and no authentication  
+   --hash-algo=sha256: hash algo to generate links  
+   packages: path to publish packages
 
 ### Publish to internal server via poetry (Client Side)
 
