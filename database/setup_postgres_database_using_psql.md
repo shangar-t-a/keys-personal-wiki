@@ -21,11 +21,11 @@
    psql -U postgres
    ```
 
-   > [!NOTE]
-   >
-   > - You will be prompted to enter the password for the user. Enter the password and press Enter.
-   > - The password will not be visible on the screen.
-   > - This password is the one you set during the installation of Postgres.
+> [!NOTE]
+>
+> - You will be prompted to enter the password for the user. Enter the password and press Enter.
+> - The password will not be visible on the screen.
+> - This password is the one you set during the installation of Postgres.
 
 4. To disconnect from the Postgres server, run the below command.
 
