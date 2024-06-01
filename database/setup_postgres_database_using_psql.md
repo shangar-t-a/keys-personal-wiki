@@ -22,6 +22,7 @@
    ```
 
    > [!NOTE]
+   >
    > - You will be prompted to enter the password for the user. Enter the password and press Enter.
    > - The password will not be visible on the screen.
    > - This password is the one you set during the installation of Postgres.
@@ -63,6 +64,7 @@
    ```
 
    > [!NOTE]
+   >
    > Replace `<username>` with the username you want to use and `<password>` with the password you want to set.
 
 3. Check the list of users to verify if the user is created. Run the below command.
@@ -84,6 +86,7 @@
    ```
 
    > [!NOTE]
+   >
    > - Replace `<username>` with the username you want to use. Not providing the database name will try to connect to
    > a database with the same name as the username. If the database does not exist, you will get an error.
    > - To avoid this, here we are connecting to the default database `postgres`.
@@ -97,6 +100,7 @@
    ```
 
    > [!NOTE]
+   >
    > - Replace `<username>` with the username you want to use. Not providing the database name will try to connect to
    > a database with the same name as the username. If the database does not exist, you will get an error.
    > - To avoid this, here we are connecting to the default database `postgres`.
@@ -120,6 +124,7 @@
    ```
 
    > [!NOTE]
+   >
    > Replace `<username>` with the username you want to use.
 
 4. Exit from shell and login using the user you want to use to create a new database. Run the below command to create a
@@ -134,4 +139,5 @@
    ```
 
    > [!NOTE]
+   >
    > Replace `<database_name>` with the name you want to use for the database.
