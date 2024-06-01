@@ -46,8 +46,9 @@ Set-ExecutionPolicy RemoteSigned
 Set-ExecutionPolicy Bypass
 ```
 
-> **Note**: Changing the execution policy might expose your system to risks. Understand the implications of each policy
-> before changing it.
+> [!NOTE]
+> Changing the execution policy might expose your system to risks. Understand the implications of each policy before
+> changing it.
 
 ## Run Script with Policy Change
 
