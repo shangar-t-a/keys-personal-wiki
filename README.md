@@ -5,6 +5,7 @@ Personal Technical Wiki
 - [Python](python/)
   - [Poetry](python/poetry.md)
   - [Ruff](python/ruff_formatter.md)
+  - [gRPC Guide](python/gRPC/docs/gRPC_python.md)
 - [Database](database/)
   - [Setup postgres database using psql](database/setup_postgres_database_using_psql.md)
 - [Barriers and Resolutions](barriers_and_resolutions/)
