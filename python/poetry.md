@@ -9,7 +9,7 @@
     - [Setup Poetry project](#setup-poetry-project)
     - [Create or Activate virtual environment](#create-or-activate-virtual-environment)
     - [Install dependencies](#install-dependencies)
-    - [Update depenedencies](#update-depenedencies)
+    - [Update dependencies](#update-dependencies)
     - [Install new dependencies](#install-new-dependencies)
     - [Uninstall dependencies](#uninstall-dependencies)
     - [List dependencies](#list-dependencies)
@@ -29,7 +29,7 @@
       > pip install pipx
    2. Install pipx inside pipx
       > pipx install pipx
-   3. Ensure pipx path in enironment variables
+   3. Ensure pipx path in environment variables
       > pipx ensurepath
    4. Uninstall pipx in global environment, one inside pipx should be enough
       > pip uninstall pipx -y
@@ -64,7 +64,7 @@ Virtual environment will also get activated by default while running other comma
 3. Sync environment with lock file
    > poetry install --sync
 
-### Update depenedencies
+### Update dependencies
 
 1. Update all dependencies
    > poetry update
