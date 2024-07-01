@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "keys python reference"
+version = "0.1.0"
+description = "Keys python references and wikis"
+authors = ["shangar-arivazhagan <shangar.arivazhagan@solitontech.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+grpcio = "^1.64.1"
+grpcio-tools = "^1.64.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
