@@ -9,6 +9,7 @@ protoc
 protos
 pycodestyle
 pydocstyle
+pyenv
 Pyflakes
 Pylint
 pypi
