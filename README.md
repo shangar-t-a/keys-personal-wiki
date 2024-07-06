@@ -3,8 +3,8 @@
 Personal Technical Wiki
 
 - [Python](python/)
-  - [Poetry](python/poetry.md)
-  - [Ruff](python/ruff_formatter.md)
+  - [Poetry Dependency Management Guide](python/poetry_py_dependency_management.md)
+  - [Ruff Formatter and Linter Guide](python/ruff_formatter_and_linter.md)
   - [gRPC Guide](python/gRPC/docs/gRPC_python.md)
   - [Python version management & penv](python/py_version_management_pyenv.md)
 - [Database](database/)

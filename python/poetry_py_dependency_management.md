@@ -1,8 +1,8 @@
-# POETRY
+# Poetry Python Dependency Management
 
 **Reference**: [Poetry CLI](https://python-poetry.org/docs/cli/)
 
-- [POETRY](#poetry)
+- [Poetry Python Dependency Management](#poetry-python-dependency-management)
   - [pipx setup for CLI management](#pipx-setup-for-cli-management)
   - [Poetry Setup](#poetry-setup)
   - [Poetry Management](#poetry-management)
