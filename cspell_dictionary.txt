@@ -7,6 +7,7 @@ pipx
 proto
 protoc
 protos
+psql
 pycodestyle
 pydocstyle
 pyenv
