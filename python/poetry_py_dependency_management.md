@@ -139,3 +139,10 @@ Internal pypi server can be hosted in pc via `pypiserver` package
    > poetry config repositories.internal_pypi http:/localhost:8080
 2. Publish to internal PyPI
    > poetry publish -r internal_pypi
+
+---
+> **Connect with me:**<br>
+> [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/shangar-t-a)
+> [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shangar-arivazhagan/)<br>
+> **Resources:** [🏠 Go to Home](../README.md)<br>
+> **Navigation:** [⬆️ Go to Top](#poetry-python-dependency-management)
