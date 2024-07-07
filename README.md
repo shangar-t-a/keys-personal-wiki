@@ -11,3 +11,5 @@ Personal Technical Wiki
   - [Setup postgres database using psql](database/setup_postgres_database_using_psql.md)
 - [Barriers and Resolutions](barriers_and_resolutions/)
   - [Powershell Execution Policy](barriers_and_resolutions/powershell_execution_failed.md)
+- [Software Tools Hacks](software_tools_hacks/)
+  - [Git CLI Tips and Hacks](software_tools_hacks/git_cli_tips.md)
