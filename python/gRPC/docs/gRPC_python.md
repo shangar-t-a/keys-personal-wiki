@@ -43,7 +43,7 @@ poetry add grpcio-tools
 
 ### Quick Start
 
-1. Create and update a sample proto file `greet.proto`. Reference: [greet.proto](../protos/greet.proto).
+1. Create and update a sample proto file `greet.proto`. Reference: [greet.proto](../src/protos/greet.proto).
 2. Run the following command to generate server and client code from the proto file.
 
    ```powershell
@@ -55,7 +55,7 @@ poetry add grpcio-tools
    ```
 
 3. Verify if the command generated the required files `greet_pb2.py` and `greet_pb2_grpc.py` in the output directory.
-4. Basic server implementation. Reference: [greet_server.py](greet_server.py). Some important points:
+4. Basic server implementation. Reference: [greet_server.py](../src/greet_server.py). Some important points:
    - Create a class that inherits from the generated `greet_pb2_grpc.GreeterServicer`. Good practice to name it as
      `GreeterServicer` (same as the service name in the proto file).
    - Implement the methods defined in the proto file.
@@ -66,15 +66,15 @@ poetry add grpcio-tools
      - Add insecure port to the server. `server.add_insecure_port("localhost:50051")`.
      - Start the server. `server.start()`.
      - Wait for termination. `server.wait_for_termination()`.
-5. Basic client implementation. Reference: [greet_client.py](greet_client.py). Some important points:
+5. Basic client implementation. Reference: [greet_client.py](../src/greet_client.py). Some important points:
    - Create a `run` function that does the following:
      - Create a channel with port from the server. `grpc.insecure_channel("localhost:50051")`. Best practice to use
        `with` statement for the channel.
      - Create a stub. `stub = greet_pb2_grpc.GreeterStub(channel)`.
-6. Client Implementation. Reference: [greet_client.py](greet_client.py). Some important points:
+6. Client Implementation. Reference: [greet_client.py](../src/greet_client.py). Some important points:
    - Client will create a request object defined in the proto file.
    - Call the required server method on the stub with the request object and get the response.
-7. Server Implementation. Reference: [greet_server.py](greet_server.py). Some important points:
+7. Server Implementation. Reference: [greet_server.py](../src/greet_server.py). Some important points:
    - Server will implement the methods defined in the proto file.
    - Create a response object defined in the proto file.
    - Return the response object.
