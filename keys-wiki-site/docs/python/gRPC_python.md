@@ -1,12 +1,11 @@
+---
+sidebar_label: 'gRPC'
+sidebar_level: 3
+---
+
 # Python gRPC Guide
 
-- [Python gRPC Guide](#python-grpc-guide)
-  - [gRPC Introduction](#grpc-introduction)
-  - [gRPC Python](#grpc-python)
-    - [Installation](#installation)
-    - [Quick Start](#quick-start)
-
-## gRPC Introduction
+## Introduction
 
 gRPC stands for Google Remote Procedure Call.
 
@@ -15,13 +14,17 @@ gRPC stands for Google Remote Procedure Call.
 - gRPC is language agnostic, meaning it can be used with gRPC supported languages.
 - gRPC allows to call methods on a remote server as if it were a local object.
 
+:::info
 Useful Resources:
 
 - [gRPC Official Documentation](https://grpc.io/docs/)
 - [gRPC Python Documentation](https://grpc.io/docs/languages/python/)
 - [gRPC Python YT Tutorial](https://www.youtube.com/watch?v=WB37L7PjI5k)
 
-Rough Architecture of gRPC:<br>
+:::
+
+## Rough Architecture of gRPC
+
 ![gRPC Architecture](images/gRPC_architecture.png)
 
 ## gRPC Python
@@ -31,31 +34,55 @@ Rough Architecture of gRPC:<br>
 Install the required packages for gRPC Python. `grpcio` and `grpcio-tools` are the main packages required for gRPC
 Python.
 
+using pip
+
 ```powershell
-pip install grpcio
-pip install grpcio-tools
+pip install grpcio grpcio-tools
+```
 
-#or using poetry
+or using poetry
 
-poetry add grpcio
-poetry add grpcio-tools
+```powershell
+poetry add grpcio grpcio-tools
 ```
 
 ### Quick Start
 
-1. Create and update a sample proto file `greet.proto`. Reference: [greet.proto](../src/protos/greet.proto).
+1. Create and update a sample proto file `greet.proto`.
+
+   :::important
+   Refer `python/gRPC/src/protos/greet.proto` from [https://github.com/shangar-t-a/keys-personal-wiki](https://github.com/shangar-t-a/keys-personal-wiki)
+   :::
+
 2. Run the following command to generate server and client code from the proto file.
 
    ```powershell
+   # Template (Not for direct Execution)
    python -m grpc_tools.protoc -I <protos_dir> --python_out=<output_dir> --grpc_python_out=<output_dir> <proto_file_dir>
-   python -m grpc_tools.protoc -I ../protos --python_out=. --grpc_python_out=. ../protos/greet.proto
+   ```
 
-   #or using poetry
+   using pip
+
+   ```powershell
+   python -m grpc_tools.protoc -I ../protos --python_out=. --grpc_python_out=. ../protos/greet.proto
+   ```
+
+   or using poetry
+
+   ```powershell
    poetry run python -m grpc_tools.protoc -I ../protos --python_out=. --grpc_python_out=. ../protos/greet.proto
    ```
 
 3. Verify if the command generated the required files `greet_pb2.py` and `greet_pb2_grpc.py` in the output directory.
-4. Basic server implementation. Reference: [greet_server.py](../src/greet_server.py). Some important points:
+
+4. Basic server implementation.
+
+   :::important
+   Refer `python/gRPC/src/greet_server.py` from [https://github.com/shangar-t-a/keys-personal-wiki](https://github.com/shangar-t-a/keys-personal-wiki)
+   :::
+
+   **Points to be considered:**
+
    - Create a class that inherits from the generated `greet_pb2_grpc.GreeterServicer`. Good practice to name it as
      `GreeterServicer` (same as the service name in the proto file).
    - Implement the methods defined in the proto file.
@@ -66,18 +93,43 @@ poetry add grpcio-tools
      - Add insecure port to the server. `server.add_insecure_port("localhost:50051")`.
      - Start the server. `server.start()`.
      - Wait for termination. `server.wait_for_termination()`.
-5. Basic client implementation. Reference: [greet_client.py](../src/greet_client.py). Some important points:
+  
+5. Basic client implementation.
+
+   :::important
+   Refer `python/gRPC/src/greet_client.py` from [https://github.com/shangar-t-a/keys-personal-wiki](https://github.com/shangar-t-a/keys-personal-wiki)
+   :::
+
+   **Points to be considered:**
+
    - Create a `run` function that does the following:
      - Create a channel with port from the server. `grpc.insecure_channel("localhost:50051")`. Best practice to use
        `with` statement for the channel.
      - Create a stub. `stub = greet_pb2_grpc.GreeterStub(channel)`.
-6. Client Implementation. Reference: [greet_client.py](../src/greet_client.py). Some important points:
+
+6. Client Implementation.
+
+   :::important
+   Refer `python/gRPC/src/greet_client.py` from [https://github.com/shangar-t-a/keys-personal-wiki](https://github.com/shangar-t-a/keys-personal-wiki)
+   :::
+
+   **Points to be considered:**
+
    - Client will create a request object defined in the proto file.
    - Call the required server method on the stub with the request object and get the response.
-7. Server Implementation. Reference: [greet_server.py](../src/greet_server.py). Some important points:
+
+7. Server Implementation.
+
+   :::important
+   Refer `python/gRPC/src/greet_server.py` from [https://github.com/shangar-t-a/keys-personal-wiki](https://github.com/shangar-t-a/keys-personal-wiki)
+   :::
+
+   **Points to be considered:**
+
    - Server will implement the methods defined in the proto file.
    - Create a response object defined in the proto file.
    - Return the response object.
+
 8. High level overview of different types of RPCs:
    1. Unary RPC:
       - Client: Create request -> Call server method -> Get response.
@@ -91,10 +143,3 @@ poetry add grpcio-tools
    4. Bidirectional Streaming RPC:
       - Client: Create multiple requests (Iterator) -> Call server method -> Get multiple responses.
       - Server: Implement server method -> Process multiple requests (Iterator) -> Create and Yield multiple responses.
-
----
-> **Connect with me:**<br>
-> [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/shangar-t-a)
-> [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shangar-arivazhagan/)<br>
-> **Resources:** [🏠 Go to Home](../../../README.md)<br>
-> **Navigation:** [⬆️ Go to Top](#python-grpc-guide)
