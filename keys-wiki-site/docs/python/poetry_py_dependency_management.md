@@ -1,3 +1,8 @@
+---
+sidebar_label: 'Poetry - Dependency Management'
+sidebar_level: 3
+---
+
 # Poetry Python Dependency Management
 
 **Reference**: [Poetry CLI](https://python-poetry.org/docs/cli/)
