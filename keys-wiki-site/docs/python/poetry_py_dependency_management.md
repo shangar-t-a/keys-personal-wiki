@@ -2,23 +2,6 @@
 
 **Reference**: [Poetry CLI](https://python-poetry.org/docs/cli/)
 
-- [Poetry Python Dependency Management](#poetry-python-dependency-management)
-  - [pipx setup for CLI management](#pipx-setup-for-cli-management)
-  - [Poetry Setup](#poetry-setup)
-  - [Poetry Management](#poetry-management)
-    - [Setup Poetry project](#setup-poetry-project)
-    - [Create or Activate virtual environment](#create-or-activate-virtual-environment)
-    - [Install dependencies](#install-dependencies)
-    - [Update dependencies](#update-dependencies)
-    - [Install new dependencies](#install-new-dependencies)
-    - [Uninstall dependencies](#uninstall-dependencies)
-    - [List dependencies](#list-dependencies)
-    - [Build Project](#build-project)
-    - [Publish Project](#publish-project)
-  - [Internal PyPI](#internal-pypi)
-    - [Setup Internal Server (Server Side)](#setup-internal-server-server-side)
-    - [Publish to internal server via poetry (Client Side)](#publish-to-internal-server-via-poetry-client-side)
-
 ## pipx setup for CLI management
 
 1. Install pipx for global CLI availability
@@ -75,16 +58,16 @@ Virtual environment will also get activated by default while running other comma
 
 1. Install latest version
    > poetry add requests pendulum
-2. Install and allow minor version update (Allow >=2.0.5, <3.0.0 versions)
+2. Install and allow minor version update `(Allow >=2.0.5, <3.0.0 versions)`
    > poetry add pendulum@^2.0.5
-3. Install and allow bugfix version update (Allow >=2.0.5, <2.1.0 versions)
+3. Install and allow bugfix version update `(Allow >=2.0.5, <2.1.0 versions)`
    > poetry add pendulum@~2.0.5
-4. Install without upperbound (Allow >=2.0.5 versions, without upper bound)
+4. Install without upperbound `(Allow >=2.0.5 versions, without upper bound)`
    > poetry add "pendulum>=2.0.5"
-5. Install only specified version (Allow only 2.0.5 version)
+5. Install only specified version `(Allow only 2.0.5 version)`
    > poetry add pendulum==2.0.5
 6. Add git dependency
-   > poetry add git+<https://github.com/sdispater/pendulum.git>
+   > poetry add git+[https://github.com/sdispater/pendulum.git](https://github.com/sdispater/pendulum.git)
 7. Add local dependency
    > poetry add ../my-package/dist/my_package-0.1.0.whl
 8. Add dependency to a group. The below command will add pytest to dev dependencies
@@ -139,10 +122,3 @@ Internal pypi server can be hosted in pc via `pypiserver` package
    > poetry config repositories.internal_pypi http:/localhost:8080
 2. Publish to internal PyPI
    > poetry publish -r internal_pypi
-
----
-> **Connect with me:**<br>
-> [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/shangar-t-a)
-> [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shangar-arivazhagan/)<br>
-> **Resources:** [🏠 Go to Home](../README.md)<br>
-> **Navigation:** [⬆️ Go to Top](#poetry-python-dependency-management)
