@@ -1,11 +1,8 @@
+---
+sidebar_label: 'Setup Postgres Database (PSQL)'
+sidebar_level: 3
+---
 # Setup Postgres Database using psql
-
-- [Setup Postgres Database using psql](#setup-postgres-database-using-psql)
-  - [Launch Postgres Command Line Interface](#launch-postgres-command-line-interface)
-  - [Create a New User and Database](#create-a-new-user-and-database)
-    - [Useful Commands](#useful-commands)
-    - [Create a New User](#create-a-new-user)
-    - [Create a New Database](#create-a-new-database)
 
 ## Launch Postgres Command Line Interface
 
@@ -21,11 +18,11 @@
    psql -U postgres
    ```
 
-   > [!NOTE]
-   >
-   > - You will be prompted to enter the password for the user. Enter the password and press Enter.
-   > - The password will not be visible on the screen.
-   > - This password is the one you set during the installation of Postgres.
+   :::info
+   - You will be prompted to enter the password for the user. Enter the password and press Enter.
+   - The password will not be visible on the screen.
+   - This password is the one you set during the installation of Postgres.
+   :::
 
 4. To disconnect from the Postgres server, run the below command.
 
@@ -63,9 +60,9 @@
    CREATE USER <username> WITH PASSWORD '<password>';
    ```
 
-   > [!NOTE]
-   >
-   > Replace `<username>` with the username you want to use and `<password>` with the password you want to set.
+   :::info
+   Replace `<username>` with the username you want to use and `<password>` with the password you want to set.
+   :::
 
 3. Check the list of users to verify if the user is created. Run the below command.
 
@@ -85,11 +82,11 @@
    psql -U <username> -d postgres
    ```
 
-   > [!NOTE]
-   >
-   > - Replace `<username>` with the username you want to use. Not providing the database name will try to connect to
-   > a database with the same name as the username. If the database does not exist, you will get an error.
-   > - To avoid this, here we are connecting to the default database `postgres`.
+   :::info
+   - Replace `<username>` with the username you want to use. Not providing the database name will try to connect to
+   a database with the same name as the username. If the database does not exist, you will get an error.
+   - To avoid this, here we are connecting to the default database `postgres`.
+   :::
 
 ### Create a New Database
 
@@ -99,11 +96,11 @@
    psql -U <username> -d postgres
    ```
 
-   > [!NOTE]
-   >
-   > - Replace `<username>` with the username you want to use. Not providing the database name will try to connect to
-   > a database with the same name as the username. If the database does not exist, you will get an error.
-   > - To avoid this, here we are connecting to the default database `postgres`.
+   :::info
+   - Replace `<username>` with the username you want to use. Not providing the database name will try to connect to
+   a database with the same name as the username. If the database does not exist, you will get an error.
+   - To avoid this, here we are connecting to the default database `postgres`.
+   ::::
 
 2. Run the below command to list all available databases.
 
@@ -123,9 +120,9 @@
    ALTER USER <username> CREATEDB;
    ```
 
-   > [!NOTE]
-   >
-   > Replace `<username>` with the username you want to use.
+   :::info
+   Replace `<username>` with the username you want to use.
+   :::
 
 4. Exit from shell and login using the user you want to use to create a new database. Run the below command to create a
    new database.
@@ -138,13 +135,6 @@
    CREATE DATABASE <database_name>;
    ```
 
-   > [!NOTE]
-   >
-   > Replace `<database_name>` with the name you want to use for the database.
-
----
-> **Connect with me:**<br>
-> [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/shangar-t-a)
-> [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shangar-arivazhagan/)<br>
-> **Resources:** [🏠 Go to Home](../README.md)<br>
-> **Navigation:** [⬆️ Go to Top](#setup-postgres-database-using-psql)
+   :::info
+   Replace `<database_name>` with the name you want to use for the database.
+   :::
