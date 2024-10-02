@@ -1,5 +1,5 @@
 ---
-sidebar_label: 'Poetry - Dependency Management'
+sidebar_label: 'Poetry (Dependency Management)'
 sidebar_level: 3
 ---
 
