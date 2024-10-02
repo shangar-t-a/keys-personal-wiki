@@ -1,12 +1,9 @@
-# Python Version Management & Pyenv
+---
+sidebar_label: 'Pyenv (Py Version Management)'
+sidebar_level: 3
+---
 
-- [Python Version Management \& Pyenv](#python-version-management--pyenv)
-  - [Python Version Management](#python-version-management)
-  - [Pyenv Introduction](#pyenv-introduction)
-    - [Installation](#installation)
-    - [Usage](#usage)
-      - [Basic pyenv commands](#basic-pyenv-commands)
-      - [Use pyenv in poetry project](#use-pyenv-in-poetry-project)
+# Python Version Management & Pyenv
 
 ## Python Version Management
 
@@ -45,10 +42,12 @@
 - Follow the official `pyenv-windows` installation page to setup pyenv in windows.
 - Reference: [Official pyenv-win Installation Guide](https://pyenv-win.github.io/pyenv-win/)
 
-> [!NOTE]
->
-> - `PowerShell` is the easiest way to setup or install pyenv in windows.
-> - [Install pyenv using Powershell](https://pyenv-win.github.io/pyenv-win/docs/installation.html#powershell)
+:::info
+
+- `PowerShell` is the easiest way to setup or install pyenv in windows.
+- [Install pyenv using Powershell](https://pyenv-win.github.io/pyenv-win/docs/installation.html#powershell)
+
+:::
 
 ### Usage
 
@@ -117,10 +116,3 @@
    ```bash
    poetry install
    ```
-
----
-> **Connect with me:**<br>
-> [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/shangar-t-a)
-> [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shangar-arivazhagan/)<br>
-> **Resources:** [🏠 Go to Home](../README.md)<br>
-> **Navigation:** [⬆️ Go to Top](#python-version-management--pyenv)

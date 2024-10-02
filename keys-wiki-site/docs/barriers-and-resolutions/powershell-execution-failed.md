@@ -1,18 +1,18 @@
-# Resolving PowerShell Execution Issue Due to Execution Policy
+---
+sidebar_label: 'Update PowerShell Execution Policy'
+sidebar_level: 3
+---
 
-- [Resolving PowerShell Execution Issue Due to Execution Policy](#resolving-powershell-execution-issue-due-to-execution-policy)
-  - [Check Current Execution Policy](#check-current-execution-policy)
-  - [Change Execution Policy](#change-execution-policy)
-  - [Run Script with Policy Change](#run-script-with-policy-change)
-  - [Execution Policy Scope (Recommended)](#execution-policy-scope-recommended)
+# Resolving PowerShell Execution Issue Due to Execution Policy
 
 PowerShell scripts often fail to execute due to the system's execution policy. The execution policy is a safety feature
 that controls the conditions under which PowerShell loads configuration files and runs scripts. Here's how you can
 resolve this issue:
 
-> [!NOTE]
-> ***Sample Error Message:*** *running scripts is disabled on this system. For more information, see
-> about_Execution_Policies at <https:/go.microsoft.com/fwlink/?LinkID=135170>.*
+:::note
+**Sample Error Message:** *running scripts is disabled on this system. For more information, see
+about_Execution_Policies at [https://go.microsoft.com/fwlink/?LinkID=135170](https://go.microsoft.com/fwlink/?LinkID=135170).*
+:::
 
 ## Check Current Execution Policy
 
@@ -46,9 +46,10 @@ Set-ExecutionPolicy RemoteSigned
 Set-ExecutionPolicy Bypass
 ```
 
-> [!NOTE]
-> Changing the execution policy might expose your system to risks. Understand the implications of each policy before
-> changing it.
+:::caution
+Changing the execution policy might expose your system to risks. Understand the implications of each policy before
+changing it.
+:::
 
 ## Run Script with Policy Change
 
@@ -71,10 +72,3 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 This command changes the execution policy for the current user only.
 
 Remember to always run PowerShell as an administrator when changing the execution policy.
-
----
-> **Connect with me:**<br>
-> [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/shangar-t-a)
-> [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shangar-arivazhagan/)<br>
-> **Resources:** [🏠 Go to Home](../README.md)<br>
-> **Navigation:** [⬆️ Go to Top](#resolving-powershell-execution-issue-due-to-execution-policy)
