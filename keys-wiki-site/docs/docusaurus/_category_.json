@@ -1,0 +1,8 @@
+{
+  "label": "Docusaurus",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Docusaurus - Static site generator."
+  }
+}
