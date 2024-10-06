@@ -27,6 +27,7 @@ Reference:
 3. Update `baseUrl` with the repository name. For example, `/repository-name/`.
 
    :::info
+
    The `baseUrl` should start with `/` and end with `/`.
 
    :::
@@ -44,18 +45,31 @@ Reference:
    ```
 
 :::info
+
 The above command triggers `docusaurus deploy` command internally.
+
 :::
 
 :::important
+
 This procedure requires setting up pages in the GitHub repository settings.
-:::
 
 1. Go to the repository settings -> Pages.
 2. Under `Build and deployment` section, select Source as `Deploy from a branch`.
 3. Select the branch as `gh-pages` and directory as `/root` and click on `Save`.
 
-#### Setting up GitHub actions
+:::
+
+#### Setting up GitHub Actions
 
 1. GitHub actions pipeline can be copied from docusaurus deployment site.
 2. Update required fields like root directory branch name etc., if required.
+
+:::important
+
+This procedure requires setting up pages in the GitHub repository settings.
+
+1. Go to the repository setting -> Pages.
+2. Under `Build and deployment` section, select Source as `GitHub Actions`.
+
+:::
