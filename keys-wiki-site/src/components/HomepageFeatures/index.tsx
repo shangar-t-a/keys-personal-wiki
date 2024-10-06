@@ -10,32 +10,35 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'About Me',
+    Svg: require('@site/static/img/profile_details.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Shangar Arivazhagan <br></br>
+        Software Engineer (Python) <br></br>
+        <strong>Interests:</strong> Web Development, GenAI & Automation <br></br>
+        <strong>Skills:</strong> Django, FastAPI, Pytest, GenAI (Beginner) & Backend Developer (Python - Intermediate) <br></br>
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Personal Blog / Wiki',
+    Svg: require('@site/static/img/taking_notes.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        My Personal Blog / Wiki primarily focussing Python. The blogs helps me to refer back to the concepts and also
+        to share my learnings with the community. The blogs cover various tasks and tools that I use in my day to day
+        work as a Python backend developer.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Gallery',
+    Svg: require('@site/static/img/my_personal_files.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Project Gallery: This section is yet to be updated. This section will contain the projects that I have worked
+        on to upskill myself.
       </>
     ),
   },
