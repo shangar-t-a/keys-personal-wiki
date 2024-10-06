@@ -18,6 +18,8 @@ const config: Config = {
   organizationName: 'shangar-t-a', // Usually your GitHub org/user name.
   projectName: 'keys-personal-wiki', // Usually your repo name.
 
+  trailingSlash: false,
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
