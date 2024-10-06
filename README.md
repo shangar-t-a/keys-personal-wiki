@@ -1,13 +1,7 @@
-# keys-personal-wiki
+# Keys' Personal Wiki 🤖
 
-Personal Technical Wiki
+My personal wiki with collection of notes, processes, tools and other stuffs... 😀
 
-- [Python](python/)
-  - [Poetry Dependency Management Guide](python/poetry_py_dependency_management.md)
-  - [Ruff Formatter and Linter Guide](python/ruff_formatter_and_linter.md)
-  - [gRPC Guide](python/gRPC/docs/gRPC_python.md)
-  - [Python version management & pyenv](python/py_version_management_pyenv.md)
-- [Database](database/)
-  - [Setup postgres database using psql](database/setup_postgres_database_using_psql.md)
-- [Barriers and Resolutions](barriers_and_resolutions/)
-  - [Powershell Execution Policy](barriers_and_resolutions/powershell_execution_failed.md)
+The wiki is built using Docusaurus and hosted on GitHub Pages. 🦖
+
+**Site:** <https://shangar-t-a.github.io/keys-personal-wiki/> 🚀
