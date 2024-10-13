@@ -27,7 +27,7 @@ This wiki is a collection of notes, tools (primarily Python), and other learning
 I am currently working with the following technologies:
 
 - **Python**
-- **Web Development (Beginner)**
+- **Web Development (Intermediate)**
 - **AI (Beginner)**
 
 ## Python Tools

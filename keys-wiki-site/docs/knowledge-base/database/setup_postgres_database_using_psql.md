@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Setup Postgres Database (PSQL)'
-sidebar_level: 3
+sidebar_level: 2
 ---
 # Setup Postgres Database using psql
 

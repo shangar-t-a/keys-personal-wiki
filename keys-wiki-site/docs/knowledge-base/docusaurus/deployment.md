@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Deploy Docusaurus Site'
-sidebar_level: 3
+sidebar_level: 2
 ---
 
 # Deploy Docusaurus Site

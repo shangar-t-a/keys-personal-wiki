@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Update PowerShell Execution Policy'
-sidebar_level: 3
+sidebar_level: 2
 ---
 
 # Resolving PowerShell Execution Issue Due to Execution Policy

@@ -1,3 +1,4 @@
+Arivazhagan
 charliermarsh
 CICD
 ensurepath
@@ -20,6 +21,8 @@ pytest
 pytoml
 pyupgrade
 SDLC
+Shangar
 upperbound
+upskilling
 virtualenv
 virtualenvs
