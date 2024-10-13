@@ -33,12 +33,12 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Gallery',
+    title: 'Project Gallery',
     Svg: require('@site/static/img/my_personal_files.svg').default,
     description: (
       <>
-        Project Gallery: This section is yet to be updated. This section will contain the projects that I have worked
-        on to upskill myself.
+        My personal project gallery where I showcase my personal projects built for personal learning, fun, and
+        upskilling.
       </>
     ),
   },

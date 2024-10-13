@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Poetry (Dependency Management)'
-sidebar_level: 3
+sidebar_level: 2
 ---
 
 # Poetry Python Dependency Management

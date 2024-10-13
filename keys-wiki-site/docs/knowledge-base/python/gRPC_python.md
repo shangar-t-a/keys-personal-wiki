@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'gRPC'
-sidebar_level: 3
+sidebar_level: 2
 ---
 
 # Python gRPC Guide

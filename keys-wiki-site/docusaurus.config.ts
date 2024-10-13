@@ -7,14 +7,13 @@ const config: Config = {
   tagline: 'Keys learning hub. Learn, recall and more...',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
+  // Production URL
   url: 'https://shangar-t-a.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  // Base path, /<base-path>/
+  // For GitHub pages deployment, '/<projectName>/'
   baseUrl: '/keys-personal-wiki/',
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
   organizationName: 'shangar-t-a', // Usually your GitHub org/user name.
   projectName: 'keys-personal-wiki', // Usually your repo name.
 
@@ -23,9 +22,6 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -37,26 +33,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          //editUrl:
-          //  'https://github.com/shangar-t-a/keys-personal-wiki/tree/main/keys-wiki-site/',
         },
-        // blog: {
-        //   showReadingTime: true,
-        //   feedOptions: {
-        //     type: ['rss', 'atom'],
-        //     xslt: true,
-        //   },
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     'https://github.com/shangar-t-a/keys-personal-wiki/tree/main/keys-wiki-site/',
-        //   // Useful options to enforce blogging best practices
-        //   onInlineTags: 'warn',
-        //   onInlineAuthors: 'warn',
-        //   onUntruncatedBlogPosts: 'warn',
-        // },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -65,7 +43,6 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: "Keys' Wiki",
@@ -80,7 +57,12 @@ const config: Config = {
           position: 'left',
           label: 'Docs',
         },
-        // {to: '/blog', label: 'Blog', position: 'left'},
+        {
+          type: 'docSidebar',
+          sidebarId: 'projectsSidebar',
+          position: 'left',
+          label: 'Projects',
+        },
         {
           href: 'https://github.com/shangar-t-a/keys-personal-wiki',
           label: 'GitHub',
@@ -96,7 +78,11 @@ const config: Config = {
           items: [
             {
               label: 'Knowledge Base',
-              to: '/docs/intro',
+              to: '/docs/knowledge-base/home',
+            },
+            {
+              label: 'Projects',
+              to: '/docs/projects/home',
             },
           ],
         },
@@ -116,10 +102,10 @@ const config: Config = {
         {
           title: 'More',
           items: [
-            // {
-            //   label: 'Blog',
-            //   to: '/blog',
-            // },
+            {
+              label: 'About Keys',
+              to: '/docs/intro',
+            },
           ],
         },
       ],

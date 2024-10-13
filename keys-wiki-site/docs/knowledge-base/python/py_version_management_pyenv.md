@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Pyenv (Py Version Management)'
-sidebar_level: 3
+sidebar_level: 2
 ---
 
 # Python Version Management & Pyenv

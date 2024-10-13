@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Ruff (Formatter & Linter)'
-sidebar_level: 3
+sidebar_level: 2
 ---
 
 # Ruff Formatter and Linter
