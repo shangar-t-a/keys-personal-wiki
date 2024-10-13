@@ -20,7 +20,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Jump to Knowledge Base 🚀
+            About Shangar Arivazhagan (aka Keys) 🚀
           </Link>
         </div>
       </div>
