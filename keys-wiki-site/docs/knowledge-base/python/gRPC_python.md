@@ -51,7 +51,7 @@ poetry add grpcio grpcio-tools
 1. Create and update a sample proto file `greet.proto`.
 
    :::important
-   Refer `python/gRPC/src/protos/greet.proto` from [https://github.com/shangar-t-a/keys-personal-wiki](https://github.com/shangar-t-a/keys-personal-wiki)
+   Refer `python/src/gRPC/protos/greet.proto` from [https://github.com/shangar-t-a/keys-personal-wiki](https://github.com/shangar-t-a/keys-personal-wiki)
    :::
 
 2. Run the following command to generate server and client code from the proto file.
@@ -78,7 +78,7 @@ poetry add grpcio grpcio-tools
 4. Basic server implementation.
 
    :::important
-   Refer `python/gRPC/src/greet_server.py` from [https://github.com/shangar-t-a/keys-personal-wiki](https://github.com/shangar-t-a/keys-personal-wiki)
+   Refer `python/src/gRPC/greet_server.py` from [https://github.com/shangar-t-a/keys-personal-wiki](https://github.com/shangar-t-a/keys-personal-wiki)
    :::
 
    **Points to be considered:**
@@ -97,7 +97,7 @@ poetry add grpcio grpcio-tools
 5. Basic client implementation.
 
    :::important
-   Refer `python/gRPC/src/greet_client.py` from [https://github.com/shangar-t-a/keys-personal-wiki](https://github.com/shangar-t-a/keys-personal-wiki)
+   Refer `python/src/gRPC/greet_client.py` from [https://github.com/shangar-t-a/keys-personal-wiki](https://github.com/shangar-t-a/keys-personal-wiki)
    :::
 
    **Points to be considered:**
@@ -110,7 +110,7 @@ poetry add grpcio grpcio-tools
 6. Client Implementation.
 
    :::important
-   Refer `python/gRPC/src/greet_client.py` from [https://github.com/shangar-t-a/keys-personal-wiki](https://github.com/shangar-t-a/keys-personal-wiki)
+   Refer `python/src/gRPC/greet_client.py` from [https://github.com/shangar-t-a/keys-personal-wiki](https://github.com/shangar-t-a/keys-personal-wiki)
    :::
 
    **Points to be considered:**
@@ -121,7 +121,7 @@ poetry add grpcio grpcio-tools
 7. Server Implementation.
 
    :::important
-   Refer `python/gRPC/src/greet_server.py` from [https://github.com/shangar-t-a/keys-personal-wiki](https://github.com/shangar-t-a/keys-personal-wiki)
+   Refer `python/src/gRPC/greet_server.py` from [https://github.com/shangar-t-a/keys-personal-wiki](https://github.com/shangar-t-a/keys-personal-wiki)
    :::
 
    **Points to be considered:**
