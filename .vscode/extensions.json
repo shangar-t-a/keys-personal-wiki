@@ -1,0 +1,24 @@
+{
+    "recommendations": [
+        "charliermarsh.ruff",
+        "codeium.codeium",
+        "darkriszty.markdown-table-prettify",
+        "davidanson.vscode-markdownlint",
+        "eamodio.gitlens",
+        "equinusocio.vsc-material-theme-icons",
+        "github.github-vscode-theme",
+        "hediet.vscode-drawio",
+        "johnpapa.winteriscoming",
+        "ms-python.debugpy",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-vscode.live-server",
+        "ms-vscode.powershell",
+        "njpwerner.autodocstring",
+        "pnp.polacode",
+        "redhat.vscode-yaml",
+        "streetsidesoftware.code-spell-checker",
+        "tamasfe.even-better-toml",
+        "yzhang.markdown-all-in-one"
+    ]
+}

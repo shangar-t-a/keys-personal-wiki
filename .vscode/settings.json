@@ -1,5 +1,30 @@
 {
     "yaml.schemas": {
         "https://json.schemastore.org/github-workflow.json": "file:///f%3A/shangar/sandbox/repos/keys-personal-wiki/.github/workflows/deploy.yml"
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "editor.rulers": [
+        120
+    ],
+    "editor.formatOnSave": true,
+    "git.autofetch": true,
+    "python.analysis.completeFunctionParens": true,
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "ruff.format.args": [
+        "--line-length=120"
+    ],
+    "ruff.lint.args": [
+        "--line-length=120"
+    ],
+    "[toml]": {
+        "editor.defaultFormatter": "tamasfe.even-better-toml"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
     }
 }
