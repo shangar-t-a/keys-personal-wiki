@@ -4,6 +4,7 @@ CICD
 ensurepath
 grpcio
 isort
+numpy
 pipx
 proto
 protoc
