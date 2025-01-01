@@ -12,6 +12,9 @@ grpcio = "^1.64.1"
 grpcio-tools = "^1.64.1"
 
 
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.8.3"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
