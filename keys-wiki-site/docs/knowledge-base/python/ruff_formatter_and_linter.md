@@ -51,24 +51,58 @@ captured here for example.
 
 ### Configuring CLI
 
-Ruff CLI can be configured from pyproject.toml
+Ruff CLI can be configured from pyproject.toml and ruff.toml. I would recommend ruff.toml for cleaner configuration
+and separation of concerns. This also makes the pyproject toml clutter free for poetry.
 
-`pyproject.toml`
+`ruff.toml`
 
 ```toml
-[tool.ruff]
+# Indentations
+line-length = 120
+
+# Includes
+include = ["project_template/**/*.py"]
+
+# Other Configs
 show-fixes = true
 
-[tool.ruff.lint]
-# [Pyflakes (F), pydocstyle (D), isort (I), pep8-naming (N), pycodestyle (E/W), Pylint (PL), flake8-bugbear (B),
-# pyupgrade (UP), flake8-simplify (SIM), flake8-comprehensions (C4), flake8-type-checking (TCH)]
-extend-select = [
-    "F", "D", "I", "N", "E", "PL", "B", "UP", "SIM", "C4", "TCH",
+# Lints
+
+# Extend Rules
+[lint]
+select = [
+    # Pyflakes
+    "F",
+    # pydocstyle
+    "D",
+    # isort
+    "I",
+    # pep8-naming
+    "N",
+    # pyupgrade
+    "UP",
+    # Pylint
+    "PL",
+    # pycodestyle (E, W)
+    "E",
+    "W",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # flake8-type-checking
+    "TC",
+    # flake8-comprehensions
+    "C4",
 ]
 
-[tool.ruff.lint.extend-per-file-ignores]
-# Also ignore `E402`, `D104` in all `__init__.py` files.
-"__init__.py" = ["E402", "D104"]
+# Documentation Style
+[lint.pydocstyle]
+convention = "google" # Accepts: "google", "numpy", or "pep257"
+
+# Ignore Imports in __init__.py
+[lint.per-file-ignores]
+"__init__.py" = ["F401"]
 ```
 
 #### Useful Commands for Ruff CLI
@@ -79,7 +113,13 @@ extend-select = [
    ruff check
    ```
 
-2. List all available linters from Ruff
+2. Run Ruff checker and fix possible errors
+
+   ```powershell
+   ruff check --fix
+   ```
+
+3. List all available linters from Ruff
 
    ```powershell
    ruff linter  
@@ -89,7 +129,7 @@ extend-select = [
    The linters can be configured in pytoml file.
    :::
 
-3. Check only specific errors
+4. Check only specific errors
 
    ```powershell
    ruff check --select I
