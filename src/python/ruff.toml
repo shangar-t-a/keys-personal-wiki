@@ -1,2 +1,53 @@
-# Set the maximum line length to 120.
+# Indentations
 line-length = 120
+
+# Includes
+include = ["src/**/*.py"]
+
+# Excludes
+exclude = [
+    # Auto generated files from protoc
+    "src/gRPC/greet_pb2_grpc.py",
+    "src/gRPC/greet_pb2.py",
+]
+
+# Other Configs
+show-fixes = true
+
+# Lints
+
+# Extend Rules
+[lint]
+select = [
+    # Pyflakes
+    "F",
+    # pydocstyle
+    "D",
+    # isort
+    "I",
+    # pep8-naming
+    "N",
+    # pyupgrade
+    "UP",
+    # Pylint
+    "PL",
+    # pycodestyle (E, W)
+    "E",
+    "W",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # flake8-type-checking
+    "TC",
+    # flake8-comprehensions
+    "C4",
+]
+
+# Documentation Style
+[lint.pydocstyle]
+convention = "google" # Accepts: "google", "numpy", or "pep257"
+
+# Ignore Imports in __init__.py
+[lint.per-file-ignores]
+"__init__.py" = ["F401"]
