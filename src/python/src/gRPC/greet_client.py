@@ -3,17 +3,16 @@
 # Standard Library
 import time
 
-# Installed Packages
-import grpc
-
 # Custom Modules
 import greet_pb2
 import greet_pb2_grpc
 
+# Installed Packages
+import grpc
+
 
 def get_client_stream_request() -> greet_pb2.HelloRequest:
-    """
-    Get a client stream request.
+    """Get a client stream request.
 
     Yields:
     -------

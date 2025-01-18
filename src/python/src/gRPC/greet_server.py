@@ -1,15 +1,15 @@
 """Greeter server implementation."""
 
 # Standard Library
-from concurrent import futures
 import time
-
-# Installed Packages
-import grpc
+from concurrent import futures
 
 # Custom Modules
 import greet_pb2
 import greet_pb2_grpc
+
+# Installed Packages
+import grpc
 
 
 class GreeterServicer(greet_pb2_grpc.GreeterServicer):
