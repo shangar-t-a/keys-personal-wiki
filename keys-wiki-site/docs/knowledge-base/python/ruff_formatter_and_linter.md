@@ -68,41 +68,28 @@ show-fixes = true
 
 # Lints
 
-# Extend Rules
 [lint]
 select = [
-    # Pyflakes
-    "F",
-    # pydocstyle
-    "D",
-    # isort
-    "I",
-    # pep8-naming
-    "N",
-    # pyupgrade
-    "UP",
-    # Pylint
-    "PL",
-    # pycodestyle (E, W)
-    "E",
-    "W",
-    # flake8-bugbear
-    "B",
-    # flake8-simplify
-    "SIM",
-    # flake8-type-checking
-    "TC",
-    # flake8-comprehensions
-    "C4",
+    "E",    # pycodestyle Errors
+    "W",    # pycodestyle Warnings
+    "F",    # Pyflakes
+    "I",    # isort
+    "B",    # flake8-bugbear
+    "C4",   # flake8-comprehensions
+    "D",    # pydocstyle
+    "N",    # pep8-naming
+    "UP",   # pyupgrade
+    "PL",   # Pylint
+    "SIM",  # flake8-simplify
+    "TC",   # flake8-type-checking
 ]
 
-# Documentation Style
 [lint.pydocstyle]
-convention = "google" # Accepts: "google", "numpy", or "pep257"
+convention = "google"   # Google Style Docstring. Can be "numpy", "pep257", or "google"
 
-# Ignore Imports in __init__.py
 [lint.per-file-ignores]
-"__init__.py" = ["F401"]
+"__init__.py" = ["F401"]    # Ignore "F401: 'module' imported but unused" in __init__.py files
+
 ```
 
 #### Useful Commands for Ruff CLI
