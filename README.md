@@ -1,7 +1,7 @@
-# Keys' Personal Wiki 🤖
+# Shangar Arivazhagan (Keys') Portfolio 🤖
 
-My personal wiki with collection of notes, processes, tools and other stuffs... 😀
+My portfolio with collection of projects, tools, and resources... 😀
 
-The wiki is built using Docusaurus and hosted on GitHub Pages. 🦖
+The portfolio is built using Docusaurus and hosted on GitHub Pages. 🦖
 
-**Site:** <https://shangar-t-a.github.io/keys-personal-wiki/> 🚀
+**Open Portfolio:** <https://shangar-t-a.github.io/keys-personal-wiki/> 🚀
