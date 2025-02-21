@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: "Keys' Personal Wiki🤖",
-  tagline: 'Keys learning hub. Learn, recall and more...',
+  title: "Shangar's Portfolio🤖",
+  tagline: "Shangar (Keys') Portfolio, Learning hub and more...",
   favicon: 'img/favicon.ico',
 
   // Production URL
@@ -43,11 +43,10 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: "Keys' Wiki",
+      title: "Keys' Portfolio",
       logo: {
-        alt: 'My Site Logo',
+        alt: "Keys' Site Logo",
         src: 'img/logo.svg',
       },
       items: [

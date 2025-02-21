@@ -3,19 +3,19 @@ sidebar_label: 'Home'
 sidebar_position: 1
 ---
 
-# Keys' Personal Wiki
+# Shangar Arivazhagan (Keys') Portfolio
 
-Keys Personal Wiki is a personal learning guide and knowledge base created by ***Shangar Arivazhagan*** aka ***Keys***.
-This wiki is a collection of notes, tools (primarily Python), and other learning resources that I have used.
+The portfolio is a collection of projects, tools, and resources that I have used.
 
 ## About Me
 
-| **Attribute**    | **Details**                                                             |
-|------------------|-------------------------------------------------------------------------|
-| **Name**         | Shangar Arivazhagan                                                     |
-| **Nickname**     | Keys                                                                    |
-| **Role**         | Software Engineer                                                       |
-| **Tech Stack**   | Python, AI (Beginner), Web Development (Intermediate)                   |
+| **Attribute**           | **Details**                                           |
+| ----------------------- | ----------------------------------------------------- |
+| **Name**                | Shangar Arivazhagan (Keys)                            |
+| **Role**                | Software Engineer - Senior Python Engineer            |
+| **Tech Stack & Domain** | Python, AI (Beginner), Web Development (Intermediate) |
+| **Work Experience**     | 4+ years                                              |
+| **Location**            | Coimbatore, Tamil Nadu, India                         |
 
 ## Connect with Me
 
@@ -24,7 +24,7 @@ This wiki is a collection of notes, tools (primarily Python), and other learning
 
 ## Tech Stack
 
-I am currently working with the following technologies:
+I am currently working in the following technologies:
 
 - **Python**
 - **Web Development (Intermediate)**
@@ -34,8 +34,24 @@ I am currently working with the following technologies:
 
 Here are some of the Python tools I use:
 
-- FastAPI
-- Django
-- PyTest
-- Poetry
-- Sphinx
+| Category                    | Tools/Modules                                        |
+| --------------------------- | ---------------------------------------------------- |
+| Web Frameworks              | Django, FastAPI                                      |
+| Web Development Support     | Django REST framework, Pydantic, SQLAlchemy, Alembic |
+| Dependency Management       | pip, Poetry                                          |
+| Linting & Formatting Legacy | flake8, pydocstyle, mypy, isort, black               |
+| Linting & Formatting New    | ruff, mypy                                           |
+| Testing                     | PyTest                                               |
+| Documentation               | Sphinx                                               |
+
+## Other Tools
+
+Here are some of the other tools I use:
+
+| Category           | Tools/Modules           |
+| ------------------ | ----------------------- |
+| IDE                | Cursor, VSCode, PyCharm |
+| Version Control    | Bitbucket, GitHub       |
+| Code Assistant     | Cursor, GitHub Copilot  |
+| Project Management | Jira, Azure             |
+| Documentation      | Confluence              |
