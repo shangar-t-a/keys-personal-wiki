@@ -1,0 +1,58 @@
+<mxfile host="65bd71144e">
+    <diagram id="7XQWfIRT13u8GzDnbmIR" name="Page-1">
+        <mxGraphModel dx="1034" dy="787" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="110" y="90" width="630" height="710" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Artificial Intelligence&lt;/h1&gt;&lt;p&gt;AI is a field of study that focuses on creating intelligent machines that can perform tasks that typically require human intelligence.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="190" y="100" width="490" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=13;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="200" width="590" height="590" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="420" width="550" height="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="610" width="510" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Large Language Models" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="190" y="700" width="220" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Small Language Models" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="700" width="220" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Generative Models&lt;/h1&gt;&lt;p&gt;Generate new data that is similar to the training data.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="190" y="620" width="410" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Machine Learning&lt;/h1&gt;&lt;p&gt;Machine Learning is a subfield of AI that focuses on building systems that learn from data without being explicitly programmed.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="190" y="220" width="460" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Deep Learning&lt;/h1&gt;&lt;p&gt;Deep Learning is a subfield of Machine Learning that focuses on building systems that learn from data using neural networks.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="190" y="420" width="480" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="320" width="280" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Supervised Learning&lt;/h1&gt;&lt;p&gt;Involves training a model on a labeled dataset.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="320" width="280" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="430" y="320" width="280" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Unsupervised Learning&lt;/h1&gt;&lt;p&gt;Involves training a model on an unlabeled dataset.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="430" y="320" width="280" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="510" width="510" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Discriminative Models&lt;/h1&gt;&lt;p&gt;Classify data into categories, cluster data into groups, or predict a specific output.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="190" y="520" width="460" height="70" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
