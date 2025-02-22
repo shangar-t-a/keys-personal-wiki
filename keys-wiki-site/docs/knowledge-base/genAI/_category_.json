@@ -1,0 +1,8 @@
+{
+    "label": "GenAI",
+    "position": 1,
+    "link": {
+        "type": "generated-index",
+        "description": "GenAI tools and libraries and other learning resources"
+    }
+}

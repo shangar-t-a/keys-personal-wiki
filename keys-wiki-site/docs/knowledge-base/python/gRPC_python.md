@@ -25,7 +25,7 @@ Useful Resources:
 
 ## Rough Architecture of gRPC
 
-![gRPC Architecture](images/gRPC_architecture.png)
+![gRPC Architecture](assets/images/gRPC_architecture.png)
 
 ## gRPC Python
 

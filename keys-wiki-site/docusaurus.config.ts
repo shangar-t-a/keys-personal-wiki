@@ -52,15 +52,15 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'kbSidebar',
-          position: 'left',
-          label: 'Docs',
-        },
-        {
-          type: 'docSidebar',
           sidebarId: 'projectsSidebar',
           position: 'left',
           label: 'Projects',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'kbSidebar',
+          position: 'left',
+          label: 'Knowledge Base',
         },
         {
           href: 'https://github.com/shangar-t-a/keys-personal-wiki',
@@ -73,15 +73,15 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Resources',
           items: [
-            {
-              label: 'Knowledge Base',
-              to: '/docs/knowledge-base/home',
-            },
             {
               label: 'Projects',
               to: '/docs/projects/home',
+            },
+            {
+              label: 'Knowledge Base',
+              to: '/docs/knowledge-base/home',
             },
           ],
         },
