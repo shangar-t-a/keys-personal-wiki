@@ -3,7 +3,9 @@ sidebar_label: 'Basics'
 sidebar_level: 2
 ---
 
-# Introduction
+# Basics of GenAI, Machine Learning, and Deep Learning
+
+## Introduction
 
 Artificial Intelligence (AI) is a field of computer science that focuses on creating intelligent machines that can
 perform tasks that typically require human intelligence.
