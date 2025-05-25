@@ -40,12 +40,7 @@ captured here for example.
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff"
     },
-    "ruff.format.args": [
-        "--line-length=120"
-    ],
-    "ruff.lint.args": [
-        "--line-length=120"
-    ]
+    "ruff.lineLength": 120
 }
 ```
 
