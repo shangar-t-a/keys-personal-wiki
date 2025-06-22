@@ -53,6 +53,12 @@ For simplicity, this article explains installing `podman` in `wsl` and `cockpit`
   wsl -d Ubuntu
   ```
 
+- Update packages in wsl using the below command.
+
+  ```bash
+  sudo apt update
+  ```
+
 - Install podman in wsl using the below command.
 
   ```bash
@@ -103,7 +109,44 @@ For simplicity, this article explains installing `podman` in `wsl` and `cockpit`
   ![cockpit login](assets/images/cockpit_login.png)
   ![cockpit podman container](assets/images/cockpit_podman_container.png)
 
+## Install and Run Portainer
+
+- Open `Ubuntu` in wsl.
+
+  ```bash
+  wsl -d Ubuntu
+  ```
+
+- Enable podman socket
+
+  ```bas
+  systemctl enable --now podman.socket
+  ```
+
+- Create the volume that Portainer Server will use to store its database
+
+  ```bash
+  sudo podman volume create portainer_data
+  ```
+
+- Download and install the Portainer Server container
+
+  ```bash
+  sudo podman run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always --privileged -v /run/podman/podman.sock:/var/run/docker.sock -v portainer_data:/data docker.io/portainer/portainer-ce:lts
+  ```
+
+- Once the container is up and running, you can access the Portainer web UI using the below URL.
+  `https://localhost:9443/`.
+
+:::note
+
+- Used `sudo` or `root` privileges because `podman` is a rootless container runtime.
+- First time portainer login will ask for `username` and `password`. Use `admin` as the `username` and `password`.
+
+:::
+
 ## Reference
 
 - [1][Podman Installation](https://podman.io/docs/installation)
 - [2][Podman + Cockpit](https://blog.while-true-do.io/podman-web-ui-via-cockpit/)
+- [3][Podman + Portainer](https://docs.portainer.io/start/install-ce/server/podman/linux)
