@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
@@ -20,7 +20,12 @@ const config: Config = {
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   i18n: {
     defaultLocale: 'en',
@@ -51,6 +56,11 @@ const config: Config = {
       },
       items: [
         {
+          label: 'About Me',
+          to: '/docs/intro',
+          position: 'left',
+        },
+        {
           type: 'docSidebar',
           sidebarId: 'projectsSidebar',
           position: 'left',
@@ -63,12 +73,18 @@ const config: Config = {
           label: 'Knowledge Base',
         },
         {
+          href: 'https://www.linkedin.com/in/shangar-arivazhagan/',
+          label: 'LinkedIn',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/shangar-t-a/keys-personal-wiki',
           label: 'GitHub',
           position: 'right',
         },
       ],
     },
+
     footer: {
       style: 'dark',
       links: [
