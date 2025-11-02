@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    font-size: 2.2rem;
+}
+
+.gradientText {
+    background: linear-gradient(90deg, var(--gradient-from) 0%, var(--gradient-mid) 60%, var(--gradient-to) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}

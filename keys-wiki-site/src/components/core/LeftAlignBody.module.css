@@ -1,0 +1,60 @@
+/* LeftAlignBody.module.css */
+
+/* Styles for Body Text */
+
+.bodyText {
+    font-size: 1.13rem;
+    font-weight: 400;
+    line-height: 1.75;
+    letter-spacing: 0.01em;
+    color: var(--ifm-font-color-base);
+    padding: 1.25rem 1.5rem;
+}
+
+/* End of Body Text Styles */
+
+/* Styles for Ordered Lists */
+
+.bodyText ol {
+    padding-left: 1.5em;
+    margin-bottom: 0.75em;
+}
+
+.bodyText ol>li {
+    margin-bottom: 0.5em;
+    font-weight: 500;
+    color: var(--ifm-color-primary);
+}
+
+.bodyText ol ol {
+    margin-top: 0.3em;
+    font-size: 0.98em;
+    color: var(--ifm-font-color-base);
+    opacity: 0.85;
+}
+
+.bodyText ol ol>li {
+    font-weight: 400;
+    color: var(--ifm-font-color-base);
+}
+
+/* End of Ordered Lists Styles */
+
+/* Styles for Images */
+
+.bodyText img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 12px rgba(30, 80, 103, 0.10);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.bodyText img:hover {
+    box-shadow: 0 4px 24px rgba(30, 80, 103, 0.18);
+    transform: scale(1.03);
+}
+
+/* End of Image Styles */
