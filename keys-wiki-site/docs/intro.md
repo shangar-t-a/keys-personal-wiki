@@ -3,21 +3,21 @@ sidebar_label: 'Home'
 sidebar_position: 1
 ---
 
+import GradientHeading from '@site/src/components/core/GradientHeading';
+
 import LinkedInIcon from '@site/static/img/docs/intro/linkedin-icon.png';
 import GitHubIcon from '@site/static/img/docs/intro/github-icon.png';
 import ShangarAvatar from '@site/static/img/docs/intro/shangar.png';
 
-<h1 style={{
-  fontSize: '2.6rem',
-  fontWeight: '800',
-  background: 'linear-gradient(90deg, #4361EE, #4CC9F0, #7209B7)',
-  WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
-  textAlign: 'center',
-  marginTop: '2rem'
-}}>
-# 🌟 Shangar Arivazhagan (Keys)
-</h1>
+<GradientHeading
+  as="h1"
+  gradientFrom="#338cf1"
+  gradientMid="#27dafd"
+  gradientTo="#8f43ec"
+>
+# Shangar Arivazhagan (Keys)
+
+</GradientHeading>
 
 <p style={{
   textAlign: 'center',

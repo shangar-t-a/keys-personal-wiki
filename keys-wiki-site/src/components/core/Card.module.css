@@ -1,0 +1,27 @@
+.card {
+    display: block;
+    padding: 1.25rem;
+    border: 1px solid var(--ifm-color-primary);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--ifm-color-primary);
+    transition: box-shadow 0.25s ease;
+    width: 280px;
+    margin: 0.5rem;
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+}
+
+.cardHeader h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+}
+
+.cardDescription {
+    margin: 0;
+    color: var(--ifm-color-gray-700);
+    font-size: 1rem;
+}
