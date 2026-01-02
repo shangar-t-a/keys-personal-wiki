@@ -8,7 +8,7 @@ managing database migrations in the Expense Manager Service Postgres infrastruct
 - ORM defined using SQLAlchemy
 - Alembic installed in the development environment
 
-::: info
+:::info
 This guide assumes you are using UV as your development environment manager. In case of using a different environment
 manager, adjust the commands accordingly.
 :::
@@ -41,7 +41,7 @@ For asynchronous support, run the following command:
 uv run alembic init -t async alembic
 ```
 
-::: info
+:::info
 The `-t async` flag initializes Alembic with support for asynchronous database operations, which is suitable for
 async SQLAlchemy or asyncpg setups.
 :::
