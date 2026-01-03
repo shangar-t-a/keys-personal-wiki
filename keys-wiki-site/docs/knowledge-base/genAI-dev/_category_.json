@@ -1,0 +1,8 @@
+{
+    "label": "GenAI Dev",
+    "position": 1,
+    "link": {
+        "type": "generated-index",
+        "description": "GenAI development related documents and resources"
+    }
+}
