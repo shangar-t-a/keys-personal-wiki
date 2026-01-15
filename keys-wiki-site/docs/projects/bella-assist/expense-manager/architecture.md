@@ -34,6 +34,12 @@ expense-manager-service/
 │   │   └── repositories/                                    # Repository interfaces
 │   ├── infrastructures/                                     # Infrastructure layer (external systems)
 │   │   ├── inmemory_db/                                     # In-memory DB implementations (for testing/dev)
+|   |   ├── postgres_db/                                     # PostgreSQL DB implementations (for production)
+|   |   │   ├── alembic/                                     # Alembic migrations (DB schema management)
+|   |   |   |   ├── versions/                                # Alembic migration versions
+|   |   |   |   └── env.py                                   # Alembic env configuration
+|   |   |   ├── alembic.ini                                  # Alembic config file
+│   │   │   └── models/                                      # SQLAlchemy models
 │   │   └── sqlite_db/                                       # SQLite DB implementations (for production)
 │   │       └── models/                                      # SQLAlchemy models
 │   ├── routers/                                             # Presentation/API layer
@@ -122,6 +128,7 @@ The backend follows Clean Architecture principles, with each layer mapped to spe
 - **FastAPI**: High-performance, async web framework for building APIs.
 - **Pydantic**: Data validation and settings management.
 - **SQLAlchemy (async)**: Async ORM for database access (SQLite).
+- **Alembic (async)**: Database migrations.
 - **Uvicorn**: ASGI server for running FastAPI apps.
 - **UV**: Dependency management.
 - **Mypy**: Static type checking.
@@ -129,11 +136,12 @@ The backend follows Clean Architecture principles, with each layer mapped to spe
 - **Tox**: Testing in isolated environments.
 - **Ruff**: Linting and code quality.
 - **Clean Architecture**: Promotes separation of concerns, testability, and maintainability.
-- **In-memory, SQLite & PostgreSQL Repositories**: Support for both development/testing and production persistence.
+- **In-memory, PostgreSQL & SQLite Repositories**: Support for both development/testing and production persistence.
 
 ## Notes & Best Practices
 
-- **Dependency Rule:** Outer layers (API, Infrastructure) depend on inner layers (Use Cases, Entities), never the reverse.
+- **Dependency Rule:** Outer layers (API, Infrastructure) depend on inner layers (Use Cases, Entities), never the
+  reverse.
 - **Extensibility:** Add new features by extending the appropriate layer, maintaining separation of concerns.
 - **Configuration:** Environment-specific settings are managed in `settings/` and `.env` files.
 - **Testing:** All tests are in `tests/`.
