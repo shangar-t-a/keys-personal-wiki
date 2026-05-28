@@ -25,8 +25,8 @@ import ShangarAvatar from '@site/static/img/docs/intro/shangar.png';
   fontWeight: '500',
   fontSize: '1.1rem'
 }}>
-Software Engineer – Lead (Technical Solutions)<br />
-Python • AI • LLMs • Backend Development
+AI &amp; Software Engineer – Lead (Technical Solutions)<br />
+Python · AI · LLMs · Backend Development
 </p>
 
 <div style={{ textAlign: 'center', margin: '2.5rem 0' }}>
@@ -43,13 +43,13 @@ Python • AI • LLMs • Backend Development
 </div>
 
 <p style={{ textAlign: 'center', fontSize: '1.05rem', lineHeight: '1.8' }}>
-Hey, I’m <strong>Shangar (Keys)</strong> - this wiki is my <strong>digital portfolio</strong> ✨
-where I share my <strong>projects, tools, learnings</strong>, and experiments with AI and backend systems.
+I'm <strong>Shangar (Keys)</strong> — an AI &amp; Software Engineer with a deep focus on building intelligent backend systems and LLM-powered architectures.
+This wiki is my <strong>digital portfolio</strong> where I document projects, engineering decisions, technical learnings, and experiments at the frontier of AI and software development.
 </p>
 
 ---
 
-## 👋 About Me
+## About Me
 
 <table>
   <thead>
@@ -59,17 +59,16 @@ where I share my <strong>projects, tools, learnings</strong>, and experiments wi
     </tr>
   </thead>
   <tbody>
-    <tr><td>🧠 Name</td><td>Shangar Arivazhagan (Keys)</td></tr>
-    <tr><td>💼 Role</td><td>Software Engineer – Lead (Technical Solutions)</td></tr>
-    <tr><td>💻 Tech Stack</td><td>Python, AI, Web Development</td></tr>
-    <tr><td>🕓 Experience</td><td>4+ years</td></tr>
-    <tr><td>📍 Location</td><td>Coimbatore, Tamil Nadu, India</td></tr>
+    <tr><td>Name</td><td>Shangar Arivazhagan (Keys)</td></tr>
+    <tr><td>Role</td><td>AI &amp; Software Engineer – Lead (Technical Solutions)</td></tr>
+    <tr><td>Tech Stack</td><td>Python, AI, LLMs, Backend Systems</td></tr>
+    <tr><td>Location</td><td>Coimbatore, Tamil Nadu, India</td></tr>
   </tbody>
 </table>
 
 ---
 
-## 🌐 Connect with Me
+## Connect with Me
 
 <div
   style={{
@@ -98,7 +97,7 @@ where I share my <strong>projects, tools, learnings</strong>, and experiments wi
     <span>LinkedIn</span>
   </a>
 
-  <!-- markdownlint-disable-next-line MD011 -->
+  {/* markdownlint-disable-next-line MD011 */}
   <a href="https&#58;//github.com/shangar-t-a/" target="_blank" style={{
     display: 'flex',
     alignItems: 'center',
@@ -120,18 +119,18 @@ where I share my <strong>projects, tools, learnings</strong>, and experiments wi
 
 ---
 
-## 🚀 Tech Focus
+## Tech Focus
 
-I’m passionate about building **backend systems**, **AI-driven tools**, and **LLM-powered architectures**.<br />
-My current focus is on:
+I specialize in designing and shipping **backend systems**, **AI-driven tools**, and **LLM-powered architectures** — from prototyping to production.
+My current areas of focus:
 
-- 🐍 **Python Development**
-- 🤖 **AI/LLM Systems**
-- ⚙️ **Backend Engineering**
+- **Python Development** – clean, typed, production-grade code
+- **AI / LLM Systems** – RAG pipelines, agent frameworks, and evaluation
+- **Backend Engineering** – scalable APIs, data modeling, and system design
 
 ---
 
-## 🤖 AI Tools & LLMs
+## AI Tools &amp; LLMs
 
 <table>
   <thead>
@@ -141,17 +140,18 @@ My current focus is on:
     </tr>
   </thead>
   <tbody>
-    <tr><td>🧠 LLM Providers</td><td>OpenAI, Gemini, Ollama, Hugging Face</td></tr>
-    <tr><td>🧬 Embeddings</td><td>OpenAI, Ollama, Hugging Face</td></tr>
-    <tr><td>🗃️ Vector Databases</td><td>Qdrant</td></tr>
-    <tr><td>🧩 Testing / Evaluation</td><td>TruLens</td></tr>
-    <tr><td>🛠️ Frameworks</td><td>LlamaIndex</td></tr>
+    <tr><td>LLM Providers</td><td>OpenAI, Gemini, Ollama, Hugging Face</td></tr>
+    <tr><td>Embeddings</td><td>OpenAI, Ollama, Hugging Face</td></tr>
+    <tr><td>Vector Databases</td><td>Qdrant</td></tr>
+    <tr><td>Testing / Evaluation</td><td>TruLens</td></tr>
+    <tr><td>Frameworks</td><td>LlamaIndex</td></tr>
+    <tr><td>AI Coding Assistants</td><td>Claude Code, Antigravity, GitHub Copilot</td></tr>
   </tbody>
 </table>
 
 ---
 
-## 🐍 Python Tools
+## Python Tools
 
 <table>
   <thead>
@@ -161,19 +161,19 @@ My current focus is on:
     </tr>
   </thead>
   <tbody>
-    <tr><td>🌐 Web Frameworks</td><td>Django, FastAPI</td></tr>
-    <tr><td>🔧 Web Development Support</td><td>Django REST framework, Pydantic, SQLAlchemy, Alembic</td></tr>
-    <tr><td>📦 Dependency Management</td><td>UV, Poetry, Pip</td></tr>
-    <tr><td>🧹 Linting & Formatting (Legacy)</td><td>flake8, pydocstyle, mypy, isort, black</td></tr>
-    <tr><td>⚡ Linting & Formatting (New)</td><td>ruff, mypy</td></tr>
-    <tr><td>🧪 Testing</td><td>PyTest</td></tr>
-    <tr><td>📚 Documentation</td><td>Sphinx</td></tr>
+    <tr><td>Web Frameworks</td><td>Django, FastAPI</td></tr>
+    <tr><td>Web Development Support</td><td>Django REST framework, Pydantic, SQLAlchemy, Alembic</td></tr>
+    <tr><td>Dependency Management</td><td>UV, Poetry, Pip</td></tr>
+    <tr><td>Linting &amp; Formatting (Legacy)</td><td>flake8, pydocstyle, mypy, isort, black</td></tr>
+    <tr><td>Linting &amp; Formatting (New)</td><td>ruff, mypy</td></tr>
+    <tr><td>Testing</td><td>PyTest</td></tr>
+    <tr><td>Documentation</td><td>Sphinx</td></tr>
   </tbody>
 </table>
 
 ---
 
-## 🧭 Development & Management Tools
+## Development &amp; Management Tools
 
 <table>
   <thead>
@@ -183,11 +183,10 @@ My current focus is on:
     </tr>
   </thead>
   <tbody>
-    <tr><td>🐳 Containerization</td><td>Docker, Docker Compose</td></tr>
-    <tr><td>🧑‍💻 IDE</td><td>VSCode, Cursor, PyCharm</td></tr>
-    <tr><td>🪜 Version Control</td><td>GitHub, Bitbucket, Azure DevOps</td></tr>
-    <tr><td>⚡ Code Assistant</td><td>GitHub Copilot, Cursor</td></tr>
-    <tr><td>📈 Project Management</td><td>Azure DevOps, Jira</td></tr>
-    <tr><td>🗒️ Documentation</td><td>Confluence, Azure DevOps Wiki</td></tr>
+    <tr><td>Containerization</td><td>Docker, Docker Compose</td></tr>
+    <tr><td>IDE</td><td>VSCode, Cursor, PyCharm</td></tr>
+    <tr><td>Version Control</td><td>GitHub, Bitbucket, Azure DevOps</td></tr>
+    <tr><td>Project Management</td><td>Azure DevOps, Jira</td></tr>
+    <tr><td>Documentation</td><td>Confluence, Azure DevOps Wiki</td></tr>
   </tbody>
 </table>
