@@ -1,8 +1,8 @@
 {
-    "label": "Shangar's Personal Assist Bella",
+    "label": "Bella Keys",
     "position": 1,
     "link": {
-        "type": "generated-index",
-        "description": "Project ShowCase for Shangar's personal assistant - Bella."
+        "type": "doc",
+        "id": "projects/bella-assist/index"
     }
 }

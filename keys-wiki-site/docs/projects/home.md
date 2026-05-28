@@ -30,12 +30,12 @@ My personal project gallery where I showcase my pet projects!
   }}
 >
   <Card
-    href="/keys-personal-wiki/docs/projects/bella-assist/poster"
+    href="/keys-personal-wiki/docs/projects/bella-assist/"
     title="Bella Assist"
     description="Shangar's personal assistant."
   />
   <Card
-    href="/keys-personal-wiki/docs/projects/bella-assist/expense-manager/poster"
+    href="/keys-personal-wiki/docs/projects/bella-assist/expense-manager/"
     title="Expense Manager"
     description="Shangar's Expense Manager."
   />
