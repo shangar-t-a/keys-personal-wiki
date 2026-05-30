@@ -3,21 +3,12 @@ sidebar_label: 'Home'
 sidebar_position: 1
 ---
 
-import GradientHeading from '@site/src/components/core/GradientHeading';
+import CardGrid from '@site/src/components/core/CardGrid';
+import FeatureCard from '@site/src/components/core/FeatureCard';
 
-import LinkedInIcon from '@site/static/img/docs/intro/linkedin-icon.png';
-import GitHubIcon from '@site/static/img/docs/intro/github-icon.png';
 import ShangarAvatar from '@site/static/img/docs/intro/shangar.png';
 
-<GradientHeading
-  as="h1"
-  gradientFrom="#338cf1"
-  gradientMid="#27dafd"
-  gradientTo="#8f43ec"
->
 # Shangar Arivazhagan (Keys)
-
-</GradientHeading>
 
 <p style={{
   textAlign: 'center',
@@ -25,7 +16,7 @@ import ShangarAvatar from '@site/static/img/docs/intro/shangar.png';
   fontWeight: '500',
   fontSize: '1.1rem'
 }}>
-AI & Software Engineering Technical Lead<br />
+Technical Lead &mdash; AI &amp; Software Development<br />
 Python · AI Systems · LLMs · Backend Engineering
 </p>
 
@@ -53,7 +44,7 @@ experiments across AI and backend systems.
 
 ## About Me
 
-I lead technical delivery across AI and Backend projects, working closely with teams to design systems that solves
+I lead technical delivery across AI and Backend projects, working closely with teams to design systems that solve
 customer pain points in the field of T&M and Enterprise Solutions. My day-to-day spans agentic workflows, API design,
 and keeping production Python services healthy and maintainable.
 
@@ -63,49 +54,67 @@ Outside of work, I spend time exploring AI advancements, working on personal pro
 
 ## Connect with Me
 
-<div
-  style={{
-    display: 'flex',
-    justifyContent: 'left',
-    gap: '1.2rem',
-    marginTop: '1.5rem',
-    flexWrap: 'wrap'
-  }}
->
-  <a href="https&#58;//www.linkedin.com/in/shangar-arivazhagan/" target="_blank" style={{
+<div style={{
+  display: 'flex',
+  gap: '1rem',
+  marginTop: '1.5rem',
+  flexWrap: 'wrap'
+}}>
+  <a href="https://www.linkedin.com/in/shangar-arivazhagan/" target="_blank" style={{
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
-    gap: '0.6rem',
-    padding: '0.8rem 1.6rem',
-    borderRadius: '999px',
-    background: 'linear-gradient(90deg, #0077B5, #00A0DC)',
-    color: '#fff',
+    gap: '0.5rem',
+    padding: '0.6rem 1.2rem',
+    borderRadius: '8px',
+    border: 'var(--card-border)',
+    background: 'var(--ifm-card-background-color)',
+    color: 'var(--ifm-font-color-base)',
     fontWeight: '600',
     textDecoration: 'none',
-    fontSize: '1rem',
-    transition: 'transform 0.2s ease, box-shadow 0.3s ease'
+    fontSize: '0.95rem',
+    transition: 'all 0.2s ease',
+    boxShadow: 'var(--card-shadow)'
+  }}
+  onMouseOver={(e) => {
+    e.currentTarget.style.borderColor = 'var(--ifm-color-primary)';
+    e.currentTarget.style.color = 'var(--ifm-color-primary)';
+    e.currentTarget.style.transform = 'translateY(-2px)';
+  }}
+  onMouseOut={(e) => {
+    e.currentTarget.style.borderColor = 'var(--border-color)';
+    e.currentTarget.style.color = 'var(--ifm-font-color-base)';
+    e.currentTarget.style.transform = 'translateY(0)';
   }}>
-    <img src={LinkedInIcon} width="22" height="22" style={{ verticalAlign: 'middle' }} />
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
     <span>LinkedIn</span>
   </a>
 
-  {/*markdownlint-disable-next-line MD011*/}
-  <a href="https&#58;//github.com/shangar-t-a/" target="_blank" style={{
+  <a href="<https://github.com/shangar-t-a/>" target="_blank" style={{
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
-    gap: '0.6rem',
-    padding: '0.8rem 1.6rem',
-    borderRadius: '999px',
-    background: 'linear-gradient(90deg, #0F2027, #203A43, #2C5364)',
-    color: '#fff',
+    gap: '0.5rem',
+    padding: '0.6rem 1.2rem',
+    borderRadius: '8px',
+    border: 'var(--card-border)',
+    background: 'var(--ifm-card-background-color)',
+    color: 'var(--ifm-font-color-base)',
     fontWeight: '600',
     textDecoration: 'none',
-    fontSize: '1rem',
-    transition: 'transform 0.2s ease, box-shadow 0.3s ease'
+    fontSize: '0.95rem',
+    transition: 'all 0.2s ease',
+    boxShadow: 'var(--card-shadow)'
+  }}
+  onMouseOver={(e) => {
+    e.currentTarget.style.borderColor = 'var(--ifm-color-primary)';
+    e.currentTarget.style.color = 'var(--ifm-color-primary)';
+    e.currentTarget.style.transform = 'translateY(-2px)';
+  }}
+  onMouseOut={(e) => {
+    e.currentTarget.style.borderColor = 'var(--border-color)';
+    e.currentTarget.style.color = 'var(--ifm-font-color-base)';
+    e.currentTarget.style.transform = 'translateY(0)';
   }}>
-    <img src={GitHubIcon} width="22" height="22" style={{ verticalAlign: 'middle' }} />
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
     <span>GitHub</span>
   </a>
 </div>
@@ -116,60 +125,92 @@ Outside of work, I spend time exploring AI advancements, working on personal pro
 
 I work across the full stack of modern AI and backend engineering. Here is where most of my depth sits right now.
 
-**AI Systems and Agent Engineering**
-Building agentic workflows that go beyond simple chat: tool use, multi-step reasoning, structured planning, and
-MCP-based integrations. I care about making agents reliable, observable and evaluatable.
-
-**LLM Engineering**
-RAG pipeline design, retrieval quality, structured outputs, prompt engineering and context engineering, and evaluation
-strategies. I work across OpenAI, Anthropic Claude, and Google Gemini depending on the use case.
-
-**Backend Engineering**
-Async Python with `asyncio` and `httpx`, FastAPI service design, event-driven patterns, Clean Code and clean domain
-modeling with Pydantic and SQLAlchemy. I lean heavily on typed, tested, well-linted code as a baseline.
-
-**AI Infrastructure**
-Vector database management with Qdrant, LLM observability, cost tracking, and evaluation with TruLens and custom
-harnesses. Getting the plumbing right matters as much as the models.
-
----
-
-## AI Tools and LLMs
-
-**LLM Providers:** OpenAI, Anthropic (Claude), Google Gemini, Ollama, Hugging Face
-
-**Frameworks:** LlamaIndex, LangChain & LangGraph (Intermediate)
-
-**Vector Databases:** Qdrant
-
-**Evaluation:** TruLens, custom eval harnesses
-
-**Embeddings:** OpenAI, Ollama, Hugging Face
-
-**AI Coding:** Claude Code, Antigravity, GitHub Copilot
+<CardGrid>
+  <FeatureCard
+    title="AI Systems"
+    description="Prompt, context, and harness engineering. Designing systems utilizing RAG, tool use, multi-step reasoning, structured planning, and MCP integrations. I primarily work on OpenAI models and Anthropic Claude for development (claude code), and Gemini for personal projects."
+  />
+  <FeatureCard
+    title="Backend Engineering"
+    description="Async Python with asyncio and httpx, FastAPI service design, Clean Code, and clean domain modeling with Pydantic and SQLAlchemy. Designing secure authentication flows using OIDC + PKCE across web, SPA, and desktop/CLI platforms."
+  />
+  <FeatureCard
+    title="DevOps & AI Infrastructure"
+    description="Infrastructure containerisation using Docker, Docker Compose, and basics of Kubernetes. Managing vector database storage with Qdrant, alongside LLM observability, cost tracking, and evaluation with TruLens."
+  />
+</CardGrid>
 
 ---
 
-## Python Stack
+## Technical Stack & Tooling
 
-**Web Frameworks:** FastAPI, Django
+Here is the breakdown of the specific technologies and tools I employ on a regular basis.
 
-**Supporting Libraries:** Django REST Framework, Pydantic v2, SQLAlchemy, Alembic, `httpx`, `asyncio`
+### AI & LLM Systems
 
-**Dependency Management:** uv, Poetry (Not Recommending for new projects)
+<CardGrid>
+  <FeatureCard
+    title="Models & Providers"
+    badge="Engines"
+    tags={['OpenAI', 'Anthropic Claude', 'Gemini', 'Others']}
+    description="Primarily working with OpenAI models and Anthropic Claude for development (claude code), and Gemini or others for personal projects."
+  />
+  <FeatureCard
+    title="Frameworks & RAG"
+    badge="Pipelines"
+    tags={['LlamaIndex', 'LangChain', 'LangGraph', 'Custom Agent Loops']}
+    description="Orchestrating agent workflows, structured cognitive patterns, memory management, and advanced retrieval."
+  />
+  <FeatureCard
+    title="Data & Eval"
+    badge="Quality"
+    tags={['Qdrant', 'TruLens', 'Custom Eval Harnesses']}
+    description="Vector storage management, semantic indexing, semantic search tuning, and testing model outputs."
+  />
+</CardGrid>
 
-**Code Quality:** ruff, mypy, pytest
+### Python & Backend Development
 
----
+<CardGrid>
+  <FeatureCard
+    title="Core Stack"
+    badge="Frameworks"
+    tags={['FastAPI', 'Django REST Framework', 'Pydantic v2', 'SQLAlchemy', 'Alembic']}
+    description="Constructing reliable APIs, clean databases, migrations, and declarative schema validations."
+  />
+  <FeatureCard
+    title="Security & Auth"
+    badge="Identity"
+    tags={['OIDC', 'PKCE', 'OAuth2']}
+    description="Implementing robust identity verification and secure authentication scopes for web, SPA, and desktop/CLI apps."
+  />
+  <FeatureCard
+    title="DevOps & Concurrency"
+    badge="Infra"
+    tags={['asyncio', 'httpx', 'Docker', 'Docker Compose', 'k8s basics']}
+    description="Building concurrent background tasks, non-blocking requests, container setups, and basic Kubernetes resources."
+  />
+  <FeatureCard
+    title="Quality & Tooling"
+    badge="Tooling"
+    tags={['uv', 'Poetry', 'ruff', 'mypy', 'pytest']}
+    description="Fast packaging, type safety linting, strict formatting, and robust unit/integration testing."
+  />
+</CardGrid>
 
-## Development and Tooling
+### Dev Infrastructure & Tooling
 
-**Containerisation:** Docker, Docker Compose
-
-**IDEs:** VS Code (Professional) and Antigravity (Personal)
-
-**Version Control:** GitHub, Bitbucket, Azure DevOps
-
-**Project Management:** Azure DevOps, Jira
-
-**Documentation Platforms:** Confluence, Azure DevOps Wiki
+<CardGrid>
+  <FeatureCard
+    title="Workspace"
+    badge="IDEs"
+    tags={['VS Code (Professional)', 'Antigravity (Personal)']}
+    description="Tailored code editing environments with type completions and fast command-line utilities."
+  />
+  <FeatureCard
+    title="Platforms"
+    badge="Management"
+    tags={['GitHub', 'Azure DevOps', 'Bitbucket', 'Jira', 'Confluence']}
+    description="Project tracking, source control, continuous integration, and engineering wikis."
+  />
+</CardGrid>
