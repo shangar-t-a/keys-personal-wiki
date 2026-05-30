@@ -21,62 +21,69 @@ import CenteredIntro from '@site/src/components/core/CenteredIntro';
 </GradientHeading>
 
 <CenteredIntro>
-Bella Keys is a desktop application combining a private AI assistant with multi-period expense and budget tracking. It is built to showcase local development patterns using FastAPI, React, Electron, LangGraph, and the Model Context Protocol (MCP).
+Bella Keys is a privacy-first desktop application combining a personal AI assistant with multi-period expense and budget tracking. Built on LangGraph, FastAPI, React, Electron, and the Model Context Protocol.
 </CenteredIntro>
 
 ---
 
 ## Deployment Architecture
 
-The application uses a hybrid deployment structure that isolates stateless application runtimes inside Docker containers while preserving sensitive user databases natively on the host filesystem. This ensures complete data privacy and offline operational capabilities:
+Bella Keys uses an inside-out architecture: application logic runs in Docker containers while all user data (PostgreSQL, Qdrant, Ollama models) stays on the host machine. The React UI is served by nginx in web mode and connects directly to services in Electron mode.
 
 ```mermaid
 graph TD
-    subgraph Client ["Client Environment (Host PC)"]
-        UI["Electron Desktop Window (React 19)"]
+    subgraph Client ["Client"]
+        UI["React 19 UI (Electron Desktop)"]
     end
 
-    subgraph Containers ["Stateless Services (Docker Network)"]
-        FastAPI["FastAPI API Gateway Gateway"]
-        EMS["Expense Manager Backend (FastAPI)"]
-        Chat["Bella Chat Engine (LangGraph)"]
-        MCP["EMS MCP Server (JSON-RPC)"]
+    subgraph Gateway ["nginx (Web / Docker mode)"]
+        Nginx["nginx Reverse Proxy"]
     end
 
-    subgraph NativeData ["Secure Data Stores (Host OS)"]
-        Ollama["Ollama Local AI Models"]
-        Postgres["PostgreSQL Database (Transactional & Session State)"]
-        Qdrant["Qdrant Vector DB (RAG Semantic Memory)"]
+    subgraph Containers ["Docker Containers (Stateless Logic)"]
+        EMS["Expense Manager Service (FastAPI :8000)"]
+        Chat["Bella Chat Service (FastAPI :5000)"]
+        MCPServer["EMS MCP Server (FastMCP :8001)"]
     end
 
-    UI -->|HTTP / WebSockets| FastAPI
-    FastAPI -->|Route| EMS
-    FastAPI -->|Route| Chat
-    EMS -->|Primary Ledger| Postgres
-    Chat -->|Store Chat Checkpoints| Postgres
-    Chat -->|Local Vector Query| Qdrant
-    Chat -->|Private Inference| Ollama
-    Chat -->|Query Finances| MCP
-    MCP -->|Read Operations| EMS
+    subgraph Host ["Host OS (Stateful Data)"]
+        Postgres["PostgreSQL :5432"]
+        Qdrant["Qdrant :6333"]
+        Ollama["Ollama :11434"]
+    end
+
+    UI -->|"Electron: direct HTTP"| EMS
+    UI -->|"Electron: direct SSE"| Chat
+    UI -->|"Web: /api/ems"| Nginx
+    UI -->|"Web: /api/bella-chat"| Nginx
+    Nginx -->|"proxy_pass"| EMS
+    Nginx -->|"proxy_pass"| Chat
+    Chat -->|"streamable-HTTP tools"| MCPServer
+    MCPServer -->|"HTTP"| EMS
+    Chat -->|"vector search"| Qdrant
+    Chat -->|"checkpoints"| Postgres
+    Chat -->|"inference"| Ollama
+    EMS -->|"ORM"| Postgres
 ```
 
 ---
 
 ## Core Components
 
-The application is structured into the following distinct services:
+1. **Desktop Client**
+   React 19 interface inside Electron, compiled with Vite and styled with Material UI v6. Served by nginx in web/Docker mode; connects directly to services in Electron mode.
 
-1. **Desktop Client** ([Overview](./expense-manager/index.md))
-   - Features a React 19 interface running inside Electron, compiled using Vite and styled with Material UI v6.
+2. **Expense Manager Service** ([Technical Details](./expense-manager.md))
+   Clean Architecture FastAPI service for multi-period budgeting, savings envelopes, and account tracking. Backed by async SQLAlchemy and PostgreSQL.
 
-2. **Expense Manager Service** ([Technical Details](./expense-manager/architecture.md))
-   - Implements FastAPI clean architecture with support for multiple periods and accounts using SQLAlchemy.
+3. **Bella Chat Service** ([Agent Details](./bella-chat.md))
+   LangGraph `create_agent` orchestrator with RAG knowledge search, MCP tool use, SSE streaming, and Arize Phoenix observability. Supports Ollama (local) and Google Gemini as the LLM backend.
 
-3. **Bella Chat Service** ([Agent Details](./bella-chat/architecture.md))
-   - Orchestrates multi-turn conversations and task execution using LangGraph, Qdrant semantic memory, and Ollama.
+4. **EMS MCP Server** ([Server Details](./ems-mcp-server.md))
+   FastMCP service exposing EMS financial data as read-only LLM-callable tools over streamable HTTP.
 
-4. **Integration Interfaces** ([Protocol Details](./mcp-integration/index.md))
-   - Exposes database read tools to the LLM via the Model Context Protocol (MCP) and processes knowledge ingestion via ETL pipelines.
+5. **ETL Pipelines** ([Pipeline Details](./etl-pipelines.md))
+   Offline ingestion job that fetches wiki docs from GitHub and loads dense vector embeddings into Qdrant.
 
 ---
 
@@ -105,11 +112,11 @@ The application is structured into the following distinct services:
   </TabItem>
   <TabItem value="chat" label="Intelligent Assistant">
     <h3>Multi-Turn Agentic Chat Workspace</h3>
-    <p>The desktop chat panel connects to containerized LangGraph workflows, routing data searches through the local database and vector indexes:</p>
+    <p>The desktop chat panel connects to the LangGraph OrchestratorAgent, routing queries to financial data tools or the RAG knowledge base:</p>
     <img src={require('./assets/images/chat-loading.png').default} alt="Chat Workspace" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
     <br/><br/>
     <h3>Context Retrieval with Grounded Citations</h3>
-    <p>The chatbot performs semantic vector RAG to retrieve matching documentation references with dynamic overlays:</p>
+    <p>The RAGAgent performs semantic vector search and returns source-linked citations alongside the answer:</p>
     <img src={require('./assets/images/chat-response-ans-available.png').default} alt="Chat RAG Response" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
   </TabItem>
 </Tabs>
