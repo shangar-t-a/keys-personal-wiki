@@ -1,23 +1,202 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+/* Homepage layout styling */
 
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+.heroContainer {
+  padding: 8rem 0 6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
   overflow: hidden;
+  text-align: center;
+  background: radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.04) 0%, transparent 60%);
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+[data-theme='dark'] .heroContainer {
+  background: radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.04) 0%, transparent 40%);
+}
+
+.heroContent {
+  max-width: 800px;
+  padding: 0 1.5rem;
+  z-index: 10;
+}
+
+.title {
+  font-size: 3.8rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-heading-color);
+  background: linear-gradient(135deg, var(--ifm-heading-color) 30%, var(--ifm-color-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme='dark'] .title {
+  background: linear-gradient(135deg, #ffffff 40%, var(--ifm-color-primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .subtitle {
+  color: var(--ifm-color-primary-light);
+}
+
+.description {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--ifm-font-color-secondary);
+  max-width: 600px;
+  margin: 0 auto 2.5rem auto;
 }
 
 .buttons {
   display: flex;
-  align-items: center;
+  gap: 1rem;
   justify-content: center;
+  align-items: center;
+}
+
+.primaryButton {
+  background: var(--ifm-color-primary);
+  color: #ffffff !important;
+  font-weight: 700;
+  padding: 0.8rem 2rem;
+  border-radius: 99px;
+  font-size: 1rem;
+  border: 1px solid var(--ifm-color-primary);
+  box-shadow: 0 4px 14px rgba(14, 165, 233, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+}
+
+.primaryButton:hover {
+  background: var(--ifm-color-primary-dark);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
+  transform: translateY(-2px);
+}
+
+[data-theme='dark'] .primaryButton {
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.25);
+}
+
+[data-theme='dark'] .primaryButton:hover {
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+}
+
+/* Mouse scroll indicator styling */
+.scrollIndicator {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.7;
+  animation: fadePulse 2s infinite ease-in-out;
+}
+
+.mouse {
+  width: 24px;
+  height: 40px;
+  border: 2px solid var(--ifm-font-color-secondary);
+  border-radius: 12px;
+  position: relative;
+}
+
+.wheel {
+  width: 4px;
+  height: 8px;
+  background: var(--ifm-color-primary);
+  border-radius: 2px;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollWheel 1.6s infinite cubic-bezier(0.15, 0.41, 0.69, 0.94);
+}
+
+@keyframes scrollWheel {
+  0% {
+    opacity: 0;
+    top: 6px;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    top: 18px;
+  }
+}
+
+@keyframes fadePulse {
+
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.mainSection {
+  padding: 4rem 0 8rem 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.sectionUnderline {
+  width: 60px;
+  height: 4px;
+  background: var(--ifm-color-primary);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .heroContainer {
+    padding: 5rem 0 3rem 0;
+  }
+
+  .title {
+    font-size: 2.6rem;
+  }
+
+  .subtitle {
+    font-size: 1.4rem;
+  }
+
+  .scrollIndicator {
+    display: none;
+  }
 }

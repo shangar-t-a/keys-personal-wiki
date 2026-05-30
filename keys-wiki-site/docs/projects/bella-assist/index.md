@@ -7,18 +7,9 @@ description: 'Bella Keys Project Overview'
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import GradientHeading from '@site/src/components/core/GradientHeading';
 import CenteredIntro from '@site/src/components/core/CenteredIntro';
 
-<GradientHeading
-  as="h1"
-  gradientFrom="#f1c533ff"
-  gradientMid="#f5e97eff"
-  gradientTo="#8f860cff"
->
 # Bella Keys
-
-</GradientHeading>
 
 <CenteredIntro>
 Bella Keys is a privacy-first desktop application combining a personal AI assistant with multi-period expense and budget tracking. Built on LangGraph, FastAPI, React, Electron, and the Model Context Protocol.
