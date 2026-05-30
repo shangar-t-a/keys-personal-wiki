@@ -3,8 +3,8 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: "Shangar's Portfolio🤖",
-  tagline: "Shangar (Keys') Portfolio, Learning hub and more...",
+  title: "Shangar's Portfolio",
+  tagline: 'Technical Lead (AI & Software Development)',
   favicon: 'img/favicon.ico',
 
   // Production URL
@@ -127,7 +127,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Shangar Arivazhagan (Keys), Inc.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Shangar Arivazhagan (Keys)`,
     },
     prism: {
       theme: prismThemes.github,

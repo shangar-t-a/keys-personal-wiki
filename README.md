@@ -1,7 +1,8 @@
-# Shangar Arivazhagan (Keys') Portfolio 🤖
+# Shangar Arivazhagan (Keys) - Portfolio
 
-My portfolio with collection of projects, tools, and resources... 😀
+A personal portfolio and knowledge base covering projects, engineering decisions, and technical learnings across AI
+systems, backend development, and software engineering.
 
-The portfolio is built using Docusaurus and hosted on GitHub Pages. 🦖
+Built with Docusaurus and hosted on GitHub Pages.
 
-**Open Portfolio:** <https://shangar-t-a.github.io/keys-personal-wiki/> 🚀
+**Portfolio:** <https://shangar-t-a.github.io/keys-personal-wiki/>

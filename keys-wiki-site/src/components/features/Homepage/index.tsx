@@ -14,21 +14,19 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/profile_details.svg').default,
     description: (
       <>
-        Shangar Arivazhagan <br></br>
-        Software Engineer (Python) <br></br>
-        <strong>Interests:</strong> Web Development, GenAI & Automation <br></br>
-        <strong>Skills:</strong> Django, FastAPI, Pytest, GenAI (Beginner) & Backend Developer (Python - Intermediate) <br></br>
+        Shangar Arivazhagan (Keys) &mdash; Technical Lead - AI &amp; Software Development. <br></br>
+        I design and ship backend systems and agentic AI solutions.<br></br>
+        <strong>Focus:</strong> AI Systems, Backend Engineering<br></br>
       </>
     ),
   },
   {
-    title: 'Personal Blog / Wiki',
+    title: 'Knowledge Base',
     Svg: require('@site/static/img/taking_notes.svg').default,
     description: (
       <>
-        My Personal Blog / Wiki primarily focussing Python. The blogs helps me to refer back to the concepts and also
-        to share my learnings with the community. The blogs cover various tasks and tools that I use in my day to day
-        work as a Python backend developer.
+        My collection of technical notes, engineering decisions, and learnings across AI,
+        backend systems, and Python. Written to be useful long after the initial exploration.
       </>
     ),
   },
@@ -37,14 +35,14 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/my_personal_files.svg').default,
     description: (
       <>
-        My personal project gallery where I showcase my personal projects built for personal learning, fun, and
-        upskilling.
+        Personal and professional projects spanning agentic AI, backend services, and developer tooling.
+        Built for showcasing my work and contributions.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
