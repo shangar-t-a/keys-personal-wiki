@@ -25,8 +25,8 @@ import ShangarAvatar from '@site/static/img/docs/intro/shangar.png';
   fontWeight: '500',
   fontSize: '1.1rem'
 }}>
-AI &amp; Software Engineer – Lead (Technical Solutions)<br />
-Python · AI · LLMs · Backend Development
+AI & Software Engineering Technical Lead<br />
+Python · AI Systems · LLMs · Backend Engineering
 </p>
 
 <div style={{ textAlign: 'center', margin: '2.5rem 0' }}>
@@ -43,28 +43,21 @@ Python · AI · LLMs · Backend Development
 </div>
 
 <p style={{ textAlign: 'center', fontSize: '1.05rem', lineHeight: '1.8' }}>
-I'm <strong>Shangar (Keys)</strong> — an AI &amp; Software Engineer with a deep focus on building intelligent backend systems and LLM-powered architectures.
-This wiki is my <strong>digital portfolio</strong> where I document projects, engineering decisions, technical learnings, and experiments at the frontier of AI and software development.
+I'm <strong>Shangar (Keys)</strong>, an AI and Software Engineering Technical Lead based in Coimbatore, Tamil Nadu.
+I focus on building backend systems, agentic AI solutions that work reliably at scale. <br></br>
+This wiki is my <strong>digital portfolio</strong> where I document projects, technical decisions and learnings, and
+experiments across AI and backend systems.
 </p>
 
 ---
 
 ## About Me
 
-<table>
-  <thead>
-    <tr>
-      <th>Attribute</th>
-      <th>Details</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Name</td><td>Shangar Arivazhagan (Keys)</td></tr>
-    <tr><td>Role</td><td>AI &amp; Software Engineer – Lead (Technical Solutions)</td></tr>
-    <tr><td>Tech Stack</td><td>Python, AI, LLMs, Backend Systems</td></tr>
-    <tr><td>Location</td><td>Coimbatore, Tamil Nadu, India</td></tr>
-  </tbody>
-</table>
+I lead technical delivery across AI and Backend projects, working closely with teams to design systems that solves
+customer pain points in the field of T&M and Enterprise Solutions. My day-to-day spans agentic workflows, API design,
+and keeping production Python services healthy and maintainable.
+
+Outside of work, I spend time exploring AI advancements, working on personal projects, and writing up what I learn here.
 
 ---
 
@@ -97,7 +90,7 @@ This wiki is my <strong>digital portfolio</strong> where I document projects, en
     <span>LinkedIn</span>
   </a>
 
-  {/* markdownlint-disable-next-line MD011 */}
+  {/*markdownlint-disable-next-line MD011*/}
   <a href="https&#58;//github.com/shangar-t-a/" target="_blank" style={{
     display: 'flex',
     alignItems: 'center',
@@ -121,72 +114,62 @@ This wiki is my <strong>digital portfolio</strong> where I document projects, en
 
 ## Tech Focus
 
-I specialize in designing and shipping **backend systems**, **AI-driven tools**, and **LLM-powered architectures** — from prototyping to production.
-My current areas of focus:
+I work across the full stack of modern AI and backend engineering. Here is where most of my depth sits right now.
 
-- **Python Development** – clean, typed, production-grade code
-- **AI / LLM Systems** – RAG pipelines, agent frameworks, and evaluation
-- **Backend Engineering** – scalable APIs, data modeling, and system design
+**AI Systems and Agent Engineering**
+Building agentic workflows that go beyond simple chat: tool use, multi-step reasoning, structured planning, and
+MCP-based integrations. I care about making agents reliable, observable and evaluatable.
 
----
+**LLM Engineering**
+RAG pipeline design, retrieval quality, structured outputs, prompt engineering and context engineering, and evaluation
+strategies. I work across OpenAI, Anthropic Claude, and Google Gemini depending on the use case.
 
-## AI Tools &amp; LLMs
+**Backend Engineering**
+Async Python with `asyncio` and `httpx`, FastAPI service design, event-driven patterns, Clean Code and clean domain
+modeling with Pydantic and SQLAlchemy. I lean heavily on typed, tested, well-linted code as a baseline.
 
-<table>
-  <thead>
-    <tr>
-      <th>Category</th>
-      <th>Tools / Platforms</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>LLM Providers</td><td>OpenAI, Gemini, Ollama, Hugging Face</td></tr>
-    <tr><td>Embeddings</td><td>OpenAI, Ollama, Hugging Face</td></tr>
-    <tr><td>Vector Databases</td><td>Qdrant</td></tr>
-    <tr><td>Testing / Evaluation</td><td>TruLens</td></tr>
-    <tr><td>Frameworks</td><td>LlamaIndex</td></tr>
-    <tr><td>AI Coding Assistants</td><td>Claude Code, Antigravity, GitHub Copilot</td></tr>
-  </tbody>
-</table>
+**AI Infrastructure**
+Vector database management with Qdrant, LLM observability, cost tracking, and evaluation with TruLens and custom
+harnesses. Getting the plumbing right matters as much as the models.
 
 ---
 
-## Python Tools
+## AI Tools and LLMs
 
-<table>
-  <thead>
-    <tr>
-      <th>Category</th>
-      <th>Tools / Modules</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Web Frameworks</td><td>Django, FastAPI</td></tr>
-    <tr><td>Web Development Support</td><td>Django REST framework, Pydantic, SQLAlchemy, Alembic</td></tr>
-    <tr><td>Dependency Management</td><td>UV, Poetry, Pip</td></tr>
-    <tr><td>Linting &amp; Formatting (Legacy)</td><td>flake8, pydocstyle, mypy, isort, black</td></tr>
-    <tr><td>Linting &amp; Formatting (New)</td><td>ruff, mypy</td></tr>
-    <tr><td>Testing</td><td>PyTest</td></tr>
-    <tr><td>Documentation</td><td>Sphinx</td></tr>
-  </tbody>
-</table>
+**LLM Providers:** OpenAI, Anthropic (Claude), Google Gemini, Ollama, Hugging Face
+
+**Frameworks:** LlamaIndex, LangChain & LangGraph (Intermediate)
+
+**Vector Databases:** Qdrant
+
+**Evaluation:** TruLens, custom eval harnesses
+
+**Embeddings:** OpenAI, Ollama, Hugging Face
+
+**AI Coding:** Claude Code, Antigravity, GitHub Copilot
 
 ---
 
-## Development &amp; Management Tools
+## Python Stack
 
-<table>
-  <thead>
-    <tr>
-      <th>Category</th>
-      <th>Tools / Platforms</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Containerization</td><td>Docker, Docker Compose</td></tr>
-    <tr><td>IDE</td><td>VSCode, Cursor, PyCharm</td></tr>
-    <tr><td>Version Control</td><td>GitHub, Bitbucket, Azure DevOps</td></tr>
-    <tr><td>Project Management</td><td>Azure DevOps, Jira</td></tr>
-    <tr><td>Documentation</td><td>Confluence, Azure DevOps Wiki</td></tr>
-  </tbody>
-</table>
+**Web Frameworks:** FastAPI, Django
+
+**Supporting Libraries:** Django REST Framework, Pydantic v2, SQLAlchemy, Alembic, `httpx`, `asyncio`
+
+**Dependency Management:** uv, Poetry (Not Recommending for new projects)
+
+**Code Quality:** ruff, mypy, pytest
+
+---
+
+## Development and Tooling
+
+**Containerisation:** Docker, Docker Compose
+
+**IDEs:** VS Code (Professional) and Antigravity (Personal)
+
+**Version Control:** GitHub, Bitbucket, Azure DevOps
+
+**Project Management:** Azure DevOps, Jira
+
+**Documentation Platforms:** Confluence, Azure DevOps Wiki
