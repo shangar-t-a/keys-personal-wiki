@@ -11,6 +11,13 @@ import styles from './index.module.css';
 function HomepageHeader() {
   return (
     <header className={styles.heroContainer}>
+      {/* Premium Ambient Background Mesh & Orbs */}
+      <div className={styles.orbContainer}>
+        <div className={styles.meshBg}></div>
+        <div className={styles.orbBlue}></div>
+        <div className={styles.orbCyan}></div>
+      </div>
+
       <div className={styles.heroContent}>
         <Heading as="h1" className={styles.title}>
           Hi. I'm Shangar.
