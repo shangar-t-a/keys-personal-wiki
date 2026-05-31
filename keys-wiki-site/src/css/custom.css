@@ -113,19 +113,38 @@ body {
 
 /* Premium Glassmorphism Navigation Bar */
 .navbar {
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.85); /* Fallback */
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02), inset 0 -1px 0 rgba(255, 255, 255, 0.6);
   transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s, box-shadow 0.4s;
-  padding: 0.6rem 2rem;
+}
+
+/* Use pseudo-element for backdrop-filter to prevent breaking Docusaurus position:fixed mobile sidebar */
+.navbar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: -1;
+  pointer-events: none;
+}
+
+@media (min-width: 997px) {
+  .navbar {
+    padding: 0.6rem 2rem;
+  }
 }
 
 [data-theme='dark'] .navbar {
-  background-color: rgba(7, 10, 19, 0.65);
+  background-color: rgba(7, 10, 19, 0.85); /* Fallback */
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 1px 15px rgba(56, 189, 248, 0.03), inset 0 -1px 0 rgba(255, 255, 255, 0.03);
+}
+
+[data-theme='dark'] .navbar::before {
+  background-color: rgba(7, 10, 19, 0.4);
 }
 
 .navbar__brand {
@@ -149,46 +168,68 @@ body {
   opacity: 0.85;
 }
 
-.navbar__item.navbar__link {
-  position: relative;
-  font-weight: 600;
-  font-size: 0.92rem;
-  color: var(--ifm-font-color-base);
-  transition: color 0.25s ease;
-  padding: 0.4rem 0.8rem !important;
-  margin: 0 0.15rem;
+/* Premium Mobile Sidebar Menu */
+.navbar-sidebar {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
-.navbar__item.navbar__link::after {
-  content: '';
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-primary-light));
-  transition: width 0.25s cubic-bezier(0.25, 0.8, 0.25, 1), left 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border-radius: 2px;
+[data-theme='dark'] .navbar-sidebar {
+  background-color: rgba(7, 10, 19, 0.85) !important;
 }
 
-.navbar__item.navbar__link:hover::after {
-  width: 70%;
-  left: 15%;
+.navbar-sidebar__brand {
+  box-shadow: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.navbar__item.navbar__link:hover {
-  color: var(--ifm-color-primary) !important;
-  text-decoration: none;
+[data-theme='dark'] .navbar-sidebar__brand {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.navbar__item.navbar__link--active::after {
-  width: 70%;
-  left: 15%;
-  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-primary-light));
-}
+@media (min-width: 997px) {
+  .navbar__item.navbar__link {
+    position: relative;
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--ifm-font-color-base);
+    transition: color 0.25s ease;
+    padding: 0.4rem 0.8rem !important;
+    margin: 0 0.15rem;
+  }
 
-.navbar__item.navbar__link--active {
-  color: var(--ifm-color-primary) !important;
+  .navbar__item.navbar__link::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-primary-light));
+    transition: width 0.25s cubic-bezier(0.25, 0.8, 0.25, 1), left 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-radius: 2px;
+  }
+
+  .navbar__item.navbar__link:hover::after {
+    width: 70%;
+    left: 15%;
+  }
+
+  .navbar__item.navbar__link:hover {
+    color: var(--ifm-color-primary) !important;
+    text-decoration: none;
+  }
+
+  .navbar__item.navbar__link--active::after {
+    width: 70%;
+    left: 15%;
+    background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-primary-light));
+  }
+
+  .navbar__item.navbar__link--active {
+    color: var(--ifm-color-primary) !important;
+  }
 }
 
 /* Modernized Sidebar */
