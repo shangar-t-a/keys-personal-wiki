@@ -103,11 +103,11 @@ graph TD
   </TabItem>
   <TabItem value="chat" label="Intelligent Assistant">
     <h3>Multi-Turn Agentic Chat Workspace</h3>
-    <p>The desktop chat panel connects to the LangGraph OrchestratorAgent, routing queries to financial data tools or the RAG knowledge base:</p>
-    <img src={require('./assets/images/chat-loading.png').default} alt="Chat Workspace" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
+    <p>The desktop chat panel supports multi-turn conversations and connects to the LangGraph OrchestratorAgent, routing queries to financial data tools (e.g. EMS MCP server tools to retrieve top expenses) or summarizing the chat history:</p>
+    <img src={require('./assets/images/ai-chat-ems-tool-and-chat-history.png').default} alt="Chat Workspace" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
     <br/><br/>
     <h3>Context Retrieval with Grounded Citations</h3>
-    <p>The RAGAgent performs semantic vector search and returns source-linked citations alongside the answer:</p>
-    <img src={require('./assets/images/chat-response-ans-available.png').default} alt="Chat RAG Response" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
+    <p>The agent uses the RAG search tool to perform semantic vector search against the Qdrant knowledge base, returning grounded answers with clickable source citations:</p>
+    <img src={require('./assets/images/ai-chat-rag-tool.png').default} alt="Chat RAG Response" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
   </TabItem>
 </Tabs>

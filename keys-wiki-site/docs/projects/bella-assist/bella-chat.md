@@ -72,17 +72,17 @@ All conversation turns are serialized into `bella_chat_checkpoints` (PostgreSQL)
   </TabItem>
   <TabItem value="workspace" label="Workspace">
 
-### Session Initialization
+### Multi-Turn Conversation & Tool Execution
 
-The interface starts a new conversation thread and connects to the OrchestratorAgent:
+The interface displays multi-turn conversation history and active tool execution, such as retrieving the top 3 financial expenses from ledger tables using the EMS MCP server and summarizing the overall chat discussion:
 
-![Chat Interface](./assets/images/chat-loading.png)
+![Multi-Turn Conversation and Tool Execution](./assets/images/ai-chat-ems-tool-and-chat-history.png)
 
-### Verified Retrieval
+### Context Retrieval & Citations (RAG)
 
-The RAGAgent returns grounded answers with source citation overlays:
+The agent triggers the `rag_search` tool to fetch grounded information from the Qdrant vector database (e.g., retrieving details about Shangar Arivazhagan/Keys), presenting a structured markdown response with clickable source citation links:
 
-![Chat Response Answer Available](./assets/images/chat-response-ans-available.png)
+![Context Retrieval and Citations (RAG)](./assets/images/ai-chat-rag-tool.png)
 
   </TabItem>
 </Tabs>
