@@ -2,24 +2,24 @@
 sidebar_level: 2
 sidebar_label: 'Overview'
 sidebar_position: 1
-description: 'Bella Keys Project Overview'
+description: 'Bella Assist Project Overview'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CenteredIntro from '@site/src/components/core/CenteredIntro';
 
-# Bella Keys
+# Bella Assist
 
 <CenteredIntro>
-Bella Keys is a privacy-first desktop application combining a personal AI assistant with multi-period expense and budget tracking. Built on LangGraph, FastAPI, React, Electron, and the Model Context Protocol.
+Bella Assist is a privacy-first desktop application combining a personal AI assistant with multi-period expense and budget tracking. Built on LangGraph, FastAPI, React, Electron, and the Model Context Protocol.
 </CenteredIntro>
 
 ---
 
 ## Deployment Architecture
 
-Bella Keys uses an inside-out architecture: application logic runs in Docker containers while all user data (PostgreSQL, Qdrant, Ollama models) stays on the host machine. The React UI is served by nginx in web mode and connects directly to services in Electron mode.
+Bella Assist uses an inside-out architecture: application logic runs in Docker containers while all user data (PostgreSQL, Qdrant, Ollama models) stays on the host machine. The React UI is served by nginx in web mode and connects directly to services in Electron mode.
 
 ```mermaid
 graph TD

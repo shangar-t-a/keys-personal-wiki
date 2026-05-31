@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 # Bella Chat Service
 
-The Bella Chat Service is the AI orchestration engine for Bella Keys. It routes user queries to the right tool — financial data via MCP, knowledge search via RAG, or a direct LLM response — and streams the result back token-by-token over SSE.
+The Bella Chat Service is the AI orchestration engine for Bella Assist. It routes user queries to the right tool — financial data via MCP, knowledge search via RAG, or a direct LLM response — and streams the result back token-by-token over SSE.
 
 ---
 
