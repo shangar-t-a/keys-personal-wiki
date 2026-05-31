@@ -19,7 +19,7 @@ A curated showcase of personal engineering projects spanning AI systems, backend
 <div style={{ marginTop: '2.5rem', marginBottom: '1.5rem' }}>
   <FeatureCard
     href="/keys-personal-wiki/docs/projects/bella-assist/"
-    title="Bella Keys &mdash; Personal AI Assistant"
+    title="Bella Assist &mdash; Personal AI Assistant"
     badge="Featured App"
     tags={['Electron', 'LangGraph', 'FastAPI', 'React']}
     description="A privacy-first desktop application combining a personal AI assistant with multi-period expense and budget tracking. Built on LangGraph, FastAPI, React, Electron, and the Model Context Protocol."
