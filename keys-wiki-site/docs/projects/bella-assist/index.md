@@ -81,25 +81,42 @@ graph TD
 ## User Workspace Showcase
 
 <Tabs>
-  <TabItem value="budget" label="Budgeting and Envelopes" default>
-    <h3>Envelope Allocations and Period Parameters</h3>
-    <p>Distribute active monthly income into customized spending and savings envelopes. The table updates balances in real-time as expense items are added.</p>
-    <img src={require('./assets/images/monthly-budget.png').default} alt="Monthly Budget" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
+  <TabItem value="budget" label="Budget and Envelopes" default>
+    <h3>Period Allocation Planner</h3>
+    <p>Distribute active monthly income into customized spending and savings envelopes using an interactive radial allocation planner:</p>
+    <img src={require('./assets/images/08-budget-visuals.png').default} alt="Period Allocation Planner" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
     <br/><br/>
     <h3>Savings Envelopes Breakdown</h3>
-    <p>Monitor target progress and transaction balances dynamically for savings objectives:</p>
-    <img src={require('./assets/images/dashboards-savings-envelopes-top.png').default} alt="Savings Envelopes Top" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%', marginBottom: '1rem' }} />
-    <img src={require('./assets/images/dashboards-savings-envelopes-bottom.png').default} alt="Savings Envelopes Bottom" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
+    <p>Monitor target progress, category splits, and transaction ledger updates dynamically for savings objectives:</p>
+    <img src={require('./assets/images/05-savings-envelopes.png').default} alt="Savings Envelopes Top" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%', marginBottom: '1rem' }} />
+    <img src={require('./assets/images/06-savings-envelopes-txs.png').default} alt="Savings Envelopes Ledger" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
   </TabItem>
   <TabItem value="accounts" label="Accounts and Balances">
-    <h3>Liquid Assets and Liabilities</h3>
-    <p>Consolidate bank accounts, savings allocations, and credit liabilities into a single view to monitor net worth statistics:</p>
-    <img src={require('./assets/images/dashboards-account-balances.png').default} alt="Account Balances" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
+    <h3>Liquid Ledger and Reconciliations</h3>
+    <p>Consolidate bank accounts, credit liabilities, and transaction histories into a single view to monitor liquid balances:</p>
+    <img src={require('./assets/images/04-spending-accounts.png').default} alt="Account Balances" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
     <br/><br/>
     <h3>Account and Category Configurations</h3>
     <p>Manage active ledger accounts and category thresholds directly inside settings cards:</p>
-    <img src={require('./assets/images/settings-bank-accounts.png').default} alt="Bank Accounts Settings" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%', marginBottom: '1rem' }} />
-    <img src={require('./assets/images/settings-budget-categories.png').default} alt="Budget Categories Settings" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
+    <img src={require('./assets/images/17-settings-accounts.png').default} alt="Bank Accounts Settings" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%', marginBottom: '1rem' }} />
+    <img src={require('./assets/images/18-settings-categories.png').default} alt="Budget Categories Settings" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
+  </TabItem>
+  <TabItem value="wealth" label="Wealth Manager">
+    <h3>Assets Trackers</h3>
+    <p>Track value-based (e.g. cash, savings) and unit-based (e.g. equity, gold) assets across five distinct categories:</p>
+    <img src={require('./assets/images/09-wealth-assets.png').default} alt="Assets Tracker" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
+    <br/><br/>
+    <h3>Liabilities Tracking & Projections</h3>
+    <p>Model Scheduled EMI and Non-EMI interest-bearing liabilities, configure moratoriums, and project long-term amortization curves:</p>
+    <img src={require('./assets/images/10-wealth-liabilities.png').default} alt="Liabilities Tracker" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
+    <br/><br/>
+    <h3>Historical Net Worth Trajectory</h3>
+    <p>Visualize the 12-month trajectory of assets, liabilities, and net worth side-by-side using composed charts:</p>
+    <img src={require('./assets/images/13-wealth-networth.png').default} alt="Net Worth Tab" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
+    <br/><br/>
+    <h3>Portfolio Allocation & Health Ratios</h3>
+    <p>Monitor self-owned asset financing leverage and track portfolio liquidity and debt risk ratios against industry-standard limits:</p>
+    <img src={require('./assets/images/14-wealth-allocation.png').default} alt="Allocation Tab" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
   </TabItem>
   <TabItem value="chat" label="Intelligent Assistant">
     <h3>Multi-Turn Agentic Chat Workspace</h3>
