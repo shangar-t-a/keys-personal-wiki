@@ -10,35 +10,43 @@ import ShangarAvatar from '@site/static/img/docs/intro/shangar.png';
 
 # Shangar Arivazhagan (Keys)
 
-<p style={{
-  textAlign: 'center',
-  fontStyle: 'italic',
-  fontWeight: '500',
-  fontSize: '1.1rem'
-}}>
-Technical Lead &mdash; AI &amp; Software Development<br />
-Python · AI Systems · LLMs · Backend Engineering
-</p>
-
-<div style={{ textAlign: 'center', margin: '2.5rem 0' }}>
-  <img
-    src={ShangarAvatar}
-    alt="Shangar Avatar"
-    style={{
-      width: '150px',
-      borderRadius: '50%',
-      border: '3px solid rgba(76, 201, 240, 0.7)',
-      boxShadow: '0 0 35px rgba(76,201,240,0.4)'
-    }}
-  />
+<div style={{ display: 'flex', alignItems: 'center', gap: '2.5rem', flexWrap: 'wrap-reverse', margin: '1rem 0 2.5rem 0' }}>
+  <div style={{ flex: '3', minWidth: '300px' }}>
+    <p style={{
+      fontStyle: 'italic',
+      fontWeight: '600',
+      fontSize: '1.2rem',
+      color: 'var(--ifm-color-primary)',
+      marginBottom: '1.5rem',
+      lineHeight: '1.5'
+    }}>
+      Technical Lead &mdash; AI &amp; Software Development<br />
+      <span style={{ fontSize: '1rem', fontWeight: '500', color: 'var(--ifm-font-color-base)', opacity: 0.8 }}>Python · AI Systems · LLMs · Backend Engineering</span>
+    </p>
+    <p style={{ fontSize: '1.05rem', lineHeight: '1.8' }}>
+      I'm <strong>Shangar (Keys)</strong>, an AI and Software Engineering Technical Lead based in Coimbatore, Tamil Nadu.
+      I focus on building backend systems and agentic AI solutions that work reliably at scale.
+    </p>
+    <p style={{ fontSize: '1.05rem', lineHeight: '1.8' }}>
+      This wiki is my <strong>digital portfolio</strong> where I document projects, technical decisions, and experiments across AI and backend systems.
+    </p>
+  </div>
+  <div style={{ flex: '1', display: 'flex', justifyContent: 'center', minWidth: '220px' }}>
+    <img
+      src={ShangarAvatar}
+      alt="Shangar Avatar"
+      style={{
+        width: '220px',
+        height: '275px',
+        objectFit: 'cover',
+        borderRadius: '12px',
+        border: '3px solid rgba(76, 201, 240, 0.7)',
+        boxShadow: '0 0 35px rgba(76,201,240,0.4)',
+        imageRendering: '-webkit-optimize-contrast'
+      }}
+    />
+  </div>
 </div>
-
-<p style={{ textAlign: 'center', fontSize: '1.05rem', lineHeight: '1.8' }}>
-I'm <strong>Shangar (Keys)</strong>, an AI and Software Engineering Technical Lead based in Coimbatore, Tamil Nadu.
-I focus on building backend systems, agentic AI solutions that work reliably at scale. <br></br>
-This wiki is my <strong>digital portfolio</strong> where I document projects, technical decisions and learnings, and
-experiments across AI and backend systems.
-</p>
 
 ---
 
