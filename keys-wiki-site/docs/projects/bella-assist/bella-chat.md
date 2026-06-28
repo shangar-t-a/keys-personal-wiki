@@ -10,37 +10,37 @@ import TabItem from '@theme/TabItem';
 
 # Bella Chat Service
 
-The Bella Chat Service is the AI orchestration engine for Bella Assist. It routes user queries to the right tool — financial data via MCP, knowledge search via RAG, or a direct LLM response — and streams the result back token-by-token over SSE.
+The Bella Chat Service is the AI orchestration service for Bella Assist. It processes user natural language inputs and routes tasks to specialized tools—such as financial ledger access via the EMS MCP Server, vector search queries via the RAG database, or fallback conversational responses—streaming token responses over Server-Sent Events (SSE).
 
 ---
 
 <Tabs>
   <TabItem value="capabilities" label="Capabilities" default>
 
-**Financial Data Access**
-Natural language queries against accounts, spending entries, and budgeting periods. Routed to the EMS MCP Server via LLM tool calls.
+**Financial Database Interaction**
+Translates natural language questions into database filters (e.g. query accounts, spending details, or budget limits) executed by the EMS MCP Server.
 
-**Semantic Knowledge Search (RAG)**
-Retrieves grounded answers from the personal wiki using Qdrant vector search. Responses include source hyperlinks.
+**Semantic Retrieval (RAG)**
+Queries the Qdrant vector database containing dense text embeddings of the personal wiki, returning grounded facts alongside hyperlinks to the source documents.
 
-**Persistent Conversation Memory**
-Multi-turn sessions are checkpointed to PostgreSQL via `AsyncPostgresSaver`. Conversation history survives Electron window restarts.
+**Checkpointed Memory**
+Serializes conversation states to a PostgreSQL database using LangGraph's `AsyncPostgresSaver`, allowing chat histories to persist across client restarts.
 
-**SSE Streaming**
-Responses stream token-by-token as `text/event-stream`. Event types: `thinking`, `tool_call`, `tool_result`, `response`, `error`, `done`.
+**Real-Time Token Streaming**
+Streams response tokens over standard `text/event-stream` protocols. Emits detailed runtime events: `thinking`, `tool_call`, `tool_result`, `response`, `error`, and `done`.
 
-**Configurable LLM Backend**
-Supports Ollama (local, default: `qwen2.5vl:7b`) and Google Gemini, switchable via `SYNTHESIS_MODEL_PROVIDER`.
+**Configurable Inference Engines**
+Integrates with Ollama for local offline execution (defaulting to the `qwen2.5vl:7b` model) or Google Gemini for cloud-based inference, toggleable via environment flags.
 
-**Observability**
-LangChain traces instrumented with Arize Phoenix via `openinference`. Trace data stored in PostgreSQL.
+**Observability Traces**
+Logs detailed execution graph runs to an Arize Phoenix instance using OpenInference, enabling debug tracing for production instances.
 
   </TabItem>
   <TabItem value="architecture" label="Architecture">
 
 ### OrchestratorAgent
 
-Built with LangGraph's `create_agent` ReAct loop. Receives a user message, decides which tool to call (or answers directly), and iterates until a final response is ready.
+The core agent is built using a LangGraph `create_agent` ReAct loop. On incoming messages, it assesses tool specifications, issues calls, evaluates tool outputs, and repeats this cycle until it constructs the final response.
 
 ```mermaid
 graph TD
@@ -63,26 +63,53 @@ graph TD
 
 ### SimpleChatAgent
 
-A lightweight fallback agent for persona-based Q&A when no tool is needed. Single-node graph: `generate_response` only.
+A fallback agent designed for generic conversational queries. It operates on a single-node graph resolving direct LLM queries without tool overhead.
 
 ### State Persistence
 
-All conversation turns are serialized into `bella_chat_checkpoints` (PostgreSQL) by `AsyncPostgresSaver`. Tables are auto-created on first startup via `checkpointer.setup()`.
+All conversational history turns are stored in the `bella_chat_checkpoints` PostgreSQL table managed by `AsyncPostgresSaver`. Schema migrations are executed automatically on service boot via `checkpointer.setup()`.
 
   </TabItem>
   <TabItem value="workspace" label="Workspace">
 
+### Empty Chat Panel
+
+The chat panel provides a clean interface for interaction.
+
+<Tabs groupId="theme-preference">
+  <TabItem value="light" label="Light Theme" default>
+    <img src={require('./assets/images/light/15-chat-empty.png').default} alt="Empty Chat Workspace - Light" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
+  </TabItem>
+  <TabItem value="dark" label="Dark Theme">
+    <img src={require('./assets/images/dark/15-chat-empty.png').default} alt="Empty Chat Workspace - Dark" style={{ borderRadius: '8px', border: '1px solid #333', maxWidth: '100%' }} />
+  </TabItem>
+</Tabs>
+
 ### Multi-Turn Conversation & Tool Execution
 
-The interface displays multi-turn conversation history and active tool execution, such as retrieving the top 3 financial expenses from ledger tables using the EMS MCP server and summarizing the overall chat discussion:
+The interface displays history turns and active tool calls, such as querying the EMS MCP server to retrieve spending limits or category balances.
 
-![Multi-Turn Conversation and Tool Execution](./assets/images/ai-chat-ems-tool-and-chat-history.png)
+<Tabs groupId="theme-preference">
+  <TabItem value="light" label="Light Theme" default>
+    <img src={require('./assets/images/ai-chat-ems-tool-and-chat-history.png').default} alt="Chat Workspace with tool call - Light" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
+  </TabItem>
+  <TabItem value="dark" label="Dark Theme">
+    <img src={require('./assets/images/ai-chat-ems-tool-and-chat-history.png').default} alt="Chat Workspace with tool call - Dark" style={{ borderRadius: '8px', border: '1px solid #333', maxWidth: '100%' }} />
+  </TabItem>
+</Tabs>
 
 ### Context Retrieval & Citations (RAG)
 
-The agent triggers the `rag_search` tool to fetch grounded information from the Qdrant vector database (e.g., retrieving details about Shangar Arivazhagan/Keys), presenting a structured markdown response with clickable source citation links:
+When referencing documentation, the agent performs semantic searches on Qdrant, formatting links to verified sources.
 
-![Context Retrieval and Citations (RAG)](./assets/images/ai-chat-rag-tool.png)
+<Tabs groupId="theme-preference">
+  <TabItem value="light" label="Light Theme" default>
+    <img src={require('./assets/images/ai-chat-rag-tool.png').default} alt="Chat RAG Response - Light" style={{ borderRadius: '8px', border: '1px solid #ddd', maxWidth: '100%' }} />
+  </TabItem>
+  <TabItem value="dark" label="Dark Theme">
+    <img src={require('./assets/images/ai-chat-rag-tool.png').default} alt="Chat RAG Response - Dark" style={{ borderRadius: '8px', border: '1px solid #333', maxWidth: '100%' }} />
+  </TabItem>
+</Tabs>
 
   </TabItem>
 </Tabs>

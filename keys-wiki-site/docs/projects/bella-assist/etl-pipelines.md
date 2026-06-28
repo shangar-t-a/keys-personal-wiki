@@ -1,7 +1,7 @@
 ---
 sidebar_level: 2
 sidebar_label: 'ETL Pipelines'
-sidebar_position: 5
+sidebar_position: 6
 description: 'ETL Pipelines — Wiki Knowledge Ingestion'
 ---
 
