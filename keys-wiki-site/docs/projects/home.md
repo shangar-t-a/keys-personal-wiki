@@ -35,7 +35,7 @@ A curated showcase of personal engineering projects spanning AI systems, backend
 
 <CardGrid>
   <FeatureCard
-    href="/keys-personal-wiki/docs/projects/bella-assist/bella-chat"
+    href="/docs/projects/bella-assist#core-components"
     title="Bella Chat"
     badge="Agent"
     tags={['LangGraph', 'RAG', 'Qdrant']}
@@ -47,7 +47,7 @@ A curated showcase of personal engineering projects spanning AI systems, backend
     }
   />
   <FeatureCard
-    href="/keys-personal-wiki/docs/projects/bella-assist/expense-manager"
+    href="/docs/projects/bella-assist#core-components"
     title="Expense Manager"
     badge="Backend"
     tags={['FastAPI', 'PostgreSQL', 'SQLAlchemy']}
@@ -60,7 +60,7 @@ A curated showcase of personal engineering projects spanning AI systems, backend
     }
   />
   <FeatureCard
-    href="/keys-personal-wiki/docs/projects/bella-assist/ems-mcp-server"
+    href="/docs/projects/bella-assist#core-components"
     title="EMS MCP Server"
     badge="MCP"
     tags={['FastMCP', 'LLM Tools', 'HTTP']}
@@ -75,7 +75,7 @@ A curated showcase of personal engineering projects spanning AI systems, backend
     }
   />
   <FeatureCard
-    href="/keys-personal-wiki/docs/projects/bella-assist/etl-pipelines"
+    href="/docs/projects/bella-assist#core-components"
     title="ETL Pipelines"
     badge="Data"
     tags={['Qdrant', 'Embeddings', 'Ingestion']}
