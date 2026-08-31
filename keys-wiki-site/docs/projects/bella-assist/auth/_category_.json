@@ -1,0 +1,8 @@
+{
+  "label": "Security & Authentication",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Authentication flows, SSO session management, and zero-trust permissions delegation"
+  }
+}
