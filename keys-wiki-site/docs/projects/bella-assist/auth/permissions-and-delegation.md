@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Permissions & AI Delegation'
-sidebar_position: 5
+sidebar_position: 2
 description: 'Descriptions of requested OAuth scopes and how the AI Assistant accesses tools on your behalf'
 ---
 
@@ -12,15 +12,15 @@ When logging into Bella Keys, the authorization screen presents a list of permis
 
 ## Requested Permissions (Scopes)
 
-| Permission Shown | Technical Scope | Description |
-| --- | --- | --- |
-| **Verify your identity** | `openid` | Confirms user identity and generates a secure local session. |
-| **Read profile claims** | `profile` | Displays username and role within the application interface. |
-| **Read email address** | `email` | Associates local profile details with the user context. |
-| **View expense data** | `bella-ems:read` | Grants permission to read spending entries, accounts, and wealth summaries. |
-| **Manage expense data** | `bella-ems:write` | Grants permission to create, edit, and delete financial records. |
-| **View chat history** | `bella-chat:read` | Allows the interface to load past assistant threads and messages. |
-| **Send chat queries** | `bella-chat:write` | Allows sending queries and executing requests with the AI Assistant. |
+| Permission Shown         | Technical Scope    | Description                                                                 |
+| ------------------------ | ------------------ | --------------------------------------------------------------------------- |
+| **Verify your identity** | `openid`           | Confirms user identity and generates a secure local session.                |
+| **Read profile claims**  | `profile`          | Displays username and role within the application interface.                |
+| **Read email address**   | `email`            | Associates local profile details with the user context.                     |
+| **View expense data**    | `bella-ems:read`   | Grants permission to read spending entries, accounts, and wealth summaries. |
+| **Manage expense data**  | `bella-ems:write`  | Grants permission to create, edit, and delete financial records.            |
+| **View chat history**    | `bella-chat:read`  | Allows the interface to load past assistant threads and messages.           |
+| **Send chat queries**    | `bella-chat:write` | Allows sending queries and executing requests with the AI Assistant.        |
 
 ---
 

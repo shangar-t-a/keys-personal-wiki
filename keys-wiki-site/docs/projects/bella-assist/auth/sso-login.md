@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'SSO & Session Management'
-sidebar_position: 4
+sidebar_position: 1
 description: 'Step-by-step SSO login for Web and Electron Desktop App, session lifecycle, and logout protocols'
 ---
 
