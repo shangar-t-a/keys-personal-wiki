@@ -20,7 +20,7 @@ Bella Assist is a local-first desktop application that integrates an AI personal
 Explore the interactive application showcase rendered directly below, featuring full screen navigation, light/dark theme switching, budget visualizations, net worth trajectories, and AI chat capabilities.
 
 <iframe
-  src="https://shangar-t-a.github.io/keys-personal-wiki/showcase/user-journey.html"
+  src="/keys-personal-wiki/showcase/user-journey.html"
   style={{
     width: '100%',
     height: '800px',
@@ -33,7 +33,7 @@ Explore the interactive application showcase rendered directly below, featuring 
   loading="lazy"
 />
 
-* **[Open Showcase in Fullscreen](https://shangar-t-a.github.io/keys-personal-wiki/showcase/user-journey.html)** — Open the live showcase in a dedicated browser tab.
+* <a href="/keys-personal-wiki/showcase/user-journey.html" target="_blank" rel="noopener noreferrer"><strong>Open Showcase in Fullscreen</strong></a> &mdash; Open the live showcase in a dedicated browser tab.
 
 ---
 

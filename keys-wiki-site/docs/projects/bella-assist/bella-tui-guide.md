@@ -64,13 +64,13 @@ graph TD
 
 ### Keyboard Shortcuts &amp; Navigation
 
-| Key | Action |
-| --- | --- |
-| `1` to `0` | Direct hotkeys to switch views (1: Chat, 2: Spending, 3: Accounts, 4: Wealth, 5: Assets, 6: Liabilities, 7: Planner, 8: Savings, 9: Backup, 0: User Session) |
-| `Ctrl+P` | Command Palette (fuzzy search commands and navigation targets) |
-| `Ctrl+Q` | Quit application |
-| `Tab` / `Shift+Tab` | Move focus across inputs, buttons, and tables |
-| Mouse / Click | Single click to switch tabs, click table rows, or press buttons |
+| Key                 | Action                                                                                                                                                       |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `1` to `0`          | Direct hotkeys to switch views (1: Chat, 2: Spending, 3: Accounts, 4: Wealth, 5: Assets, 6: Liabilities, 7: Planner, 8: Savings, 9: Backup, 0: User Session) |
+| `Ctrl+P`            | Command Palette (fuzzy search commands and navigation targets)                                                                                               |
+| `Ctrl+Q`            | Quit application                                                                                                                                             |
+| `Tab` / `Shift+Tab` | Move focus across inputs, buttons, and tables                                                                                                                |
+| Mouse / Click       | Single click to switch tabs, click table rows, or press buttons                                                                                              |
 
 ---
 
@@ -158,9 +158,10 @@ timeout   = 30
 
 Alternatively, override individual endpoints using environment variables:
 
-| Variable | Description |
-| --- | --- |
-| `BELLA_AUTH_URL` | Authentication service URL |
-| `BELLA_EMS_URL` | Expense Manager service URL |
-| `BELLA_CHAT_URL` | Bella Chat service URL |
-| `BELLA_TIMEOUT` | Request timeout in seconds |
+| Variable         | Description                 |
+| ---------------- | --------------------------- |
+| `BELLA_AUTH_URL` | Authentication service URL  |
+| `BELLA_EMS_URL`  | Expense Manager service URL |
+| `BELLA_CHAT_URL` | Bella Chat service URL      |
+| `BELLA_TIMEOUT`  | Request timeout in seconds  |
+
