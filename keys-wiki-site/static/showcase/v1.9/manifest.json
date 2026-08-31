@@ -1,0 +1,234 @@
+{
+  "app": "Bella Keys",
+  "version": "1.9",
+  "ui_version": "1.9.0",
+  "generated_at": "2026-07-19T13:51:16.674707+00:00",
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "sections": [
+    {
+      "id": "auth",
+      "label": "Authentication",
+      "color": "#6366f1",
+      "steps": [
+        {
+          "slug": "login",
+          "description": "Secure OAuth 2.1 SSO login page \u2014 the first touchpoint of every session.",
+          "optional": false,
+          "captured": true,
+          "files": {
+            "light": "light/login.png",
+            "dark": "dark/login.png"
+          }
+        },
+        {
+          "slug": "login-consent",
+          "description": "OAuth 2.1 SSO Consent & Authorization portal.",
+          "optional": false,
+          "captured": true,
+          "files": {
+            "light": "light/login-consent.png",
+            "dark": "dark/login-consent.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "dashboard",
+      "label": "Dashboard",
+      "color": "#0ea5e9",
+      "steps": [
+        {
+          "slug": "home",
+          "description": "Hero landing page showing financial health at a glance.",
+          "optional": false,
+          "captured": true,
+          "files": {
+            "light": "light/home.png",
+            "dark": "dark/home.png"
+          }
+        },
+        {
+          "slug": "spending-accounts",
+          "description": "Spending account summary with balance trends and quick-add transactions.",
+          "optional": false,
+          "captured": true,
+          "files": {
+            "light": "light/spending-accounts.png",
+            "dark": "dark/spending-accounts.png"
+          }
+        },
+        {
+          "slug": "savings-envelopes",
+          "description": "Savings envelope overview with allocation donut chart.",
+          "optional": false,
+          "captured": true,
+          "files": {
+            "light": "light/savings-envelopes.png",
+            "dark": "dark/savings-envelopes.png"
+          }
+        },
+        {
+          "slug": "savings-envelopes-transactions",
+          "description": "Savings envelope transaction ledger scrolled into view.",
+          "optional": false,
+          "captured": true,
+          "files": {
+            "light": "light/savings-envelopes-transactions.png",
+            "dark": "dark/savings-envelopes-transactions.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Monthly Budget",
+      "color": "#10b981",
+      "steps": [
+        {
+          "slug": "budget-checklist",
+          "description": "Monthly budget checklist \u2014 planned vs actual spend per category.",
+          "optional": false,
+          "captured": true,
+          "files": {
+            "light": "light/budget-checklist.png",
+            "dark": "dark/budget-checklist.png"
+          }
+        },
+        {
+          "slug": "budget-visuals",
+          "description": "Budget visualisation tab \u2014 pie chart breakdown of spending categories.",
+          "optional": false,
+          "captured": true,
+          "files": {
+            "light": "light/budget-visuals.png",
+            "dark": "dark/budget-visuals.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "wealth",
+      "label": "Wealth Manager",
+      "color": "#f59e0b",
+      "steps": [
+        {
+          "slug": "wealth-assets",
+          "description": "Assets tab \u2014 grouped table of investments with returns and allocation.",
+          "optional": false,
+          "captured": true,
+          "files": {
+            "light": "light/wealth-assets.png",
+            "dark": "dark/wealth-assets.png"
+          }
+        },
+        {
+          "slug": "wealth-liabilities",
+          "description": "Liabilities tab \u2014 active loans with EMI schedules and outstanding balances.",
+          "optional": false,
+          "captured": true,
+          "files": {
+            "light": "light/wealth-liabilities.png",
+            "dark": "dark/wealth-liabilities.png"
+          }
+        },
+        {
+          "slug": "wealth-liabilities-charts",
+          "description": "Payoff projection charts showing ideal vs actual debt reduction curves.",
+          "optional": false,
+          "captured": true,
+          "files": {
+            "light": "light/wealth-liabilities-charts.png",
+            "dark": "dark/wealth-liabilities-charts.png"
+          }
+        },
+        {
+          "slug": "wealth-liabilities-ledger",
+          "description": "Transaction ledger modal for detailed liability repayment history.",
+          "optional": false,
+          "captured": true,
+          "files": {
+            "light": "light/wealth-liabilities-ledger.png",
+            "dark": "dark/wealth-liabilities-ledger.png"
+          }
+        },
+        {
+          "slug": "wealth-networth",
+          "description": "Net worth timeline \u2014 composed chart of assets vs liabilities over time.",
+          "optional": false,
+          "captured": true,
+          "files": {
+            "light": "light/wealth-networth.png",
+            "dark": "dark/wealth-networth.png"
+          }
+        },
+        {
+          "slug": "wealth-allocation",
+          "description": "Portfolio allocation \u2014 category distribution, leverage, and health metrics.",
+          "optional": false,
+          "captured": true,
+          "files": {
+            "light": "light/wealth-allocation.png",
+            "dark": "dark/wealth-allocation.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-chat",
+      "label": "Bella AI Chat",
+      "color": "#8b5cf6",
+      "steps": [
+        {
+          "slug": "chat-empty",
+          "description": "Bella AI chat in empty state \u2014 prompt suggestions and assistant branding.",
+          "optional": false,
+          "captured": true,
+          "files": {
+            "light": "light/chat-empty.png",
+            "dark": "dark/chat-empty.png"
+          }
+        },
+        {
+          "slug": "chat-conversation",
+          "description": "Bella AI answering a financial query with context from the user's data.",
+          "optional": false,
+          "captured": true,
+          "files": {
+            "light": "light/chat-conversation.png",
+            "dark": "dark/chat-conversation.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "settings",
+      "label": "Settings",
+      "color": "#64748b",
+      "steps": [
+        {
+          "slug": "settings-accounts",
+          "description": "Settings \u2014 bank accounts management panel.",
+          "optional": false,
+          "captured": true,
+          "files": {
+            "light": "light/settings-accounts.png",
+            "dark": "dark/settings-accounts.png"
+          }
+        },
+        {
+          "slug": "settings-categories",
+          "description": "Settings \u2014 budget category configuration.",
+          "optional": false,
+          "captured": true,
+          "files": {
+            "light": "light/settings-categories.png",
+            "dark": "dark/settings-categories.png"
+          }
+        }
+      ]
+    }
+  ]
+}

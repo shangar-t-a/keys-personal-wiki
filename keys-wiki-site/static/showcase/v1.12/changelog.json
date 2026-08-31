@@ -1,0 +1,837 @@
+[
+  {
+    "version": "keys-personal-assist-ui@1.12.0",
+    "component": "keys-personal-assist-ui",
+    "semver": "1.12.0",
+    "date": "2026-08-19",
+    "badge": "Latest Release",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Added interactive Cost Breakdown Popover dialog (`AssetCostBreakdownPopover.tsx`) featuring 4 KPI tiles, visual cost composition bar, and grouped category accordions for carrying expenses and out-of-pocket outflow."
+      },
+      {
+        "type": "Added",
+        "text": "Added 1-click `\ud83d\udcca Cost Breakdown` pie-chart icon button in Assets Overview table."
+      },
+      {
+        "type": "Added",
+        "text": "Added support for transaction types `ANCILLARY_FEE`, `CAPITALIZED_INTEREST`, `INTEREST_REDUCTION`, and `IMPROVEMENT`."
+      }
+    ]
+  },
+  {
+    "version": "expense-manager-service@1.8.0",
+    "component": "expense-manager-service",
+    "semver": "1.8.0",
+    "date": "2026-08-19",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Extended `AssetTransactionType` enum with `ANCILLARY_FEE`, `CAPITALIZED_INTEREST`, `INTEREST_REDUCTION`, and `IMPROVEMENT`."
+      },
+      {
+        "type": "Added",
+        "text": "Added derived cost basis response fields to `AssetWithCalc` and `AssetResponse`: `base_asset_value`, `additional_spent`, `total_loan_interest`, and `total_cash_outflow`."
+      },
+      {
+        "type": "Added",
+        "text": "Updated asset valuation engine to separate physical market valuation from total out-of-pocket cost basis."
+      }
+    ]
+  },
+  {
+    "version": "keys-personal-assist-ui@1.11.0",
+    "component": "keys-personal-assist-ui",
+    "semver": "1.11.0",
+    "date": "2026-08-02",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Integrated application version (`v1.11.0`) and copyright notice (`\u00a9 2025 - 2026 Shangar Arivazhagan`) across sidebar navigation footer, user profile menu, and SSO login page."
+      },
+      {
+        "type": "Added",
+        "text": "Added dedicated **About & System** tab under System Settings displaying application metadata, author details, license type, and runtime environment."
+      },
+      {
+        "type": "Added",
+        "text": "Added interactive **Changelog & Release Notes** viewer modal and app-matching dark theme styling to GitHub Pages showcase."
+      }
+    ]
+  },
+  {
+    "version": "keys-personal-assist-ui@1.10.0",
+    "component": "keys-personal-assist-ui",
+    "semver": "1.10.0",
+    "date": "2026-08-02",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Added **Backup & Restore** manager tab under Settings with folder configuration, snapshot list, export, download, deletion, and atomic restore operations."
+      },
+      {
+        "type": "Added",
+        "text": "Integrated native Electron directory selection dialog (`dialog:selectDirectory`) via preload IPC for desktop mode, with fallback modal for web mode."
+      },
+      {
+        "type": "Added",
+        "text": "Added unified path container pill component for desktop target directory selection."
+      }
+    ]
+  },
+  {
+    "version": "expense-manager-service@1.7.0",
+    "component": "expense-manager-service",
+    "semver": "1.7.0",
+    "date": "2026-08-02",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Added user-configurable local database backup directory support (`~/.bella-keys/backups` by default)."
+      },
+      {
+        "type": "Added",
+        "text": "Added API endpoints `GET /v1/backup/config`, `PATCH /v1/backup/config`, `POST /v1/backup/export`, `GET /v1/backup/list`, and `POST /v1/backup/restore/snapshot`."
+      },
+      {
+        "type": "Added",
+        "text": "Added automatic pre-restore safety snapshot generation (`pre_restore_<timestamp>.json`) prior to database clearing."
+      },
+      {
+        "type": "Fixed",
+        "text": "Handled transaction `IntegrityError` in `get_or_create_period` and `get_or_create_account` to prevent race conditions and 500 errors under parallel UI requests."
+      }
+    ]
+  },
+  {
+    "version": "expense-manager-service@1.6.0",
+    "component": "expense-manager-service",
+    "semver": "1.6.0",
+    "date": "2026-07-11",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Changed",
+        "text": "Integrated scope-based access controls enforcing the `bella-ems:read` scope dynamically on all v1 router endpoints."
+      },
+      {
+        "type": "Fixed",
+        "text": "Updated integration test client token generator to inject valid `\"scope\"` claims, resolving all integration test failures under scope enforcement."
+      }
+    ]
+  },
+  {
+    "version": "bella-chat-service@1.1.0",
+    "component": "bella-chat-service",
+    "semver": "1.1.0",
+    "date": "2026-07-11",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Changed",
+        "text": "Integrated scope-based access controls enforcing the `bella-chat:write` scope dynamically on all message endpoints."
+      }
+    ]
+  },
+  {
+    "version": "utilities@1.1.0",
+    "component": "utilities",
+    "semver": "1.1.0",
+    "date": "2026-07-11",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Added reusable FastAPI scope enforcement dependency guard `require_scope` under `utilities.scope_guard` to perform authorization checks against JWT scope claims."
+      }
+    ]
+  },
+  {
+    "version": "keys-personal-assist-ui@1.9.0",
+    "component": "keys-personal-assist-ui",
+    "semver": "1.9.0",
+    "date": "2026-07-11",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Changed",
+        "text": "Updated authentication client configuration to request full resource scopes (`openid`, `profile`, `email`, `bella-ems:read`, `bella-ems:write`, `bella-chat:read`, `bella-chat:write`) during login authorization."
+      }
+    ]
+  },
+  {
+    "version": "auth-service@2.1.0",
+    "component": "auth-service",
+    "semver": "2.1.0",
+    "date": "2026-07-11",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Introduced centralized scope registry `scopes.py` and integrated scope filtering / validation at authorization time."
+      }
+    ]
+  },
+  {
+    "version": "expense-manager-service@1.5.3",
+    "component": "expense-manager-service",
+    "semver": "1.5.3",
+    "date": "2026-07-11",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Changed",
+        "text": "Upgraded shared `utilities` package dependency to `1.0.1`."
+      }
+    ]
+  },
+  {
+    "version": "bella-chat-service@1.0.2",
+    "component": "bella-chat-service",
+    "semver": "1.0.2",
+    "date": "2026-07-11",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Changed",
+        "text": "Upgraded shared `utilities` package dependency to `1.0.1`."
+      }
+    ]
+  },
+  {
+    "version": "utilities@1.0.1",
+    "component": "utilities",
+    "semver": "1.0.1",
+    "date": "2026-07-11",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Fixed",
+        "text": "Added manual CORS headers dynamically to raw responses returned from `JWTAuthMiddleware` (e.g. 401 Unauthorized errors) to prevent browser and Electron preflight blockages during cross-origin API operations."
+      },
+      {
+        "type": "Fixed",
+        "text": "Added `verify_aud: False` option in `JWTAuthMiddleware` decryption step to prevent generic token verification claims failures across distributed services."
+      }
+    ]
+  },
+  {
+    "version": "keys-personal-assist-ui@1.8.0",
+    "component": "keys-personal-assist-ui",
+    "semver": "1.8.0",
+    "date": "2026-07-11",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Registered `bella-app://` custom protocol deep-link listener inside Electron's main process."
+      },
+      {
+        "type": "Added",
+        "text": "Implemented global React hook handler for incoming deep links to auto-route back to `/callback` exchange sequence."
+      },
+      {
+        "type": "Added",
+        "text": "Added external system browser redirection for login flows inside desktop container."
+      },
+      {
+        "type": "Changed",
+        "text": "Migrated authentication mechanism from standard credential submission to centralized OAuth 2.1 Single Sign-On (SSO) login flow."
+      },
+      {
+        "type": "Changed",
+        "text": "Added PKCE (`S256`) authorization code request sequence dynamically generated via Web Crypto API."
+      },
+      {
+        "type": "Changed",
+        "text": "Implemented `/callback` router handler (`OAuthCallback.tsx`) to perform secure token exchange and establish UI sessions."
+      }
+    ]
+  },
+  {
+    "version": "auth-service@2.0.0",
+    "component": "auth-service",
+    "semver": "2.0.0",
+    "date": "2026-07-11",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Added support for database-backed OAuth 2.1 authorization code flow with dynamic state and PKCE challenge verification."
+      },
+      {
+        "type": "Added",
+        "text": "Introduced OIDC discovery metadata endpoint (`/.well-known/openid-configuration` / `/.well-known/oauth-authorization-server`) and `/oauth/userinfo` endpoints."
+      },
+      {
+        "type": "Added",
+        "text": "Built dark glassmorphism consent/login UI template for authorization requests."
+      },
+      {
+        "type": "Added",
+        "text": "Integrated `bella-app://callback` custom protocol deep-linking whitelist support."
+      },
+      {
+        "type": "Added",
+        "text": "Added OIDC standard claims (`iss`, `aud`, `jti`, `scope`) to access token payloads and session propagation structures."
+      },
+      {
+        "type": "Deprecated",
+        "text": "Marked the legacy `POST /login` endpoint as deprecated (`deprecated=True`)."
+      },
+      {
+        "type": "Fixed",
+        "text": "Resolved warnings inside test suites related to unawaited async-mock coroutines on synchronous SQLAlchemy session operations."
+      }
+    ]
+  },
+  {
+    "version": "ems-mcp-server@1.1.0",
+    "component": "ems-mcp-server",
+    "semver": "1.1.0",
+    "date": "2026-07-11",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Expanded Model Context Protocol (MCP) server with comprehensive financial query tools for accounts, reporting periods, spending entries, assets, liabilities, savings buckets, net wealth allocations, and monthly planner entries."
+      },
+      {
+        "type": "Added",
+        "text": "Implemented extensive unit tests covering the new tools with 100% test coverage using respx mocks."
+      }
+    ]
+  },
+  {
+    "version": "keys-personal-assist-ui@1.7.2",
+    "component": "keys-personal-assist-ui",
+    "semver": "1.7.2",
+    "date": "2026-06-28",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Fixed",
+        "text": "Resolved access violation crashes in packaged Electron production executable caused by absolute redirect paths starting with `/` or `/login` resolving to local directories (`file:///C:/`) rather than the application's relative index bundle path."
+      }
+    ]
+  },
+  {
+    "version": "keys-personal-assist-ui@1.7.1",
+    "component": "keys-personal-assist-ui",
+    "semver": "1.7.1",
+    "date": "2026-06-28",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Fixed",
+        "text": "Implemented single-instance application lock check during startup to prevent concurrent app instances from locking disk cache directories and throwing access denied errors."
+      },
+      {
+        "type": "Fixed",
+        "text": "Corrected Recharts chart rendering in Savings Envelopes page to initialize safely with fallback dimensions."
+      },
+      {
+        "type": "Fixed",
+        "text": "Added explicit tab values to Material UI navigation tabs to suppress invalid value console warnings."
+      },
+      {
+        "type": "Security",
+        "text": "Defined a robust Content Security Policy (CSP) to restrict remote origin access while permitting local API ports and hot-reload WebSockets in development."
+      }
+    ]
+  },
+  {
+    "version": "keys-personal-assist-ui@1.7.0",
+    "component": "keys-personal-assist-ui",
+    "semver": "1.7.0",
+    "date": "2026-06-28",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Security",
+        "text": "Migrated refresh token storage from browser `localStorage` to secure, server-controlled `HttpOnly` cookies to protect Single-Page Application (SPA) sessions against Cross-Site Scripting (XSS) attacks."
+      },
+      {
+        "type": "Changed",
+        "text": "Configured Axios client and Fetch authorization wrappers to transmit credentials/cookies and retrieve silent token refresh securely."
+      },
+      {
+        "type": "Changed",
+        "text": "Cleaned up token management flow inside `AuthContext` to skip storing refresh token in `localStorage`."
+      }
+    ]
+  },
+  {
+    "version": "auth-service@1.1.0",
+    "component": "auth-service",
+    "semver": "1.1.0",
+    "date": "2026-06-28",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Created `/logout` POST endpoint to delete and clear the client's `refresh_token` cookie."
+      },
+      {
+        "type": "Security",
+        "text": "Updated `/login` and `/refresh` endpoints to set and rotate `refresh_token` in secure, HttpOnly cookies."
+      },
+      {
+        "type": "Changed",
+        "text": "Configured CORS middleware dynamically to allow credential sharing for all local hosts (e.g. electron-vite dev environment) using a regex origin check."
+      },
+      {
+        "type": "Changed",
+        "text": "Updated FastAPI instance metadata to bind dynamically to the auth service package version."
+      }
+    ]
+  },
+  {
+    "version": "expense-manager-service@1.5.1",
+    "component": "expense-manager-service",
+    "semver": "1.5.1",
+    "date": "2026-06-27",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Fixed",
+        "text": "Net worth double-counting when REVALUE transaction is backdated to the asset creation day."
+      },
+      {
+        "type": "Changed",
+        "text": "Audited and cleaned up comments across service migrations and tests to follow simplified, undecorated commenting standards."
+      }
+    ]
+  },
+  {
+    "version": "keys-personal-assist-ui@1.6.0",
+    "component": "keys-personal-assist-ui",
+    "semver": "1.6.0",
+    "date": "2026-06-27",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Changed",
+        "text": "Overhauled visual styling to a premium, desaturated Azure-like aesthetic with individual elevated card layouts, float transitions, and unified chart color palettes."
+      },
+      {
+        "type": "Changed",
+        "text": "Standardized user/assistant messaging bubbles with glassmorphism effects and modern gradient accents."
+      },
+      {
+        "type": "Changed",
+        "text": "Simplified comment blocks across all frontend TS/TSX/CSS files to use undecorated, clean commenting formats."
+      },
+      {
+        "type": "Changed",
+        "text": "Documented commenting guidelines and UI guidelines in `.agents/AGENTS.md` and `docs/developer/development-workflow.md`."
+      }
+    ]
+  },
+  {
+    "version": "expense-manager-service@1.5.0",
+    "component": "expense-manager-service",
+    "semver": "1.5.0",
+    "date": "2026-06-27",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Portfolio Net Worth API endpoints with support for current summary calculation and historical timeline tracking."
+      },
+      {
+        "type": "Added",
+        "text": "Portfolio Allocation API endpoints tracking asset/liability distribution, financing leverage, and health metrics (Debt-to-Asset and Liquidity ratios)."
+      }
+    ]
+  },
+  {
+    "version": "keys-personal-assist-ui@1.5.0",
+    "component": "keys-personal-assist-ui",
+    "semver": "1.5.0",
+    "date": "2026-06-27",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Interactive Net Worth dashboard tab featuring historical composed charts and ledger history."
+      },
+      {
+        "type": "Added",
+        "text": "Portfolio Allocation dashboard tab displaying category distributions, financing leverage, and health metric gauges."
+      },
+      {
+        "type": "Added",
+        "text": "Interactive explanatory tooltips for financial terms and metrics across all Wealth Manager dashboard tabs."
+      }
+    ]
+  },
+  {
+    "version": "expense-manager-service@1.4.0",
+    "component": "expense-manager-service",
+    "semver": "1.4.0",
+    "date": "2026-06-26",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Support for interest-bearing liabilities without a scheduled EMI (non-EMI liabilities)."
+      },
+      {
+        "type": "Added",
+        "text": "Amortization calculation engine supporting daily, monthly, quarterly, semi-annual, and annual compounding frequencies."
+      },
+      {
+        "type": "Added",
+        "text": "Support for absolute, interest-only, and interest-free moratorium periods in liability simulations."
+      },
+      {
+        "type": "Added",
+        "text": "Amortization simulation endpoints to project outstanding balance and accumulated interest over time."
+      },
+      {
+        "type": "Changed",
+        "text": "Refactored repository layer and database models for assets and liabilities to improve type safety and robustness."
+      },
+      {
+        "type": "Changed",
+        "text": "Decoupled database seeding logic from standard Alembic database migrations."
+      }
+    ]
+  },
+  {
+    "version": "keys-personal-assist-ui@1.4.0",
+    "component": "keys-personal-assist-ui",
+    "semver": "1.4.0",
+    "date": "2026-06-26",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Comprehensive wealth manager liabilities tracking dashboard and input wizard."
+      },
+      {
+        "type": "Added",
+        "text": "Amortization schedule charts, monthly payables tables, and summary metrics including total outstanding debt, active accounts, simple/compound distribution, and interest-free debt."
+      },
+      {
+        "type": "Added",
+        "text": "Moratorium configurator and non-EMI mode toggle inside the liability addition flow."
+      },
+      {
+        "type": "Added",
+        "text": "Theme-driven category chip styling and interactive delete confirmation dialogs."
+      },
+      {
+        "type": "Fixed",
+        "text": "Silent JWT token refresh mechanism on initial application reload and request failure."
+      }
+    ]
+  },
+  {
+    "version": "keys-personal-assist-ui@1.2.0",
+    "component": "keys-personal-assist-ui",
+    "semver": "1.2.0",
+    "date": "2026-06-21",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Initial user interface layouts for tracking liabilities within the Wealth Manager module."
+      }
+    ]
+  },
+  {
+    "version": "expense-manager-service@1.2.0",
+    "component": "expense-manager-service",
+    "semver": "1.2.0",
+    "date": "2026-06-21",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Database models, schemas, and API routers for tracking personal liabilities."
+      },
+      {
+        "type": "Added",
+        "text": "Core amortization simulation logic for standard EMI loans."
+      }
+    ]
+  },
+  {
+    "version": "bella-chat-service@1.0.1",
+    "component": "bella-chat-service",
+    "semver": "1.0.1",
+    "date": "2026-06-21",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Fixed",
+        "text": "Qdrant connection refused error by ensuring proper hostname routing when running inside Docker container environments."
+      },
+      {
+        "type": "Fixed",
+        "text": "Python package dependency constraints and environment configurations."
+      }
+    ]
+  },
+  {
+    "version": "ems-mcp-server@1.0.1",
+    "component": "ems-mcp-server",
+    "semver": "1.0.1",
+    "date": "2026-06-21",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Changed",
+        "text": "Secured the EMS MCP server by propagating and validating the client authentication token."
+      }
+    ]
+  },
+  {
+    "version": "expense-manager-service@1.1.0",
+    "component": "expense-manager-service",
+    "semver": "1.1.0",
+    "date": "2026-06-07",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Database schemas and API routes for tracking wealth manager assets."
+      },
+      {
+        "type": "Added",
+        "text": "Support for asset categories (Real Estate, Equity, Mutual Funds, Cash, Precious Metals)."
+      },
+      {
+        "type": "Changed",
+        "text": "Decoupled initial database seeding logic from database migrations."
+      }
+    ]
+  },
+  {
+    "version": "keys-personal-assist-ui@1.1.0",
+    "component": "keys-personal-assist-ui",
+    "semver": "1.1.0",
+    "date": "2026-06-07",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Assets tracking wizard and customized dialog flows."
+      },
+      {
+        "type": "Added",
+        "text": "Inline quick-add UI for dashboard transactions and account management."
+      },
+      {
+        "type": "Changed",
+        "text": "Standardized Finance module sub-pages under a cohesive sidebar navigation."
+      },
+      {
+        "type": "Changed",
+        "text": "Consolidated settings interface and dark mode switcher inside user profile dropdown."
+      }
+    ]
+  },
+  {
+    "version": "auth-service@1.0.0",
+    "component": "auth-service",
+    "semver": "1.0.0",
+    "date": "2026-06-01",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Independent authentication service built on FastAPI."
+      },
+      {
+        "type": "Added",
+        "text": "JWT token signing, verification endpoints, and silent refresh mechanisms."
+      },
+      {
+        "type": "Added",
+        "text": "Docker build configurations and automated workflows."
+      },
+      {
+        "type": "Changed",
+        "text": "Reset all monorepo service versions to 1.0.0 baselines to establish a clean production release tracking timeline."
+      }
+    ]
+  },
+  {
+    "version": "expense-manager-service@3.0.0",
+    "component": "expense-manager-service",
+    "semver": "3.0.0",
+    "date": "2026-05-24",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Savings buckets feature allowing users to segregate savings across custom targets."
+      },
+      {
+        "type": "Added",
+        "text": "Transaction cancellation rules and logic."
+      },
+      {
+        "type": "Added",
+        "text": "Database tables for savings buckets and savings transactions."
+      }
+    ]
+  },
+  {
+    "version": "keys-personal-assist-ui@3.0.0",
+    "component": "keys-personal-assist-ui",
+    "semver": "3.0.0",
+    "date": "2026-05-24",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Savings Fund Segregator dashboard layout."
+      },
+      {
+        "type": "Added",
+        "text": "Integrations with backend savings buckets APIs."
+      },
+      {
+        "type": "Added",
+        "text": "Automated Electron application packaging configurations and platform-specific installers (Windows, Linux, macOS)."
+      }
+    ]
+  },
+  {
+    "version": "ems-mcp-server@1.0.0",
+    "component": "ems-mcp-server",
+    "semver": "1.0.0",
+    "date": "2026-04-04",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Read-only Model Context Protocol (MCP) server for retrieving information from the Expense Manager Service."
+      }
+    ]
+  },
+  {
+    "version": "bella-chat-service@1.0.0",
+    "component": "bella-chat-service",
+    "semver": "1.0.0",
+    "date": "2025-10-21",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "LangGraph workflow engine for orchestration."
+      },
+      {
+        "type": "Added",
+        "text": "Arize Phoenix integration for LLM tracing."
+      },
+      {
+        "type": "Added",
+        "text": "ETL pipeline for GitHub keys personal wiki integration utilizing Personal Access Tokens (PAT) and Qdrant."
+      },
+      {
+        "type": "Added",
+        "text": "Chat interface UI and real-time streaming tools."
+      }
+    ]
+  },
+  {
+    "version": "expense-manager-service@1.0.0",
+    "component": "expense-manager-service",
+    "semver": "1.0.0",
+    "date": "2025-08-16",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Initial version of the FastAPI expense manager backend service."
+      },
+      {
+        "type": "Added",
+        "text": "PostgreSQL database integration and Alembic migrations system."
+      },
+      {
+        "type": "Added",
+        "text": "Docker Compose local development environment setups."
+      }
+    ]
+  },
+  {
+    "version": "keys-personal-assist-ui@1.0.0",
+    "component": "keys-personal-assist-ui",
+    "semver": "1.0.0",
+    "date": "2025-08-16",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "React, TypeScript, and Vite-powered user interface replacing legacy frontend."
+      },
+      {
+        "type": "Added",
+        "text": "App shell, navigation routing, and responsive dashboard."
+      }
+    ]
+  },
+  {
+    "version": "keys-personal-assist-ui@0.0.3",
+    "component": "keys-personal-assist-ui",
+    "semver": "0.0.3",
+    "date": "2024-07-30",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Changed",
+        "text": "Removed redundant close button from header of Add Entry and Edit Entry modals."
+      }
+    ]
+  },
+  {
+    "version": "keys-personal-assist-ui@0.0.2",
+    "component": "keys-personal-assist-ui",
+    "semver": "0.0.2",
+    "date": "2024-07-30",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Changed",
+        "text": "Adjusted dark mode CSS selectors to trigger based on `body.dark-mode` class toggles rather than system preferences."
+      }
+    ]
+  },
+  {
+    "version": "keys-personal-assist-ui@0.0.1",
+    "component": "keys-personal-assist-ui",
+    "semver": "0.0.1",
+    "date": "2024-07-30",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Initial Bolt-generated React frontend codebase for tracking expenses."
+      }
+    ]
+  },
+  {
+    "version": "expense-manager-service@0.0.1",
+    "component": "expense-manager-service",
+    "semver": "0.0.1",
+    "date": "2024-07-30",
+    "badge": "",
+    "changes": [
+      {
+        "type": "Added",
+        "text": "Initial implementation of the Python FastAPI expense tracking API."
+      }
+    ]
+  }
+]

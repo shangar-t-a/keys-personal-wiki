@@ -20,7 +20,7 @@ Bella Assist is a local-first desktop application that integrates an AI personal
 Explore the interactive application showcase rendered directly below, featuring full screen navigation, light/dark theme switching, budget visualizations, net worth trajectories, and AI chat capabilities.
 
 <iframe
-  src="https://shangar-t-a.github.io/bella-keys-personal-assist/screens/user-journey.html"
+  src="https://shangar-t-a.github.io/keys-personal-wiki/showcase/user-journey.html"
   style={{
     width: '100%',
     height: '800px',
@@ -33,28 +33,19 @@ Explore the interactive application showcase rendered directly below, featuring 
   loading="lazy"
 />
 
-* **[Open Showcase in Fullscreen](https://shangar-t-a.github.io/bella-keys-personal-assist/)** — Open the live showcase in a dedicated browser tab.
-* **[GitHub Repository](https://github.com/shangar-t-a/bella-keys-personal-assist)** — Access source code, issue tracker, and releases.
+* **[Open Showcase in Fullscreen](https://shangar-t-a.github.io/keys-personal-wiki/showcase/user-journey.html)** — Open the live showcase in a dedicated browser tab.
 
 ---
 
-## Deployed Documentation
+## Documentation
 
-To ensure smooth documentation reuse and prevent content duplication across repositories, technical specifications, user manuals, and developer guidelines are maintained and deployed directly alongside the application source code.
+All user-facing documentation is maintained in this wiki. Technical specifications and developer guidelines are maintained internally within the project repository.
 
-### User Guides & Manuals
+### User Guides &amp; Manuals
 
-* **[User Setup & Installation Guide](https://github.com/shangar-t-a/bella-keys-personal-assist/blob/main/docs/user/setup-guide.md)** — Native host prerequisites, PostgreSQL/Ollama initialization, and Docker deployment scripts.
-* **[Authentication & Security Guide](https://github.com/shangar-t-a/bella-keys-personal-assist/blob/main/docs/user/authentication-guide.md)** — SSO identity management, JWT access tokens, HttpOnly refresh cookies, and token rotation.
-* **[Wealth Manager Guide](https://github.com/shangar-t-a/bella-keys-personal-assist/blob/main/docs/user/wealth-manager-guide.md)** — Asset trackers, interest-bearing liabilities, EMI projections, and net worth trajectory models.
-
-### Developer & Architecture Specifications
-
-* **[System Architecture & Coding Standards](https://github.com/shangar-t-a/bella-keys-personal-assist/blob/main/docs/developer/architecture-standards.md)** — Layered Clean Architecture rules, stateless containers, and backend standards.
-* **[Developer Workflow](https://github.com/shangar-t-a/bella-keys-personal-assist/blob/main/docs/developer/development-workflow.md)** — Monorepo layout, local execution scripts, dependency management, and linting standards.
-* **[MCP Authorization Specification](https://github.com/shangar-t-a/bella-keys-personal-assist/blob/main/docs/developer/mcp-authorization.md)** — Security boundaries, bearer token verification, and FastMCP integration design.
-* **[Frontend & UI Guidelines](https://github.com/shangar-t-a/bella-keys-personal-assist/blob/main/docs/developer/frontend-guidelines.md)** — React 18/19, Material UI v6 design system, accessibility, and [UI Guidelines](https://github.com/shangar-t-a/bella-keys-personal-assist/blob/main/docs/developer/ui-guidelines.md).
-* **[Testing Guidelines](https://github.com/shangar-t-a/bella-keys-personal-assist/blob/main/docs/developer/testing-guidelines.md)** — Async unit testing, integration test suits, and pytest conventions.
+* **[User Setup &amp; Installation Guide](/docs/projects/bella-assist/setup-guide)** — Native host prerequisites, PostgreSQL/Ollama initialization, Docker deployment, and `bella-manager` production orchestration.
+* **[Bella TUI Terminal Guide](/docs/projects/bella-assist/bella-tui-guide)** — Installation, authentication flow, keyboard shortcuts, feature workflows, and scriptable commands for the `bella` terminal companion.
+* **[Wealth Manager Guide](/docs/projects/bella-assist/wealth-manager-guide)** — Asset trackers, interest-bearing liabilities, EMI projections, and net worth trajectory models.
 
 ---
 
@@ -108,20 +99,20 @@ graph TD
 
 ## Core Components
 
-1. **Desktop Client** ([Codebase](https://github.com/shangar-t-a/bella-keys-personal-assist/tree/main/keys-personal-assist-ui))
+1. **Desktop Client**
    React 19 interface inside Electron, compiled with Vite and styled with Material UI v6. Served by nginx in web/Docker mode; connects directly to services in Electron mode.
 
-2. **Expense Manager Service** ([Codebase](https://github.com/shangar-t-a/bella-keys-personal-assist/tree/main/services/expense-manager-service))
+2. **Expense Manager Service**
    Clean Architecture FastAPI service for budgeting, savings envelopes, and account tracking. Backed by async SQLAlchemy and PostgreSQL.
 
-3. **Authentication Service** ([Codebase](https://github.com/shangar-t-a/bella-keys-personal-assist/tree/main/services/auth-service) | [Guide](https://github.com/shangar-t-a/bella-keys-personal-assist/blob/main/docs/user/authentication-guide.md))
-   FastAPI identity manager handling registration, login, and secure sessions via token rotation and HttpOnly cookies.
+3. **Authentication Service**
+   FastAPI identity manager handling registration, login, and secure sessions via OAuth 2.1 PKCE, token rotation, and HttpOnly refresh cookies.
 
-4. **Bella Chat Service** ([Codebase](https://github.com/shangar-t-a/bella-keys-personal-assist/tree/main/services/bella-chat-service))
+4. **Bella Chat Service**
    LangGraph `create_agent` orchestrator with RAG knowledge search, MCP tool use, SSE streaming, and Arize Phoenix observability. Supports Ollama (local) and Google Gemini as the LLM backend.
 
-5. **EMS MCP Server** ([Codebase](https://github.com/shangar-t-a/bella-keys-personal-assist/tree/main/mcps/ems-mcp-server) | [Specification](https://github.com/shangar-t-a/bella-keys-personal-assist/blob/main/docs/developer/mcp-authorization.md))
+5. **EMS MCP Server**
    FastMCP service exposing EMS financial data as read-only LLM-callable tools over streamable HTTP.
 
-6. **ETL Pipelines** ([Codebase](https://github.com/shangar-t-a/bella-keys-personal-assist/tree/main/services/etl-pipelines))
-   Offline ingestion job that fetches wiki docs from GitHub and loads dense vector embeddings into Qdrant.
+6. **ETL Pipelines**
+   Offline ingestion job that fetches wiki docs from GitHub and loads dense vector embeddings into Qdrant for semantic knowledge search.

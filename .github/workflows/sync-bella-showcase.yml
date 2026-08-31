@@ -1,0 +1,62 @@
+name: Sync Bella Showcase from bella-keys-personal-assist
+
+# Triggered by a repository_dispatch event sent from bella-keys-personal-assist
+# after a new user journey capture is completed.
+on:
+  repository_dispatch:
+    types: [sync-bella-showcase]
+  workflow_dispatch:
+    inputs:
+      source_ref:
+        description: 'Ref from bella-keys-personal-assist to sync from (branch or tag)'
+        required: false
+        default: 'main'
+
+jobs:
+  sync-showcase:
+    name: Sync Showcase Files
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout keys-personal-wiki
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout bella-keys-personal-assist (source)
+        uses: actions/checkout@v4
+        with:
+          repository: shangar-t-a/bella-keys-personal-assist
+          token: ${{ secrets.KEYS_PERSONAL_WIKI_WRITE }}
+          ref: ${{ github.event.client_payload.ref || inputs.source_ref || 'main' }}
+          path: _bella-source
+
+      - name: Sync screens to static/showcase
+        run: |
+          echo "Syncing docs/screens/ from bella-keys-personal-assist → keys-wiki-site/static/showcase/"
+          rsync -av --delete \
+            _bella-source/docs/screens/ \
+            keys-wiki-site/static/showcase/
+          echo "Sync complete."
+
+      - name: Clean up source checkout
+        run: rm -rf _bella-source
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add keys-wiki-site/static/showcase/
+          if git diff --cached --quiet; then
+            echo "No showcase changes to commit."
+          else
+            git commit -m "chore(showcase): sync bella user journey screens from bella-keys-personal-assist
+
+          - Automated sync triggered by bella-keys-personal-assist repository_dispatch
+          - Source ref: ${{ github.event.client_payload.ref || inputs.source_ref || 'main' }}
+          - Updates keys-wiki-site/static/showcase/ with latest screens"
+            git push
+            echo "Showcase synced and pushed successfully."
+          fi
