@@ -37,8 +37,29 @@ If you prefer manual setup:
 
 Production service deployment and lifecycle management across Windows, macOS, and Linux are orchestrated using **`bella-manager`**.
 
-:::info Installing `bella-manager`
-`bella-manager` is distributed from the private project repository. Installation requires repo access. Contact the project owner or use the instructions provided within the repository.
+:::info Installing `bella-manager` (Private Repository)
+Because `bella-keys-personal-assist` is a private repository, `uv` requires authenticated git access. You can install globally using any of the following methods:
+
+**Method 1: Direct install via SSH (Recommended)**
+```bash
+uv tool install "git+ssh://git@github.com/shangar-t-a/bella-keys-personal-assist.git#subdirectory=tools/bella-manager"
+```
+
+**Method 2: Direct install via HTTPS (with Git credentials)**
+```bash
+# Ensure git authentication is configured
+gh auth setup-git
+
+# Install via HTTPS
+uv tool install "git+https://github.com/shangar-t-a/bella-keys-personal-assist.git#subdirectory=tools/bella-manager"
+```
+
+**Method 3: From a local checkout**
+```bash
+git clone https://github.com/shangar-t-a/bella-keys-personal-assist.git
+cd bella-keys-personal-assist
+uv tool install ./tools/bella-manager
+```
 :::
 
 ### Running the Manager
@@ -62,8 +83,13 @@ If configuration files (`docker-compose.prod.yaml`, `.env.example`, `init-db-pro
 
 For an interactive terminal interface or command-line scripting with full application feature parity, install and run **`bella`** (see the [Bella TUI Guide](/docs/projects/bella-assist/bella-tui-guide)):
 
-:::info Installing `bella`
-`bella` is distributed from the private project repository. Installation requires repo access. See the [Bella TUI Guide](/docs/projects/bella-assist/bella-tui-guide) for full usage instructions once installed.
+:::info Installing `bella` (Private Repository)
+Install `bella` using any of the authenticated methods detailed in the [Bella TUI Guide](/docs/projects/bella-assist/bella-tui-guide):
+
+```bash
+# Via SSH
+uv tool install "git+ssh://git@github.com/shangar-t-a/bella-keys-personal-assist.git#subdirectory=tools/bella-cli"
+```
 :::
 
 ```bash
