@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Permissions & AI Delegation'
-sidebar_position: 6
+sidebar_position: 5
 description: 'Descriptions of requested OAuth scopes and how the AI Assistant accesses tools on your behalf'
 ---
 

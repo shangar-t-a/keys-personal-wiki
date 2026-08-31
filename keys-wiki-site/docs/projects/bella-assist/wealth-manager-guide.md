@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Wealth Manager Guide'
-sidebar_position: 4
+sidebar_position: 2
 description: 'Complete guide to the Wealth Manager: assets, liabilities, net worth, and portfolio allocation'
 ---
 
@@ -18,13 +18,13 @@ An asset is anything you own that has financial value – bank savings, stocks, 
 
 Your assets are organized into five buckets:
 
-| Category    | What belongs here                                        |
-| ----------- | -------------------------------------------------------- |
-| Equity      | Stocks, mutual funds, ETFs, NPS equity                   |
-| Debt        | Fixed deposits, PPF, bonds, EPF                          |
-| Real Estate | Property, land, REITs                                    |
+| Category | What belongs here |
+| --- | --- |
+| Equity | Stocks, mutual funds, ETFs, NPS equity |
+| Debt | Fixed deposits, PPF, bonds, EPF |
+| Real Estate | Property, land, REITs |
 | Commodities | Physical gold/silver, digital gold, sovereign gold bonds |
-| Cash / Bank | Savings accounts, current accounts, cash in hand         |
+| Cash / Bank | Savings accounts, current accounts, cash in hand |
 
 ### What do "Invested Value" and "Current Value" mean?
 
@@ -48,10 +48,10 @@ For most assets like bank balances or FDs, the current value is whatever you las
 
 ### Transaction types for assets
 
-| Type    | When to use                                                 |
-| ------- | ----------------------------------------------------------- |
-| Buy     | You purchased or deposited into this asset                  |
-| Sell    | You sold or withdrew from this asset                        |
+| Type | When to use |
+| --- | --- |
+| Buy | You purchased or deposited into this asset |
+| Sell | You sold or withdrew from this asset |
 | Revalue | You have a statement balance to record as the current value |
 
 ---
@@ -64,16 +64,16 @@ A liability is money you owe – personal loans, home loans, credit card balance
 
 ### Key Values on the Liability Card
 
-| Value                    | What it means                                                                         |
-| ------------------------ | ------------------------------------------------------------------------------------- |
-| **Original Loan Amount** | The total principal you borrowed (sum of all loan disbursals)                         |
-| **Current Outstanding**  | What you owe right now, calculated month by month                                     |
-| **Total Repaid**         | Everything you have paid back so far (EMIs + extra payments)                          |
-| **Accumulated Interest** | Total interest charged on this loan to date                                           |
-| **Progress %**           | How much of the original loan you have paid off: `(1 − outstanding / original) × 100` |
-| **EMI**                  | Your scheduled monthly payment                                                        |
-| **Start Date**           | The date your first loan instalment began                                             |
-| **Projected End Date**   | When the loan will be fully paid off at the current pace                              |
+| Value | What it means |
+| --- | --- |
+| **Original Loan Amount** | The total principal you borrowed (sum of all loan disbursals) |
+| **Current Outstanding** | What you owe right now, calculated month by month |
+| **Total Repaid** | Everything you have paid back so far (EMIs + extra payments) |
+| **Accumulated Interest** | Total interest charged on this loan to date |
+| **Progress %** | How much of the original loan you have paid off: `(1 − outstanding / original) × 100` |
+| **EMI** | Your scheduled monthly payment |
+| **Start Date** | The date your first loan instalment began |
+| **Projected End Date** | When the loan will be fully paid off at the current pace |
 
 ### How is the outstanding balance calculated?
 
@@ -88,10 +88,10 @@ This means **you do not need to log every EMI manually**. The app assumes each m
 
 ### Transaction types for liabilities
 
-| Type    | When to use                                                                                  |
-| ------- | -------------------------------------------------------------------------------------------- |
-| Borrow  | Initial loan disbursal or additional top-up borrowing                                        |
-| Repay   | An extra payment you made on top of your scheduled EMI (part-payment, prepayment)            |
+| Type | When to use |
+| --- | --- |
+| Borrow | Initial loan disbursal or additional top-up borrowing |
+| Repay | An extra payment you made on top of your scheduled EMI (part-payment, prepayment) |
 | Revalue | Your bank's official outstanding balance from a statement – this is the most important entry |
 
 :::tip Best Practice
@@ -126,12 +126,12 @@ The projections graph and metrics answer the key question: **how much are your p
 
 The graph shows four curves over time:
 
-| Curve                           | What it shows                                                                                      |
-| ------------------------------- | -------------------------------------------------------------------------------------------------- |
-| **Ideal Balance**               | How the principal would have decreased if you paid only the scheduled EMI every month from day one |
-| **Actual / Projected Balance**  | How your balance actually moved (historical) and will move (projected) based on real payments      |
-| **Ideal Interest**              | Cumulative interest under the ideal schedule                                                       |
-| **Actual / Projected Interest** | Cumulative interest as it actually accrued and will accrue                                         |
+| Curve | What it shows |
+| --- | --- |
+| **Ideal Balance** | How the principal would have decreased if you paid only the scheduled EMI every month from day one |
+| **Actual / Projected Balance** | How your balance actually moved (historical) and will move (projected) based on real payments |
+| **Ideal Interest** | Cumulative interest under the ideal schedule |
+| **Actual / Projected Interest** | Cumulative interest as it actually accrued and will accrue |
 
 When your actual balance is **below** the ideal balance, you are ahead of schedule – prepayments are working.
 
