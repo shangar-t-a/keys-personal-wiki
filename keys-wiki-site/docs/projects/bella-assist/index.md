@@ -46,6 +46,8 @@ All user-facing documentation is maintained in this wiki. Technical specificatio
 * **[User Setup &amp; Installation Guide](/docs/projects/bella-assist/setup-guide)** — Native host prerequisites, PostgreSQL/Ollama initialization, Docker deployment, and `bella-manager` production orchestration.
 * **[Bella TUI Terminal Guide](/docs/projects/bella-assist/bella-tui-guide)** — Installation, authentication flow, keyboard shortcuts, feature workflows, and scriptable commands for the `bella` terminal companion.
 * **[Wealth Manager Guide](/docs/projects/bella-assist/wealth-manager-guide)** — Asset trackers, interest-bearing liabilities, EMI projections, and net worth trajectory models.
+* **[Single Sign-On &amp; Session Guide](/docs/projects/bella-assist/sso-login)** — Single Sign-On workflow across Web and Electron, session lifecycle, and logout protocols.
+* **[Permissions, Scopes &amp; AI Delegation](/docs/projects/bella-assist/permissions-and-delegation)** — Permission scope descriptions and zero-trust On-Behalf-Of (OBO) token delegation architecture.
 
 ---
 
