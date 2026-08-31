@@ -97,7 +97,7 @@ Outside of work, I spend time exploring AI advancements, working on personal pro
     <span>LinkedIn</span>
   </a>
 
-  <a href="<https://github.com/shangar-t-a/>" target="_blank" style={{
+  <a href="https://github.com/shangar-t-a/" target="_blank" style={{
     display: 'flex',
     alignItems: 'center',
     gap: '0.5rem',
@@ -144,7 +144,7 @@ I work across the full stack of modern AI and backend engineering. Here is where
   />
   <FeatureCard
     title="DevOps & AI Infrastructure"
-    description="Infrastructure containerisation using Docker, Docker Compose, and basics of Kubernetes. Managing vector database storage with Qdrant, alongside LLM observability, cost tracking, and evaluation with TruLens."
+    description="Infrastructure containerisation using Docker, Docker Compose, and basics of Kubernetes. Managing vector database storage with Qdrant, alongside LLM observability, cost tracking, and tracing with Arize Phoenix."
   />
 </CardGrid>
 
@@ -172,8 +172,8 @@ Here is the breakdown of the specific technologies and tools I employ on a regul
   <FeatureCard
     title="Data & Eval"
     badge="Quality"
-    tags={['Qdrant', 'TruLens', 'Custom Eval Harnesses']}
-    description="Vector storage management, semantic indexing, semantic search tuning, and testing model outputs."
+    tags={['Qdrant', 'Arize Phoenix', 'Custom Eval Harnesses']}
+    description="Vector storage management, semantic indexing, semantic search tuning, LLM observability and tracing, and testing model outputs."
   />
 </CardGrid>
 

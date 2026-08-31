@@ -117,4 +117,3 @@ graph TD
 
 6. **ETL Pipelines**
    Offline ingestion job that fetches wiki docs from GitHub and loads dense vector embeddings into Qdrant for semantic knowledge search.
-

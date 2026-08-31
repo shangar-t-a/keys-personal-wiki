@@ -18,7 +18,7 @@ A curated showcase of personal engineering projects spanning AI systems, backend
 
 <div style={{ marginTop: '2.5rem', marginBottom: '1.5rem' }}>
   <FeatureCard
-    href="/keys-personal-wiki/docs/projects/bella-assist/"
+    href="/docs/projects/bella-assist"
     title="Bella Assist &mdash; Personal AI Assistant"
     badge="Featured App"
     tags={['Electron', 'LangGraph', 'FastAPI', 'React']}
