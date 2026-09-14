@@ -43,6 +43,7 @@ All user-facing documentation is maintained in this wiki. Technical specificatio
 
 ### User Guides &amp; Manuals
 
+* **[Production Setup Guide (WSL &amp; Docker)](/docs/projects/bella-assist/setup-guide)** — Production deployment in WSL2, container lifecycle management, Windows Host PostgreSQL connectivity, and troubleshooting.
 * **[Wealth Manager Guide](/docs/projects/bella-assist/wealth-manager-guide)** — Asset trackers, interest-bearing liabilities, EMI projections, and net worth trajectory models.
 * **[Bella TUI Terminal Guide](/docs/projects/bella-assist/bella-tui-guide)** — Installation, authentication flow, keyboard shortcuts, feature workflows, and scriptable commands for the `bella` terminal companion.
 * **[Single Sign-On &amp; Session Guide](/docs/projects/bella-assist/auth/sso-login)** — Single Sign-On workflow across Web and Electron, session lifecycle, and logout protocols.
@@ -117,3 +118,4 @@ graph TD
 
 6. **ETL Pipelines**
    Offline ingestion job that fetches wiki docs from GitHub and loads dense vector embeddings into Qdrant for semantic knowledge search.
+
