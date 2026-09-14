@@ -151,7 +151,7 @@ body {
   }
 }
 
-/* Signature Rotated Diamond Mark on Brand */
+/* Navbar Brand Title */
 .navbar__brand {
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -160,18 +160,6 @@ body {
   align-items: center;
   gap: 0.35rem;
   transition: opacity 0.25s ease;
-}
-
-.navbar__brand::before {
-  content: '';
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  background-color: var(--color-copper);
-  transform: rotate(45deg);
-  margin-right: 6px;
-  flex-shrink: 0;
-  box-shadow: 0 0 8px var(--color-copper-subtle);
 }
 
 .navbar__brand:hover {
