@@ -10,112 +10,60 @@ import CenteredIntro from '@site/src/components/core/CenteredIntro';
 # Bella Assist
 
 <CenteredIntro>
-Bella Assist is a local-first desktop application that integrates an AI personal assistant with multi-period budgeting, asset and liability tracking, and semantic search. The application is built using a clean-architecture backend in FastAPI, a React interface packaged inside Electron, and custom Model Context Protocol (MCP) servers.
+Bella Assist is a privacy-first personal assistant and wealth management application. It integrates intelligent assistance with multi-period budgeting, asset and liability tracking, savings envelopes, and terminal productivity tools.
 </CenteredIntro>
 
 ---
 
-## Live User Journey Showcase
+## Interactive Application Showcase
 
-Explore the interactive application showcase rendered directly below, featuring full screen navigation, light/dark theme switching, budget visualizations, net worth trajectories, and AI chat capabilities.
+Explore the interactive application showcase below, featuring screen navigation, dark and light theme switching, budget visualizations, net worth trajectories, and AI chat capabilities.
 
 <iframe
   src="/keys-personal-wiki/showcase/user-journey.html"
   style={{
     width: '100%',
     height: '800px',
-    border: '1px solid var(--ifm-color-emphasis-300)',
+    border: '1px solid var(--border-line)',
     borderRadius: '12px',
-    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
+    boxShadow: 'var(--card-shadow)',
     marginBottom: '2rem'
   }}
   title="Bella Assist Interactive User Journey Showcase"
   loading="lazy"
 />
 
-* <a href="/keys-personal-wiki/showcase/user-journey.html" target="_blank" rel="noopener noreferrer"><strong>Open Showcase in Fullscreen</strong></a> &mdash; Open the live showcase in a dedicated browser tab.
+* <a href="/keys-personal-wiki/showcase/user-journey.html" target="_blank" rel="noopener noreferrer"><strong>Open Showcase in Fullscreen</strong></a> &ndash; Open the live interactive showcase in a dedicated browser tab.
 
 ---
 
-## Documentation
+## Key Features
 
-All user-facing documentation is maintained in this wiki. Technical specifications and developer guidelines are maintained internally within the project repository.
+1. **Multi-Period Budgeting & Savings Envelopes**
+   Organize income into dedicated allocations (Bills, Discretionary, Savings Envelopes) with real-time balance tracking and recurring transaction support.
 
-### User Guides &amp; Manuals
+2. **Wealth & Net Worth Tracking**
+   Track tangible and financial assets alongside interest-bearing liabilities with automated EMI schedules and forward-looking net worth projections.
 
-* **[Production Setup Guide (WSL &amp; Docker)](/docs/projects/bella-assist/setup-guide)** — Production deployment in WSL2, container lifecycle management, Windows Host PostgreSQL connectivity, and troubleshooting.
-* **[Wealth Manager Guide](/docs/projects/bella-assist/wealth-manager-guide)** — Asset trackers, interest-bearing liabilities, EMI projections, and net worth trajectory models.
-* **[Bella TUI Terminal Guide](/docs/projects/bella-assist/bella-tui-guide)** — Installation, authentication flow, keyboard shortcuts, feature workflows, and scriptable commands for the `bella` terminal companion.
-* **[Single Sign-On &amp; Session Guide](/docs/projects/bella-assist/auth/sso-login)** — Single Sign-On workflow across Web and Electron, session lifecycle, and logout protocols.
-* **[Permissions, Scopes &amp; AI Delegation](/docs/projects/bella-assist/auth/permissions-and-delegation)** — Permission scope descriptions and zero-trust On-Behalf-Of (OBO) token delegation architecture.
+3. **Personal AI Assistant**
+   Chat with your assistant using local or cloud language models. Query your expense history, search personal knowledge bases, and run tool-assisted financial calculations.
 
----
-
-## Deployment Architecture
-
-Bella Assist uses a hybrid local architecture: stateless application logic runs within containerized Docker environments while all stateful user data (PostgreSQL databases, Qdrant vector store, and Ollama model inference) is maintained directly on the host machine to ensure privacy and data sovereignty.
-
-```mermaid
-graph TD
-    subgraph Client ["Client"]
-        UI["React UI (Electron Desktop)"]
-    end
-
-    subgraph Gateway ["nginx (Web / Docker mode)"]
-        Nginx["nginx Reverse Proxy"]
-    end
-
-    subgraph Containers ["Docker Containers (Stateless Logic)"]
-        EMS["Expense Manager Service (FastAPI :8000)"]
-        Chat["Bella Chat Service (FastAPI :5000)"]
-        MCPServer["EMS MCP Server (FastMCP :8001)"]
-        Auth["Authentication Service (FastAPI :8002)"]
-    end
-
-    subgraph Host ["Host OS (Stateful Data)"]
-        Postgres["PostgreSQL :5432"]
-        Qdrant["Qdrant :6333"]
-        Ollama["Ollama :11434"]
-    end
-
-    UI -->|"Electron: direct HTTP"| EMS
-    UI -->|"Electron: direct SSE"| Chat
-    UI -->|"Electron: direct HTTP"| Auth
-    UI -->|"Web: /api/ems"| Nginx
-    UI -->|"Web: /api/bella-chat"| Nginx
-    UI -->|"Web: /api/auth"| Nginx
-    Nginx -->|"proxy_pass"| EMS
-    Nginx -->|"proxy_pass"| Chat
-    Nginx -->|"proxy_pass"| Auth
-    Chat -->|"streamable-HTTP tools"| MCPServer
-    MCPServer -->|"HTTP"| EMS
-    MCPServer -->|"HTTP (verify token)"| Auth
-    Chat -->|"vector search"| Qdrant
-    Chat -->|"checkpoints"| Postgres
-    Chat -->|"inference"| Ollama
-    EMS -->|"ORM"| Postgres
-    Auth -->|"ORM"| Postgres
-```
+4. **Terminal Companion (`bella`)**
+   A fast terminal UI (TUI) and scriptable CLI tool for quick transaction logging, balance inquiries, and system monitoring directly from your shell.
 
 ---
 
-## Core Components
+## User Guides & Manuals
 
-1. **Desktop Client**
-   React 19 interface inside Electron, compiled with Vite and styled with Material UI v6. Served by nginx in web/Docker mode; connects directly to services in Electron mode.
+* **[Wealth Manager Guide](/docs/projects/bella-assist/wealth-manager-guide)** &ndash; Asset tracking, interest-bearing liabilities, EMI projections, and net worth trajectory models.
+* **[Bella TUI Terminal Guide](/docs/projects/bella-assist/bella-tui-guide)** &ndash; Installation, authentication flow, keyboard shortcuts, and commands for the `bella` terminal companion.
+* **[Single Sign-On & Session Guide](/docs/projects/bella-assist/auth/sso-login)** &ndash; Single Sign-On workflow across Web and Electron, session lifecycle, and logout protocols.
+* **[Permissions & Delegation Guide](/docs/projects/bella-assist/auth/permissions-and-delegation)** &ndash; Permission scope descriptions and token delegation model.
 
-2. **Expense Manager Service**
-   Clean Architecture FastAPI service for budgeting, savings envelopes, and account tracking. Backed by async SQLAlchemy and PostgreSQL.
+---
 
-3. **Authentication Service**
-   FastAPI identity manager handling registration, login, and secure sessions via OAuth 2.1 PKCE, token rotation, and HttpOnly refresh cookies.
+## Technical & Architecture Notes
 
-4. **Bella Chat Service**
-   LangGraph `create_agent` orchestrator with RAG knowledge search, MCP tool use, SSE streaming, and Arize Phoenix observability. Supports Ollama (local) and Google Gemini as the LLM backend.
+For deep container deployment architecture, host networking details, and WSL2 configurations:
 
-5. **EMS MCP Server**
-   FastMCP service exposing EMS financial data as read-only LLM-callable tools over streamable HTTP.
-
-6. **ETL Pipelines**
-   Offline ingestion job that fetches wiki docs from GitHub and loads dense vector embeddings into Qdrant for semantic knowledge search.
-
+* **[WSL2 & Docker Hybrid Architecture Guide](/docs/knowledge-base/devops/wsl-docker-hybrid-setup)** &ndash; Complete setup guide for running stateless microservices in WSL2 with Windows Host PostgreSQL.
