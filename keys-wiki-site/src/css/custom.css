@@ -419,6 +419,84 @@ body {
   line-height: 1.7;
 }
 
+/* Editorial Technical Grid & Cards */
+.editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0 2.5rem;
+}
+
+.editorial-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-line);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.editorial-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-copper);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.editorial-card-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-copper);
+  background-color: var(--color-copper-subtle);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.editorial-card-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-ink);
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.01em;
+}
+
+.editorial-card-text {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-ink-2);
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.editorial-card-text strong {
+  color: var(--text-ink);
+}
+
+.editorial-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+
+.editorial-tag {
+  display: inline-block;
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: var(--text-ink-3);
+  background-color: var(--bg-sunken);
+  border: 1px solid var(--border-line);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+}
+
 /* ==========================================================================
    Documentation & Markdown Customizations
    ========================================================================== */
