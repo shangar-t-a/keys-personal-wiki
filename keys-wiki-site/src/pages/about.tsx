@@ -37,7 +37,7 @@ export default function AboutPage(): JSX.Element {
                 Technical Lead &ndash; AI &amp; Software Development
               </p>
               <p className="editorial-bio-text">
-                Specializing in Python backend engineering, LlamaIndex &amp; agentic workflows, enterprise Microsoft Entra ID integration, and T&amp;M test automation.
+                Specializing in AI and Python backend engineering, LlamaIndex &amp; agentic workflows, enterprise applications, and T&amp;M test automations.
               </p>
               <div className="editorial-bio-links">
                 <a
@@ -78,31 +78,31 @@ export default function AboutPage(): JSX.Element {
           <div className="editorial-prose">
             <h2>In My Day Job</h2>
             <p>
-              I work primarily as an <strong>AI and Backend Engineer</strong>, designing systems and automation tooling that accelerate test engineers throughout the silicon and hardware validation lifecycle.
+              I work primarily as an <strong>AI and Backend Engineer</strong>, designing AI systems and automation tooling that accelerate test engineers throughout the silicon and hardware validation lifecycle and enable customers to make better decisions faster.
             </p>
 
             <p>
-              My background spans key phases of the <strong>Test &amp; Measurement (T&amp;M)</strong> lifecycle in silicon and embedded systems:
+              My background spans key phases of the <strong>Test &amp; Measurement (T&amp;M)</strong> lifecycle in silicon and enterprise systems:
             </p>
 
             <ul className="editorial-list">
               <li>
-                <strong>Pre-Silicon Firmware V&amp;V:</strong> Firmware verification and validation before silicon tape-out to catch logical and timing regressions early.
+                <strong>Test and Productivity Acceleration AI Applications:</strong> Architecting intelligent AI systems that speed up knowledge discovery, workflow automation.
               </li>
               <li>
-                <strong>Silicon Bench Validation:</strong> Hands-on bench testing, instrument control, and electrical validation of physical silicon.
-              </li>
-              <li>
-                <strong>Online Design Tool (ODT):</strong> A web-based engineering simulation platform enabling customers to list parts, simulate real-world operational scenarios, and pick the optimal part for their specific use case.
+                <strong>AI-Assisted Test Development:</strong> Building AI-driven workflows to accelerate test program development for Automated Test Equipment (ATE) test engineers.
               </li>
               <li>
                 <strong>Medical Equipment Test Rig Automation:</strong> Designed an end-to-end automation framework controlling a hardware test rig setup to execute full product validation &ndash; spanning firmware dumping/flashing through real-time patient health monitoring.
               </li>
               <li>
-                <strong>AI-Assisted ATE Test Development:</strong> Building AI-driven workflows to accelerate test program development for Automated Test Equipment (ATE) test engineers.
+                <strong>Online Design Tool (ODT):</strong> A web-based engineering simulation platform enabling customers to list parts, simulate real-world operational scenarios, and pick the optimal part for their specific use case.
               </li>
               <li>
-                <strong>Customer Acceleration AI Applications:</strong> Architecting intelligent systems that index deep technical documentation to speed up and sharpen technical responses for end customers.
+                <strong>Pre-Silicon Firmware V&amp;V:</strong> Firmware verification and validation before silicon tape-out to catch logical and timing regressions early.
+              </li>
+              <li>
+                <strong>Silicon Bench Validation:</strong> Hands-on bench testing, instrument control, and electrical validation.
               </li>
             </ul>
 
@@ -115,69 +115,94 @@ export default function AboutPage(): JSX.Element {
             </p>
 
             <h2>Technical Focus &amp; Stack</h2>
-            <p>
-              Here is a summary of the technologies, frameworks, and domain tooling I work with regularly:
-            </p>
           </div>
 
-          {/* Restored Technical Focus Grid */}
+          {/* Technical Focus Grid */}
           <div className="editorial-grid">
             <div className="editorial-card">
-              <div className="editorial-card-badge">AI &amp; RAG</div>
+              <div className="editorial-card-badge">AI &amp; Multi-Agent</div>
               <h3 className="editorial-card-title">AI &amp; Intelligent Systems</h3>
-              <p className="editorial-card-text">
-                Primary depth with <strong>LlamaIndex</strong> for document ingestion, hierarchical indexing, and advanced retrieval. Building agent skills &amp; plugins, tool use with MCP, <strong>Claude Agent SDKs</strong>, <strong>LangGraph</strong>, <strong>Qdrant</strong> vector storage, and <strong>Arize Phoenix</strong> tracing.
-              </p>
+              <ul className="editorial-card-list">
+                <li>
+                  Custom agent orchestration, multi-agent workflows, and systematic eval-driven development for LLM applications.
+                </li>
+                <li>
+                  Agent skill/plugin engineering, tool integration via Model Context Protocol (MCP), and enterprise context connectors (SharePoint &amp; technical docs).
+                </li>
+                <li>
+                  Frameworks &amp; Storage: <strong>Claude Agent SDK</strong>, <strong>LlamaIndex</strong>, <strong>LangGraph</strong>, <strong>Qdrant</strong> vector database, and <strong>Arize Phoenix</strong> tracing.
+                </li>
+              </ul>
               <div className="editorial-tag-list">
                 <span className="editorial-tag">LlamaIndex</span>
-                <span className="editorial-tag">Claude SDK</span>
+                <span className="editorial-tag">Claude Agent SDK</span>
                 <span className="editorial-tag">LangGraph</span>
                 <span className="editorial-tag">MCP</span>
-                <span className="editorial-tag">SharePoint Connectors</span>
+                <span className="editorial-tag">Eval-Driven Dev</span>
                 <span className="editorial-tag">Qdrant</span>
                 <span className="editorial-tag">Arize Phoenix</span>
               </div>
             </div>
 
             <div className="editorial-card">
-              <div className="editorial-card-badge">Backend</div>
-              <h3 className="editorial-card-title">Python &amp; API Architecture</h3>
-              <p className="editorial-card-text">
-                Asynchronous Python with <strong>FastAPI</strong>, <strong>asyncio</strong>, and <strong>httpx</strong>. Clean Architecture, declarative schema modeling with <strong>Pydantic v2</strong>, and relational persistence with <strong>SQLAlchemy</strong> and <strong>Alembic</strong>.
-              </p>
+              <div className="editorial-card-badge">Backend &amp; Infra</div>
+              <h3 className="editorial-card-title">Python, Backend Architecture &amp; Infra</h3>
+              <ul className="editorial-card-list">
+                <li>
+                  Asynchronous Python microservices with <strong>FastAPI</strong>, Clean Architecture, <strong>Pydantic v2</strong> declarative schemas, and <strong>PostgreSQL</strong> persistence (<strong>SQLAlchemy</strong> &amp; <strong>Alembic</strong>).
+                </li>
+                <li>
+                  Cloud-native containerized deployments using <strong>Docker</strong> and <strong>Kubernetes</strong>, API design &amp; contracts with OpenAPI/Swagger.
+                </li>
+                <li>
+                  Enterprise CI/CD pipelines with <strong>GitHub Actions</strong> &amp; <strong>OpenShift</strong>, monitored via <strong>Prometheus</strong>, <strong>Grafana</strong>, and <strong>Arize Phoenix</strong>. Modern tooling with <strong>uv</strong>, <strong>ruff</strong>, <strong>mypy</strong>, and <strong>pytest</strong>.
+                </li>
+              </ul>
               <div className="editorial-tag-list">
                 <span className="editorial-tag">FastAPI</span>
-                <span className="editorial-tag">asyncio</span>
-                <span className="editorial-tag">Pydantic v2</span>
-                <span className="editorial-tag">SQLAlchemy</span>
                 <span className="editorial-tag">PostgreSQL</span>
-                <span className="editorial-tag">Alembic</span>
+                <span className="editorial-tag">Docker &amp; K8s</span>
+                <span className="editorial-tag">CI/CD &amp; OpenShift</span>
+                <span className="editorial-tag">Prometheus / Grafana</span>
+                <span className="editorial-tag">uv / ruff</span>
               </div>
             </div>
 
             <div className="editorial-card">
-              <div className="editorial-card-badge">Identity &amp; DevOps</div>
-              <h3 className="editorial-card-title">Enterprise Security &amp; Infra</h3>
-              <p className="editorial-card-text">
-                <strong>Microsoft Entra ID</strong> enterprise authentication, OIDC + PKCE, token rotation, and app registrations. Containerization with <strong>Docker</strong> / <strong>Docker Compose</strong>, WSL2 Linux workflows, and modern tooling with <strong>uv</strong>, <strong>ruff</strong>, <strong>mypy</strong>, and <strong>pytest</strong>.
-              </p>
+              <div className="editorial-card-badge">Identity &amp; Security</div>
+              <h3 className="editorial-card-title">Enterprise Security &amp; Identity</h3>
+              <ul className="editorial-card-list">
+                <li>
+                  <strong>Microsoft Entra ID (Azure AD)</strong> enterprise authentication, app registrations, and zero-trust identity architectures.
+                </li>
+                <li>
+                  End-to-end implementation of enterprise auth flows: Authorization Code Flow with PKCE, On-Behalf-Of (OBO) token exchange, Client Credentials, and microservice RBAC.
+                </li>
+              </ul>
               <div className="editorial-tag-list">
                 <span className="editorial-tag">Microsoft Entra ID</span>
                 <span className="editorial-tag">OIDC / PKCE</span>
-                <span className="editorial-tag">Docker</span>
-                <span className="editorial-tag">WSL2</span>
-                <span className="editorial-tag">uv</span>
-                <span className="editorial-tag">ruff / mypy</span>
-                <span className="editorial-tag">pytest</span>
+                <span className="editorial-tag">OBO Token Flow</span>
+                <span className="editorial-tag">Client Credentials</span>
+                <span className="editorial-tag">OAuth 2.1</span>
+                <span className="editorial-tag">RBAC</span>
               </div>
             </div>
 
             <div className="editorial-card">
-              <div className="editorial-card-badge">Domain</div>
+              <div className="editorial-card-badge">Domain &amp; Validation</div>
               <h3 className="editorial-card-title">Test &amp; Measurement Engineering</h3>
-              <p className="editorial-card-text">
-                Experience across pre-silicon firmware V&amp;V, silicon bench validation, web-based Online Design Tools (ODT), medical device test rig automation frameworks, and ATE test program acceleration.
-              </p>
+              <ul className="editorial-card-list">
+                <li>
+                  Pre-silicon firmware V&amp;V and post-silicon bench validation, instrument automation, and electrical verification across the silicon lifecycle.
+                </li>
+                <li>
+                  Automated hardware test rig frameworks for full-system validation (firmware flashing, telemetry, and real-time monitoring).
+                </li>
+                <li>
+                  Online Design Tool (ODT) engineering simulation platforms for parametric part selection and operational modeling.
+                </li>
+              </ul>
               <div className="editorial-tag-list">
                 <span className="editorial-tag">Silicon T&amp;M Lifecycle</span>
                 <span className="editorial-tag">Pre-Silicon V&amp;V</span>

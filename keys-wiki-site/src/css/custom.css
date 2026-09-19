@@ -311,10 +311,11 @@ body {
 }
 
 .editorial-bio-avatar {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 165px;
   border-radius: 10px;
   object-fit: cover;
+  object-position: center top;
   border: 2px solid var(--color-copper);
   box-shadow: 0 4px 16px var(--color-copper-subtle);
   flex-shrink: 0;
@@ -477,6 +478,40 @@ body {
 
 .editorial-card-text strong {
   color: var(--text-ink);
+}
+
+.editorial-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.editorial-card-list li {
+  font-size: 0.90rem;
+  line-height: 1.55;
+  color: var(--text-ink-2);
+  position: relative;
+  padding-left: 1.15rem;
+  margin: 0;
+}
+
+.editorial-card-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: -0.05rem;
+  color: var(--color-copper);
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.editorial-card-list strong {
+  color: var(--text-ink);
+  font-weight: 600;
 }
 
 .editorial-tag-list {
