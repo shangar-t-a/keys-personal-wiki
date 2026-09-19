@@ -5,3 +5,4 @@ export default {
   ...ComponentTypes,
   'custom-themePaletteToggle': ThemePaletteToggle,
 };
+

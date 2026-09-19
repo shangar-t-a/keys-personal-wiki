@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+import clsx from 'clsx';
 import styles from './ThemePaletteToggle.module.css';
 
 export type AccentTheme = 'blue' | 'copper';
@@ -72,40 +73,65 @@ export default function ThemePaletteToggle(): JSX.Element | null {
     };
   }, []);
 
-  const toggleTheme = () => {
-    const nextTheme: AccentTheme = accentTheme === 'blue' ? 'copper' : 'blue';
-    setAccentTheme(nextTheme);
-    applyTheme(nextTheme);
+  const selectTheme = (theme: AccentTheme) => {
+    if (accentTheme === theme) return;
+    setAccentTheme(theme);
+    applyTheme(theme);
   };
 
   if (!isMounted) {
     return (
-      <button
-        type="button"
-        aria-label="Toggle Theme Palette"
-        className={styles.toggleBtn}
-        disabled>
-        <span className={styles.swatch} />
-        <span className={styles.label}>Theme</span>
-      </button>
+      <div className={styles.capsule} aria-hidden="true">
+        <span className={clsx(styles.segmentBtn, styles.activeSegment)}>🌊</span>
+        <span className={clsx(styles.segmentBtn, styles.inactiveSegment)}>🍂</span>
+      </div>
     );
   }
 
   const isBlue = accentTheme === 'blue';
-  const label = isBlue ? 'Ocean Blue' : 'Warm Copper';
-  const title = isBlue
-    ? 'Active: Deep Space Blue gradient (Click for Warm Copper)'
-    : 'Active: Warm Copper editorial (Click for Deep Space Blue)';
 
   return (
-    <button
-      type="button"
-      onClick={toggleTheme}
-      className={styles.toggleBtn}
-      title={title}
-      aria-label={`Switch Theme Palette (Current: ${label})`}>
-      <span className={styles.swatch} />
-      <span className={styles.label}>{label}</span>
-    </button>
+    <div
+      className={styles.capsule}
+      role="radiogroup"
+      aria-label="Color Palette Switcher">
+      {/* Sliding indicator */}
+      <div
+        className={clsx(
+          styles.slider,
+          isBlue ? styles.sliderBlue : styles.sliderCopper
+        )}
+      />
+
+      {/* Ocean Blue Option */}
+      <button
+        type="button"
+        role="radio"
+        aria-checked={isBlue}
+        onClick={() => selectTheme('blue')}
+        className={clsx(
+          styles.segmentBtn,
+          isBlue ? styles.activeSegment : styles.inactiveSegment
+        )}
+        title="Deep Space Blue & Cyan Palette (Default)"
+        aria-label="Switch to Deep Space Blue & Cyan theme">
+        🌊
+      </button>
+
+      {/* Warm Copper Option */}
+      <button
+        type="button"
+        role="radio"
+        aria-checked={!isBlue}
+        onClick={() => selectTheme('copper')}
+        className={clsx(
+          styles.segmentBtn,
+          !isBlue ? styles.activeSegment : styles.inactiveSegment
+        )}
+        title="Warm Copper & Amber Editorial Palette"
+        aria-label="Switch to Warm Copper & Amber theme">
+        🍂
+      </button>
+    </div>
   );
 }
