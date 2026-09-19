@@ -81,7 +81,7 @@ export default function ThemePaletteToggle(): JSX.Element | null {
 
   if (!isMounted) {
     return (
-      <div className={styles.capsule} aria-hidden="true">
+      <div className={styles.paletteTrack} aria-hidden="true">
         <span className={clsx(styles.segmentBtn, styles.activeSegment)}>🌊</span>
         <span className={clsx(styles.segmentBtn, styles.inactiveSegment)}>🍂</span>
       </div>
@@ -92,14 +92,14 @@ export default function ThemePaletteToggle(): JSX.Element | null {
 
   return (
     <div
-      className={styles.capsule}
+      className={styles.paletteTrack}
       role="radiogroup"
-      aria-label="Color Palette Switcher">
-      {/* Sliding indicator */}
+      aria-label="Theme Color Palette">
+      {/* 3D Spring Slider Thumb */}
       <div
         className={clsx(
-          styles.slider,
-          isBlue ? styles.sliderBlue : styles.sliderCopper
+          styles.thumb,
+          isBlue ? styles.thumbBlue : styles.thumbCopper
         )}
       />
 
@@ -114,7 +114,7 @@ export default function ThemePaletteToggle(): JSX.Element | null {
           isBlue ? styles.activeSegment : styles.inactiveSegment
         )}
         title="Deep Space Blue & Cyan Palette (Default)"
-        aria-label="Switch to Deep Space Blue & Cyan theme">
+        aria-label="Switch to Deep Space Blue & Cyan palette">
         🌊
       </button>
 
@@ -129,7 +129,7 @@ export default function ThemePaletteToggle(): JSX.Element | null {
           !isBlue ? styles.activeSegment : styles.inactiveSegment
         )}
         title="Warm Copper & Amber Editorial Palette"
-        aria-label="Switch to Warm Copper & Amber theme">
+        aria-label="Switch to Warm Copper & Amber palette">
         🍂
       </button>
     </div>

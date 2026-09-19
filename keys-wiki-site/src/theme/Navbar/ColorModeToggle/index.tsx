@@ -1,6 +1,5 @@
 import React from 'react';
-import { useColorMode, useThemeConfig } from '@docusaurus/theme-common';
-import ColorModeToggle from '@theme/ColorModeToggle';
+import NavbarColorModeToggleOriginal from '@theme-original/Navbar/ColorModeToggle';
 import ThemePaletteToggle from '@site/src/components/core/ThemePaletteToggle';
 import clsx from 'clsx';
 import styles from './styles.module.css';
@@ -10,28 +9,12 @@ export interface Props {
   buttonClassName?: string;
 }
 
-export default function NavbarColorModeToggle({
-  className,
-  buttonClassName,
-}: Props): JSX.Element | null {
-  const navbarStyle = useThemeConfig().navbar.style;
-  const { disableSwitch, respectPrefersColorScheme } = useThemeConfig().colorMode;
-  const { colorModeChoice, setColorMode } = useColorMode();
-
+export default function NavbarColorModeToggle(props: Props): JSX.Element {
   return (
-    <div className={clsx(styles.appearanceControlsGroup, className)}>
+    <div className={clsx(styles.appearanceControlsGroup, props.className)}>
       <ThemePaletteToggle />
-      {!disableSwitch && (
-        <ColorModeToggle
-          className={className}
-          buttonClassName={
-            navbarStyle === 'dark' ? styles.darkNavbarColorModeToggle : buttonClassName
-          }
-          respectPrefersColorScheme={respectPrefersColorScheme}
-          value={colorModeChoice}
-          onChange={setColorMode}
-        />
-      )}
+      <span className={styles.separator} aria-hidden="true" />
+      <NavbarColorModeToggleOriginal {...props} className={undefined} />
     </div>
   );
 }
