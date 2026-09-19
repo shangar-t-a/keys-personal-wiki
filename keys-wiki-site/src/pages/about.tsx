@@ -1,9 +1,11 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import ShangarAvatar from '@site/static/img/docs/intro/shangar.png';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export default function AboutPage(): JSX.Element {
+  const shangarAvatar = useBaseUrl('/img/docs/intro/shangar.png');
+
   return (
     <Layout
       title="About"
@@ -27,7 +29,7 @@ export default function AboutPage(): JSX.Element {
           {/* Author Callout Banner */}
           <div className="editorial-bio-card">
             <img
-              src={ShangarAvatar}
+              src={shangarAvatar}
               alt="Shangar Arivazhagan (Keys)"
               className="editorial-bio-avatar"
             />

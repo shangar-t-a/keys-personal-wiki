@@ -1,7 +1,8 @@
 /**
  * Global CSS Overrides
- * Customized for an elite editorial & premium tech aesthetic (inspired by LocalHake).
- * Features Fraunces display typography, Instrument Sans prose, and warm copper accents.
+ * Customized for an elite technical & editorial portfolio aesthetic with dynamic theme palettes.
+ * Default: Signature Deep Space Blue & Cyan Gradient.
+ * Optional: Warm Editorial Copper & Amber.
  */
 
 :root {
@@ -10,32 +11,33 @@
   --ifm-font-family-monospace: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --font-display: 'Fraunces', Georgia, serif;
 
-  /* Signature Warm Accent Tokens (Copper / Amber) */
-  --color-copper: #c2693e;
-  --color-copper-strong: #a6552e;
-  --color-copper-subtle: rgba(194, 105, 62, 0.12);
+  /* Signature Accent Tokens (Default: Deep Space Blue / Cyan) */
+  --color-accent: #0284c7;
+  --color-accent-strong: #0369a1;
+  --color-accent-subtle: rgba(2, 132, 199, 0.12);
+  --accent-gradient: linear-gradient(135deg, #0284c7 0%, #06b6d4 100%);
 
-  /* Light Mode Color System (Warm Editorial Paper) */
-  --ifm-color-primary: #c2693e;
-  --ifm-color-primary-dark: #af5c33;
-  --ifm-color-primary-darker: #9c4f29;
-  --ifm-color-primary-darkest: #793c1d;
-  --ifm-color-primary-light: #d47a4f;
-  --ifm-color-primary-lighter: #e08b61;
-  --ifm-color-primary-lightest: #f0ab87;
+  /* Light Mode Color System (Default: Deep Space Blue & Cool Paper) */
+  --ifm-color-primary: #0284c7;
+  --ifm-color-primary-dark: #0369a1;
+  --ifm-color-primary-darker: #075985;
+  --ifm-color-primary-darkest: #0c4a6e;
+  --ifm-color-primary-light: #0ea5e9;
+  --ifm-color-primary-lighter: #38bdf8;
+  --ifm-color-primary-lightest: #7dd3fc;
 
-  --bg-base: #fbfaf8;
+  --bg-base: #fafafa;
   --bg-surface: #ffffff;
-  --bg-sunken: #f3f0ea;
+  --bg-sunken: #f1f5f9;
   --bg-raised: #ffffff;
 
   --ifm-background-color: var(--bg-base);
   --ifm-background-surface-color: var(--bg-surface);
   --ifm-card-background-color: var(--bg-surface);
 
-  --text-ink: #18181b;
-  --text-ink-2: #52525b;
-  --text-ink-3: #888891;
+  --text-ink: #0f172a;
+  --text-ink-2: #334155;
+  --text-ink-3: #64748b;
 
   --ifm-font-color-base: var(--text-ink-2);
   --ifm-font-color-secondary: var(--text-ink-3);
@@ -60,10 +62,80 @@
 }
 
 [data-theme='dark'] {
-  /* Dark Mode Color System (Obsidian Slate + Warm Copper Glow) */
-  --color-copper: #d97746;
-  --color-copper-strong: #e78e60;
-  --color-copper-subtle: rgba(217, 119, 70, 0.16);
+  /* Dark Mode Default: Deep Space Blue & Cyan Accent */
+  --color-accent: #38bdf8;
+  --color-accent-strong: #0ea5e9;
+  --color-accent-subtle: rgba(56, 189, 248, 0.16);
+  --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #06b6d4 100%);
+
+  --ifm-color-primary: #38bdf8;
+  --ifm-color-primary-dark: #0ea5e9;
+  --ifm-color-primary-darker: #0284c7;
+  --ifm-color-primary-darkest: #0369a1;
+  --ifm-color-primary-light: #06b6d4;
+  --ifm-color-primary-lighter: #22d3ee;
+  --ifm-color-primary-lightest: #67e8f9;
+
+  --bg-base: #070a13;
+  --bg-surface: #0b0f19;
+  --bg-sunken: #04060a;
+  --bg-raised: #0f172a;
+
+  --ifm-background-color: var(--bg-base);
+  --ifm-background-surface-color: var(--bg-surface);
+  --ifm-card-background-color: rgba(15, 23, 42, 0.55);
+
+  --text-ink: #f8fafc;
+  --text-ink-2: #cbd5e1;
+  --text-ink-3: #94a3b8;
+
+  --ifm-font-color-base: var(--text-ink-2);
+  --ifm-font-color-secondary: var(--text-ink-3);
+  --ifm-heading-color: var(--text-ink);
+
+  --border-line: rgba(255, 255, 255, 0.08);
+  --border-line-strong: rgba(255, 255, 255, 0.16);
+  --border-color: var(--border-line);
+  --card-border: 1px solid var(--border-line);
+  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+  --card-shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.65), 0 0 20px rgba(56, 189, 248, 0.18);
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.08);
+}
+
+/* ==========================================================================
+   Warm Copper / Amber Theme Palette Overrides
+   ========================================================================== */
+[data-accent-theme='copper'] {
+  --color-accent: #c2693e;
+  --color-accent-strong: #a6552e;
+  --color-accent-subtle: rgba(194, 105, 62, 0.12);
+  --accent-gradient: linear-gradient(135deg, #c2693e 0%, #e08b61 100%);
+
+  --ifm-color-primary: #c2693e;
+  --ifm-color-primary-dark: #af5c33;
+  --ifm-color-primary-darker: #9c4f29;
+  --ifm-color-primary-darkest: #793c1d;
+  --ifm-color-primary-light: #d47a4f;
+  --ifm-color-primary-lighter: #e08b61;
+  --ifm-color-primary-lightest: #f0ab87;
+
+  --bg-base: #fbfaf8;
+  --bg-surface: #ffffff;
+  --bg-sunken: #f3f0ea;
+  --bg-raised: #ffffff;
+
+  --text-ink: #18181b;
+  --text-ink-2: #52525b;
+  --text-ink-3: #888891;
+}
+
+[data-theme='dark'][data-accent-theme='copper'],
+[data-theme='dark'] [data-accent-theme='copper'] {
+  --color-accent: #d97746;
+  --color-accent-strong: #e78e60;
+  --color-accent-subtle: rgba(217, 119, 70, 0.16);
+  --accent-gradient: linear-gradient(135deg, #d97746 0%, #f09f74 100%);
 
   --ifm-color-primary: #d97746;
   --ifm-color-primary-dark: #c46837;
@@ -78,26 +150,11 @@
   --bg-sunken: #07080a;
   --bg-raised: #181c24;
 
-  --ifm-background-color: var(--bg-base);
-  --ifm-background-surface-color: var(--bg-surface);
-  --ifm-card-background-color: rgba(19, 22, 28, 0.7);
-
   --text-ink: #f4f4f6;
   --text-ink-2: #a1a1aa;
   --text-ink-3: #71717a;
 
-  --ifm-font-color-base: var(--text-ink-2);
-  --ifm-font-color-secondary: var(--text-ink-3);
-  --ifm-heading-color: var(--text-ink);
-
-  --border-line: rgba(255, 255, 255, 0.08);
-  --border-line-strong: rgba(255, 255, 255, 0.16);
-  --border-color: var(--border-line);
-  --card-border: 1px solid var(--border-line);
-  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
-  --card-shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.65), 0 0 16px var(--color-copper-subtle);
-
-  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.08);
+  --card-shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.65), 0 0 16px rgba(217, 119, 70, 0.18);
 }
 
 /* Global resets for premium feel */
@@ -124,25 +181,30 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-copper);
+  background: var(--color-accent);
 }
 
 /* ==========================================================================
    Premium Glassmorphism Navigation Bar
    ========================================================================== */
 .navbar {
-  background-color: rgba(251, 250, 248, 0.85) !important;
-  backdrop-filter: blur(14px) saturate(1.2);
-  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  background-color: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
   border-bottom: 1px solid var(--border-line);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 [data-theme='dark'] .navbar {
-  background-color: rgba(12, 14, 18, 0.82) !important;
+  background-color: rgba(7, 10, 19, 0.82) !important;
   border-bottom: 1px solid var(--border-line);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme='dark'][data-accent-theme='copper'] .navbar,
+[data-theme='dark'] [data-accent-theme='copper'] .navbar {
+  background-color: rgba(12, 14, 18, 0.82) !important;
 }
 
 @media (min-width: 997px) {
@@ -207,7 +269,7 @@ body {
     left: 15%;
     width: 70%;
     height: 2px;
-    background: var(--color-copper);
+    background: var(--accent-gradient);
     border-radius: 2px;
   }
 }
@@ -225,7 +287,7 @@ body {
 }
 
 /* ==========================================================================
-   Editorial Layout & Prose Styling (LocalHake Style)
+   Editorial Layout & Prose Styling
    ========================================================================== */
 
 .editorial-wrapper {
@@ -251,7 +313,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--color-copper);
+  color: var(--color-accent);
   margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
@@ -283,7 +345,7 @@ body {
 }
 
 .editorial-accent-link {
-  color: var(--color-copper);
+  color: var(--color-accent);
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 4px;
@@ -291,7 +353,7 @@ body {
 }
 
 .editorial-accent-link:hover {
-  color: var(--color-copper-strong);
+  color: var(--color-accent-strong);
   opacity: 0.9;
 }
 
@@ -328,8 +390,8 @@ body {
   border-radius: 10px;
   object-fit: cover;
   object-position: center top;
-  border: 2px solid var(--color-copper);
-  box-shadow: 0 4px 16px var(--color-copper-subtle);
+  border: 2px solid var(--color-accent);
+  box-shadow: 0 4px 16px var(--color-accent-subtle);
   flex-shrink: 0;
 }
 
@@ -344,7 +406,7 @@ body {
 .editorial-bio-role {
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--color-copper);
+  color: var(--color-accent);
   margin-bottom: 0.5rem;
 }
 
@@ -383,9 +445,9 @@ body {
 }
 
 .editorial-pill-link:hover {
-  background-color: var(--color-copper-subtle);
-  color: var(--color-copper);
-  border-color: var(--color-copper);
+  background-color: var(--color-accent-subtle);
+  color: var(--color-accent);
+  border-color: var(--color-accent);
   transform: translateY(-1px);
 }
 
@@ -424,7 +486,6 @@ body {
 .editorial-list {
   margin: 1.5rem 0 2rem;
   padding-left: 1.5rem;
-  space-y: 0.75rem;
 }
 
 .editorial-list li {
@@ -453,7 +514,7 @@ body {
 
 .editorial-card:hover {
   transform: translateY(-2px);
-  border-color: var(--color-copper);
+  border-color: var(--color-accent);
   box-shadow: var(--card-shadow-hover);
 }
 
@@ -464,8 +525,8 @@ body {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-copper);
-  background-color: var(--color-copper-subtle);
+  color: var(--color-accent);
+  background-color: var(--color-accent-subtle);
   padding: 0.2rem 0.6rem;
   border-radius: 4px;
   margin-bottom: 0.75rem;
@@ -516,7 +577,7 @@ body {
   position: absolute;
   left: 0;
   top: -0.05rem;
-  color: var(--color-copper);
+  color: var(--color-accent);
   font-size: 1.1rem;
   line-height: 1.4;
 }
@@ -567,8 +628,8 @@ body {
 }
 
 .menu__link--active {
-  background-color: var(--color-copper-subtle) !important;
-  color: var(--color-copper) !important;
+  background-color: var(--color-accent-subtle) !important;
+  color: var(--color-accent) !important;
   font-weight: 600;
 }
 
@@ -641,7 +702,7 @@ body {
   left: 2rem;
   width: 48px;
   height: 2px;
-  background-color: var(--color-copper);
+  background: var(--accent-gradient);
 }
 
 .footer__title {
@@ -661,7 +722,7 @@ body {
 }
 
 .footer__link-item:hover {
-  color: var(--color-copper) !important;
+  color: var(--color-accent) !important;
   text-decoration: none !important;
 }
 
