@@ -51,7 +51,7 @@ export default function Home(): JSX.Element {
       <HomepageHeader />
       <main className={styles.mainSection}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Explore the Wiki</h2>
+          <h2 className={styles.sectionTitle}>Featured Work &amp; Notes</h2>
           <div className={styles.sectionUnderline}></div>
         </div>
 
@@ -82,7 +82,7 @@ export default function Home(): JSX.Element {
             }
           />
           <FeatureCard
-            title="Knowledge Base"
+            title="Engineering Notes"
             badge="Learnings"
             href="/docs/knowledge-base/home"
             tags={['Python', 'DevOps', 'Databases']}

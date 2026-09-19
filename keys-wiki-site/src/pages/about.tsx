@@ -53,7 +53,7 @@ export default function AboutPage(): JSX.Element {
                   LinkedIn
                 </a>
                 <a
-                  href="https://github.com/shangar-t-a/keys-personal-wiki"
+                  href="https://github.com/shangar-t-a"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="editorial-pill-link">
@@ -66,7 +66,7 @@ export default function AboutPage(): JSX.Element {
                   <span>View Projects &rarr;</span>
                 </Link>
                 <Link to="/docs/knowledge-base/home" className="editorial-pill-link">
-                  <span>Knowledge Base &rarr;</span>
+                  <span>Engineering Notes &rarr;</span>
                 </Link>
               </div>
             </div>
@@ -214,9 +214,9 @@ export default function AboutPage(): JSX.Element {
           </div>
 
           <div className="editorial-prose" style={{ marginTop: '2.5rem' }}>
-            <h2>Say hi</h2>
+            <h2>Let's Connect</h2>
             <p>
-              Feel free to connect on{' '}
+              Feel free to connect with me on{' '}
               <a
                 href="https://www.linkedin.com/in/shangar-arivazhagan/"
                 target="_blank"
@@ -224,9 +224,9 @@ export default function AboutPage(): JSX.Element {
                 className="editorial-accent-link">
                 LinkedIn
               </a>
-              {' '}or explore the code repositories on{' '}
+              {' '}or explore my work on{' '}
               <a
-                href="https://github.com/shangar-t-a/keys-personal-wiki"
+                href="https://github.com/shangar-t-a"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="editorial-accent-link">

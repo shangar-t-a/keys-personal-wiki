@@ -166,6 +166,18 @@ body {
   opacity: 0.85;
 }
 
+.navbar__logo {
+  border-radius: 9px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navbar__logo:hover {
+  transform: scale(1.05);
+}
+
 /* Nav Links Styling */
 @media (min-width: 997px) {
   .navbar__item.navbar__link {

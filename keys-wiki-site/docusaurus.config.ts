@@ -3,7 +3,7 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: "Shangar's Portfolio",
+  title: 'Shangar Arivazhagan',
   tagline: 'Technical Lead (AI & Software Development)',
   favicon: 'img/favicon.ico',
 
@@ -57,7 +57,7 @@ const config: Config = {
 
   themeConfig: {
     navbar: {
-      title: "Keys' Portfolio",
+      title: 'Shangar (Keys)',
       logo: {
         alt: "Keys' Site Logo",
         src: 'img/logo.svg',
@@ -78,7 +78,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'kbSidebar',
           position: 'left',
-          label: 'Knowledge Base',
+          label: 'Engineering Notes',
         },
         {
           href: 'https://www.linkedin.com/in/shangar-arivazhagan/',
@@ -86,7 +86,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://github.com/shangar-t-a/keys-personal-wiki',
+          href: 'https://github.com/shangar-t-a',
           label: 'GitHub',
           position: 'right',
         },
@@ -97,20 +97,33 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Resources',
+          title: 'Navigation',
           items: [
             {
-              label: 'Projects',
+              label: 'About Me',
+              to: '/about',
+            },
+            {
+              label: 'Projects Gallery',
               to: '/docs/projects/home',
             },
             {
-              label: 'Knowledge Base',
+              label: 'Engineering Notes',
               to: '/docs/knowledge-base/home',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Featured Work',
+          items: [
+            {
+              label: 'Bella Assist (AI Assistant & Wealth Manager)',
+              to: '/docs/projects/bella-assist',
+            },
+          ],
+        },
+        {
+          title: 'Connect',
           items: [
             {
               label: 'LinkedIn',
@@ -118,21 +131,12 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/shangar-t-a/keys-personal-wiki',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'About Keys',
-              to: '/about',
+              href: 'https://github.com/shangar-t-a',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Shangar Arivazhagan (Keys)`,
+      copyright: `© 2025–${new Date().getFullYear()} Shangar Arivazhagan (Keys)`,
     },
     prism: {
       theme: prismThemes.github,
