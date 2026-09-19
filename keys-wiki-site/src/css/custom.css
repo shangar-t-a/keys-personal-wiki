@@ -274,6 +274,47 @@ body {
   }
 }
 
+/* ==========================================================================
+   Harmonized Color Mode Toggle Button Styling
+   ========================================================================== */
+.navbar [class*='toggleButton_'],
+[class*='colorModeToggle'] button {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 999px !important;
+  background-color: var(--bg-sunken) !important;
+  border: 1px solid var(--border-line) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--text-ink) !important;
+  cursor: pointer !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-sizing: border-box !important;
+  padding: 0 !important;
+}
+
+.navbar [class*='toggleButton_']:hover,
+[class*='colorModeToggle'] button:hover {
+  background-color: var(--bg-surface) !important;
+  border-color: var(--color-accent) !important;
+  box-shadow: 0 2px 8px var(--color-accent-subtle) !important;
+  transform: scale(1.06);
+}
+
+.navbar [class*='toggleButton_']:active,
+[class*='colorModeToggle'] button:active {
+  transform: scale(0.95);
+}
+
+.navbar [class*='toggleButton_'] svg,
+[class*='colorModeToggle'] button svg {
+  width: 17px !important;
+  height: 17px !important;
+  fill: currentColor !important;
+  transition: transform 0.25s ease !important;
+}
+
 /* Mobile Sidebar Menu */
 .navbar-sidebar {
   background-color: var(--bg-surface) !important;

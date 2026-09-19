@@ -95,10 +95,6 @@ const config: Config = {
           label: 'Engineering Notes',
         },
         {
-          type: 'custom-themePaletteToggle',
-          position: 'right',
-        },
-        {
           href: 'https://www.linkedin.com/in/shangar-arivazhagan/',
           label: 'LinkedIn',
           position: 'right',
