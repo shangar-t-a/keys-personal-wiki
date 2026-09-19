@@ -15,17 +15,8 @@ export default function NavbarMobilePrimaryMenu(): JSX.Element {
   const items = useNavbarItems();
 
   return (
-    <>
-      <ul className="menu__list">
-        {items.map((item, i) => (
-          <NavbarItem
-            mobile
-            {...(item as any)}
-            onClick={() => mobileSidebar.toggle()}
-            key={i}
-          />
-        ))}
-      </ul>
+    <div className={styles.primaryMenuContainer}>
+      {/* Prominent Appearance Section at the Top of Drawer */}
       <div className={styles.mobileAppearanceCard}>
         <div className={styles.cardHeader}>
           <span className={styles.cardHeaderIcon} aria-hidden="true">🎨</span>
@@ -40,6 +31,18 @@ export default function NavbarMobilePrimaryMenu(): JSX.Element {
           </div>
         </div>
       </div>
-    </>
+
+      {/* Navigation Links */}
+      <ul className="menu__list">
+        {items.map((item, i) => (
+          <NavbarItem
+            mobile
+            {...(item as any)}
+            onClick={() => mobileSidebar.toggle()}
+            key={i}
+          />
+        ))}
+      </ul>
+    </div>
   );
 }
