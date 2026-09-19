@@ -34,11 +34,6 @@
 
 @media (max-width: 996px) {
   .appearanceControlsGroup {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.6rem;
-    padding: 6px 10px;
-    margin: 0.75rem 0.5rem;
+    display: none !important;
   }
 }
