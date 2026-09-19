@@ -61,6 +61,24 @@
   background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, rgba(6, 182, 212, 0) 70%);
 }
 
+[data-accent-theme='copper'] .orbBlue {
+  background: radial-gradient(circle, rgba(194, 105, 62, 0.07) 0%, rgba(194, 105, 62, 0) 70%);
+}
+
+[data-theme='dark'][data-accent-theme='copper'] .orbBlue,
+[data-theme='dark'] [data-accent-theme='copper'] .orbBlue {
+  background: radial-gradient(circle, rgba(217, 119, 70, 0.12) 0%, rgba(217, 119, 70, 0) 70%);
+}
+
+[data-accent-theme='copper'] .orbCyan {
+  background: radial-gradient(circle, rgba(224, 139, 97, 0.06) 0%, rgba(224, 139, 97, 0) 70%);
+}
+
+[data-theme='dark'][data-accent-theme='copper'] .orbCyan,
+[data-theme='dark'] [data-accent-theme='copper'] .orbCyan {
+  background: radial-gradient(circle, rgba(231, 142, 96, 0.1) 0%, rgba(231, 142, 96, 0) 70%);
+}
+
 @keyframes floatOrb1 {
   0% {
     transform: translate(0, 0) scale(1);
@@ -102,6 +120,15 @@
   background: linear-gradient(120deg, rgba(14, 165, 233, 0.08) 0%, rgba(6, 182, 212, 0.04) 35%, rgba(99, 102, 241, 0.05) 70%, rgba(14, 165, 233, 0.05) 100%);
   background-size: 300% 300%;
   animation: waveGradient 18s ease infinite alternate;
+}
+
+[data-accent-theme='copper'] .meshBg {
+  background: linear-gradient(120deg, rgba(194, 105, 62, 0.04) 0%, rgba(224, 139, 97, 0.03) 40%, rgba(217, 119, 70, 0.02) 100%);
+}
+
+[data-theme='dark'][data-accent-theme='copper'] .meshBg,
+[data-theme='dark'] [data-accent-theme='copper'] .meshBg {
+  background: linear-gradient(120deg, rgba(217, 119, 70, 0.08) 0%, rgba(231, 142, 96, 0.05) 35%, rgba(194, 105, 62, 0.04) 100%);
 }
 
 @keyframes waveGradient {

@@ -24,7 +24,21 @@ const config: Config = {
   organizationName: 'shangar-t-a', // Usually your GitHub org/user name.
   projectName: 'keys-personal-wiki', // Usually your repo name.
 
-  trailingSlash: false,
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: {
+        type: 'text/javascript',
+      },
+      innerHTML: `(function() {
+        try {
+          var saved = localStorage.getItem('keys-accent-theme');
+          var theme = saved || 'blue';
+          document.documentElement.setAttribute('data-accent-theme', theme);
+        } catch (e) {}
+      })();`,
+    },
+  ],
 
   markdown: {
     mermaid: true,
