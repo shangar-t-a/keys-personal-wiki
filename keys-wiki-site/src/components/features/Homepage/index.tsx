@@ -14,7 +14,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/profile_details.svg').default,
     description: (
       <>
-        Shangar Arivazhagan (Keys) &mdash; Technical Lead - AI &amp; Software Development. <br></br>
+        Shangar Arivazhagan (Keys) &ndash; Technical Lead - AI &amp; Software Development. <br></br>
         I design and ship backend systems and agentic AI solutions.<br></br>
         <strong>Focus:</strong> AI Systems, Backend Engineering<br></br>
       </>

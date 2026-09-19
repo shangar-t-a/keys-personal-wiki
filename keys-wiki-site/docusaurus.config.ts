@@ -3,13 +3,13 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: "Shangar's Portfolio",
+  title: 'Shangar Arivazhagan',
   tagline: 'Technical Lead (AI & Software Development)',
   favicon: 'img/favicon.ico',
 
   stylesheets: [
     {
-      href: 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap',
+      href: 'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap',
       type: 'text/css',
     },
   ],
@@ -25,8 +25,6 @@ const config: Config = {
   projectName: 'keys-personal-wiki', // Usually your repo name.
 
   trailingSlash: false,
-
-  onBrokenLinks: 'throw',
 
   markdown: {
     mermaid: true,
@@ -59,15 +57,15 @@ const config: Config = {
 
   themeConfig: {
     navbar: {
-      title: "Keys' Portfolio",
+      title: 'Shangar (Keys)',
       logo: {
         alt: "Keys' Site Logo",
         src: 'img/logo.svg',
       },
       items: [
         {
-          label: 'About Me',
-          to: '/docs/intro',
+          label: 'About',
+          to: '/about',
           position: 'left',
         },
         {
@@ -80,7 +78,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'kbSidebar',
           position: 'left',
-          label: 'Knowledge Base',
+          label: 'Engineering Notes',
         },
         {
           href: 'https://www.linkedin.com/in/shangar-arivazhagan/',
@@ -88,7 +86,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://github.com/shangar-t-a/keys-personal-wiki',
+          href: 'https://github.com/shangar-t-a',
           label: 'GitHub',
           position: 'right',
         },
@@ -99,20 +97,33 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Resources',
+          title: 'Navigation',
           items: [
             {
-              label: 'Projects',
+              label: 'About Me',
+              to: '/about',
+            },
+            {
+              label: 'Projects Gallery',
               to: '/docs/projects/home',
             },
             {
-              label: 'Knowledge Base',
+              label: 'Engineering Notes',
               to: '/docs/knowledge-base/home',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Featured Work',
+          items: [
+            {
+              label: 'Bella Assist (AI Assistant & Wealth Manager)',
+              to: '/docs/projects/bella-assist',
+            },
+          ],
+        },
+        {
+          title: 'Connect',
           items: [
             {
               label: 'LinkedIn',
@@ -120,21 +131,12 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/shangar-t-a/keys-personal-wiki',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'About Keys',
-              to: '/docs/intro',
+              href: 'https://github.com/shangar-t-a',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Shangar Arivazhagan (Keys)`,
+      copyright: `© 2025–${new Date().getFullYear()} Shangar Arivazhagan (Keys)`,
     },
     prism: {
       theme: prismThemes.github,
