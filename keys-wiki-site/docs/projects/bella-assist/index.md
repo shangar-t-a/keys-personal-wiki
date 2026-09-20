@@ -62,8 +62,9 @@ Explore the interactive application showcase below, featuring screen navigation,
 
 ---
 
-## Technical & Architecture Notes
+## Technical & Developer Documentation
 
-For deep container deployment architecture, host networking details, and WSL2 configurations:
+For container deployment, architecture details, and developer setup instructions, refer to the developer documentation:
 
-* **[WSL2 & Docker Hybrid Architecture Guide](/docs/knowledge-base/devops/wsl-docker-hybrid-setup)** &ndash; Complete setup guide for running stateless microservices in WSL2 with Windows Host PostgreSQL.
+* **[WSL2 & Docker Deployment Guide](/docs/developer/deployment/wsl-docker-setup)** &ndash; Deploying the full stack with Docker Compose and Windows Host PostgreSQL.
+* **[Architecture & Guidelines](/docs/developer/architecture-standards)** &ndash; Coding conventions, domain patterns, and system design specifications.
